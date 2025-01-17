@@ -4,24 +4,27 @@
 		line-height: 1;
 		margin-bottom: 0.25rem;
 	}
-	// .form__input
-	&__input {
+	// .form__control
+	&__control {
 		text-overflow: ellipsis;
 		transition: border-color 0.3s ease 0s, color 0.3s ease 0s;
 		width: 100%;
-		border-radius: 0.375rem;
-		background: #fff;
-		border: rem(1) solid #fff;
-		color: #000;
-		line-height: 100%;
-		font-size: 1rem;
-		padding: 0.875rem 0.63rem;
-		@media (min-width: $md2) {
-			font-size: 1.125rem;
+		border: rem(1) solid transparent;
+		font-size: 0.875rem;
+		line-height: 135%;
+		border-radius: 0.75rem;
+		padding: 0.69rem 1.12rem;
+		&.form__control-white {
+			background: rgba(255, 255, 255, 0.15);
+			color: $white;
+			&:hover,
+			&:focus {
+				border-color: $white;
+			}
 		}
 		&::placeholder {
-			opacity: 1;
-			color: #737373;
+			opacity: 0.7;
+			color: currentColor;
 		}
 		&:hover,
 		&:focus {
@@ -186,74 +189,50 @@
 	text-align: center;
 	user-select: none;
 	transition: all 0.3s ease 0s;
-	padding: 0.875rem 2.0625rem;
-	border-radius: 0.25rem;
+	padding: 0.95rem 2.9rem;
+	border-radius: 0.75rem;
 	font-size: 1rem;
-	font-weight: 700;
-	line-height: 100%;
-	text-transform: uppercase;
+	font-weight: 500;
+	line-height: 135%;
+	min-height: rem(52);
 	&::before {
 		order: 1;
 	}
 	&.btn-primary {
-		border: 2px solid #393939;
-		color: #393939;
+		background: $accent;
+		color: $white;
 		&:hover {
-			background: #393939;
-			color: #fff;
+			background: $accent-dark;
 		}
 		&:active {
-			background: darken($color: #393939, $amount: 10);
-			color: #fff;
+			background: $accent-light;
 		}
 	}
-	&.btn-secondary {
-		background: #fa5300;
-		color: #fff;
+	&.btn-pink {
+		background: #fa7a93;
+		color: $white;
 		&:hover {
-			background: #e44c00;
+			background: #ff6b89;
 		}
 		&:active {
-			background: darken($color: #e44c00, $amount: 10);
+			background: #ff95aa;
 		}
 	}
 	&.btn-white {
-		border: 2px solid #fff;
-		color: #fff;
+		background: $white;
+		color: $text;
 		&:hover {
-			background: #393939;
+			background: $white-bg;
 		}
 		&:active {
-			background: darken($color: #393939, $amount: 10);
+			background: $pink;
 		}
 	}
-	&.btn-blue {
-		background: #38b6ff;
-		color: #fff;
-		&:hover {
-			background: #1ca2ef;
-		}
-		&:active {
-			background: darken($color: #1ca2ef, $amount: 10);
-		}
-	}
+
 	&.btn-fullwidth {
 		width: 100%;
 	}
-	&.btn-sm {
-		padding: 0.3125rem 2.125rem;
-	}
-	&.btn-md {
-		padding: 0.75rem 1.6875rem;
-		@media (min-width: $md5) {
-			padding: 0.5625rem 1.6875rem;
-		}
-	}
-	&.btn-lg {
-		font-size: 1.25rem;
-		border-radius: 0.5rem;
-		padding: 1.2rem 2.65rem;
-	}
+
 	&:disabled,
 	&[aria-disabled="true"] {
 		cursor: default;

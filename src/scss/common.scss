@@ -1,0 +1,105 @@
+body {
+	font-family: $fontfamily, sans-serif;
+	font-size: 1rem;
+	min-width: rem($minWidth);
+	min-height: 100%;
+	line-height: normal;
+	color: $text;
+	background-color: $white-bg;
+	&:has(.open-menu) {
+		overflow: hidden;
+	}
+}
+
+// ================== ОБОЛОЧКА ==============================
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+// ================== ОБОЛОЧКА ===============================
+
+// ================== LAYOUT =================================
+
+[class*="__container"] {
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 0 rem(20);
+	@media (min-width: $md5) {
+		box-sizing: content-box;
+		max-width: rem(540);
+	}
+	@media (min-width: $md4) {
+		max-width: rem(704);
+	}
+	@media (min-width: $md3) {
+		max-width: rem(960);
+	}
+	@media (min-width: $md2) {
+		max-width: $maxWidthContainer;
+	}
+}
+
+//=============== LAYOUT ===============================
+
+.page {
+	padding: 2rem 0;
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	&__container {
+		width: 100%;
+		display: flex;
+		gap: 2.5rem;
+		flex: 1 1 auto;
+	}
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.menu {
+	flex: 0 0 12.8125rem;
+	// .menu__list
+	&__list {
+	}
+	// .menu__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 0.25rem;
+		}
+	}
+	// .menu__link
+	&__link {
+		font-size: 1.125rem;
+		font-weight: 500;
+		line-height: 100%;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		transition: background-color 0.3s ease, color 0.3s ease;
+		padding: rem(12) rem(10);
+		border-radius: 0.75rem;
+		&::before {
+			font-size: 1.5rem;
+		}
+		&:hover {
+			background: $white;
+		}
+		&:active,
+		&.active {
+			background: $grey;
+			color: $white;
+		}
+	}
+}
+
+.sidebar {
+	background: red;
+	flex: 0 0 12.8125rem;
+}

@@ -4,13 +4,20 @@
     'title': 'Главная страница'
     })
     <body>
-        <section class="wrapper">
+        <div class="wrapper">
             @@include('html/_header.html', {})
-            <main class="page">
+            <div class="page">
+                <div class="page__container">
+                    @@include('./html/_menu.html')
+                    <main class="main">
 
-            </main>
+                    </main>
+                    @@include('./html/_sidebar.html')
+                </div>
+            </div>
             @@include('html/_footer.html', {})
             <!-- @@include('html/_modal.html', {}) -->
             @@include('html/_js.html', {})
+        </div>
     </body>
 </html>
