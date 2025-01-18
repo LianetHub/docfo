@@ -17,6 +17,13 @@
 		display: block;
 	}
 }
+
+.icon-lock:before {
+	content: "\e915";
+}
+.icon-clock:before {
+	content: "\e916";
+}
 .icon-check:before {
 	content: "\e900";
 }

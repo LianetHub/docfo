@@ -25,7 +25,7 @@ $md6: 389.98px;
 
 $minWidth: 320; // Минимальная ширина страницы
 $maxWidth: 1920; // Ширина макета
-$maxWidthContainer: rem(1312); // Максимальная ширина ограничивающего контейнера
+$maxWidthContainer: rem(1352); // Максимальная ширина ограничивающего контейнера
 $containerPadding: 30;
 
 // ЦВЕТА
@@ -48,6 +48,10 @@ $text-80: rgba(
 $text-60: rgba(
 	$color: $text,
 	$alpha: 0.6,
+);
+$text-10: rgba(
+	$color: $text,
+	$alpha: 0.1,
 );
 $text-5: rgba(
 	$color: $text,
@@ -90,3 +94,7 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 @import "footer";
 
 //=======================================
+
+// СТИЛИ СТРАНИЦ
+
+@import "pages/home";

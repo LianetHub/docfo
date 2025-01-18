@@ -10,7 +10,11 @@ import shorthand from 'gulp-shorthand';
 
 const sass = gulpSass(dartSass);
 
+
+
+
 export const scss = () => {
+
     return app.gulp.src(app.path.src.scss, { sourcemaps: app.isDev })
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
@@ -27,15 +31,15 @@ export const scss = () => {
                 groupCssMediaQueries()
             )
         )
-        // .pipe(
-        //     app.plugins.if(
-        //         app.isBuild,
-        //         webpcss({
-        //             webpClass: '.webp',
-        //             noWebpClass: '.no-webp'
-        //         })
-        //     )
-        // )
+        .pipe(
+            app.plugins.if(
+                app.isBuild,
+                webpcss({
+                    webpClass: '.webp',
+                    noWebpClass: '.no-webp'
+                })
+            )
+        )
         .pipe(
             app.plugins.if(
                 app.isBuild,
@@ -46,12 +50,6 @@ export const scss = () => {
                 })
             )
         )
-        // .pipe(
-        //     app.plugins.if(
-        //         app.isBuild,
-        //         shorthand()
-        //     )
-        // )
         .pipe(app.plugins.replace(/@img\//g, '../img/'))
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(

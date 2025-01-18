@@ -1,0 +1,34 @@
+<li class="doctor">
+    <div class="doctor__side">
+        <a href="" class="doctor__image">
+            <img src="@@image" class="cover-image" alt="Фото доктора">
+        </a>
+        <button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
+        @@if(status==='online'){<span class="doctor__status online">Сейчас на сайте</span>}
+        @@if(status==='offline'){<span class="doctor__status">Оффлайн</span>}
+    </div>
+    <div class="doctor__body">
+        <div class="doctor__header">
+            <a href="" class="doctor__name">@@name</a>
+            <div class="doctor__reviews">
+                <a href="" class="doctor__reviews-link">Смотреть отзывы</a>
+                <span class="rate-label icon-star">4.8</span>
+            </div>
+        </div>
+        <ul class="doctor__info">
+            <li class="doctor__info-item">
+                <span class="doctor__info-property">Опыт:</span>
+                <span class="doctor__info-value">8 лет</span>
+            </li>
+            <li class="doctor__info-item">
+                <span class="doctor__info-property">Образование:</span>
+                <span class="doctor__info-value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
+            </li>
+        </ul>
+        <div class="doctor__position"><a href="">Диетолог</a>, <a href="">Терапевт</a></div>
+        <div class="doctor__bottom">
+            <a href="" class="doctor__btn btn btn-fullwidth btn-primary">Задать вопрос</a>
+            <a href="" class="doctor__btn btn btn-fullwidth btn-pink">Онлайн консультация 100₽</a>
+        </div>
+    </div>
+</li>

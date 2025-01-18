@@ -1,0 +1,54 @@
+[
+    {
+        "case_name": "Расшифровка ЭКГ",
+        "price": "100₽",
+        "answers": "10 Ответов",
+        "position": "Терапевт",
+        "status": "closed",
+        "person_name": "Ирина Иванова",
+        "person_image": "@img/stub-user.svg",
+        "additional_doctors": "+3",
+        "date": "28.10.2024",
+        "doctors": [
+            "@img/doctors/doctor-1.jpg",
+            "@img/doctors/doctor-2.jpg",
+            "@img/doctors/doctor-3.jpg",
+            "@img/doctors/doctor-1.jpg"
+        ]
+    },
+    {
+        "case_name": "Повышенные лейкоциты в моче, эпителий плоский большое количество, теперь боюсь что это такое?",
+        "price": "100₽",
+        "answers": "10 Ответов",
+        "position": "Клинический фармаколог",
+        "status": "wait",
+        "person_name": "Ирина Иванова",
+        "person_image": "@img/stub-user.svg",
+        "date": "28.10.2024",
+        "doctors": [
+            "@img/stub-doctor-sm.svg",
+            "@img/doctors/doctor-3.jpg",
+            "@img/doctors/doctor-1.jpg"
+        ]
+    },
+    {
+        "case_name": "Расшифровка ЭКГ",
+        "price": "100₽",
+        "answers": "10 Ответов",
+        "position": "Клинический фармаколог",
+        "status": "open",
+        "person_name": "Ирина Иванова",
+        "person_image": "@img/stub-user.svg",
+        "additional_doctors": "+3",
+        "date": "28.10.2024",
+        "doctors": [
+            "@img/doctors/doctor-1.jpg",
+            "@img/doctors/doctor-2.jpg",
+            "@img/doctors/doctor-3.jpg",
+            "@img/doctors/doctor-1.jpg",
+            "@img/doctors/doctor-2.jpg",
+            "@img/doctors/doctor-3.jpg",
+            "@img/doctors/doctor-1.jpg"
+        ]
+    }
+]

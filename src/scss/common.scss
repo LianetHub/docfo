@@ -46,7 +46,7 @@ body {
 //=============== LAYOUT ===============================
 
 .page {
-	padding: 2rem 0;
+	padding: 2rem 0 4.5rem;
 	flex: 1 1 auto;
 	display: flex;
 	flex-direction: column;
@@ -60,6 +60,16 @@ body {
 
 .main {
 	flex: 1 1 auto;
+	min-width: 0;
+	max-width: 100%;
+	& > section {
+		&:not(:first-child) {
+			padding-top: rem(36);
+		}
+		&:not(:last-child) {
+			padding-bottom: rem(36);
+		}
+	}
 }
 
 .menu {
@@ -153,6 +163,18 @@ body {
 	display: flex;
 	flex-direction: column;
 	padding: 0.75rem;
+	transition: background-color 0.3s ease;
+	position: relative;
+	z-index: 1;
+	@media (any-hover: hover) {
+		&:hover {
+			background: #ebf4fa;
+			z-index: 2;
+		}
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(12);
+	}
 	// .doctor-card__header
 	&__header {
 		position: relative;
@@ -184,21 +206,9 @@ body {
 	}
 	// .doctor-card__rate
 	&__rate {
-		border-radius: 0.375rem;
-		background: $grey;
-		color: $white;
-		display: flex;
-		align-items: center;
-		gap: 0.25rem;
-		padding: 0.25rem 0.375rem;
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		font-size: 0.875rem;
-		line-height: 100%;
-		&::before {
-			color: $orange;
-		}
 	}
 	// .doctor-card__name
 	&__name {
@@ -227,16 +237,184 @@ body {
 	}
 	// .doctor-card__education
 	&__education {
+		position: relative;
+	}
+	// .doctor-card__education-btn
+	&__education-btn {
 		text-decoration: underline;
 		text-decoration-style: dashed;
 		text-decoration-thickness: 0.05em;
 		text-underline-offset: rem(2);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accent;
+				& + .doctor-card__education-tooltip {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
 	}
+	// .doctor-card__education-tooltip
+	&__education-tooltip {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		min-width: rem(180);
+		background: $white;
+		padding: rem(10) rem(12);
+		color: $text-80;
+		font-size: 0.75rem;
+		line-height: 135%;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+	}
+
 	// .doctor-card__direction
 	&__direction {
 		font-size: 0.875rem;
 		font-weight: 500;
 		line-height: 135%;
+	}
+}
+
+.doctor {
+	border-radius: 1rem;
+	border: rem(1) solid $text-5;
+	background: $white;
+	display: flex;
+	gap: 2.5rem;
+	padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+	&:not(:last-child) {
+		margin-bottom: rem(13);
+	}
+	// .doctor__side
+	&__side {
+		flex: 0 0 11.5rem;
+		position: relative;
+		.favorite-btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+	// .doctor__image
+	&__image {
+		width: 100%;
+		display: block;
+		& img {
+			border-radius: 50%;
+		}
+	}
+	// .doctor__status
+	&__status {
+		margin-top: 0.75rem;
+		color: $grey;
+		font-size: 0.75rem;
+		font-weight: 500;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.25rem;
+		&::before {
+			content: "";
+			width: 0.5rem;
+			height: 0.5rem;
+			background-color: currentColor;
+			border-radius: 50%;
+		}
+		&.online {
+			color: $green;
+		}
+	}
+	// .doctor__body
+	&__body {
+		flex: 1 1 auto;
+	}
+	// .doctor__header
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .doctor__name
+	&__name {
+		font-size: 1.25rem;
+		font-weight: 500;
+		line-height: 125%;
+		transition: color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+	// .doctor__reviews
+	&__reviews {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		.rate-label {
+			font-size: 1rem;
+			padding: rem(6) rem(10);
+		}
+	}
+	// .doctor__reviews-link
+	&__reviews-link {
+		color: $text-60;
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 135%;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+	// .doctor__info
+	&__info {
+		margin-top: 0.5rem;
+	}
+	// .doctor__info-item
+	&__info-item {
+		font-size: 0.875rem;
+		line-height: 135%;
+		&:not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
+	}
+	// .doctor__info-property
+	&__info-property {
+	}
+	// .doctor__info-value
+	&__info-value {
+		color: $text-60;
+	}
+	// .doctor__position
+	&__position {
+		margin-top: 0.5rem;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 135%;
+		& a {
+			transition: color 0.3s ease;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $accent;
+				}
+			}
+		}
+	}
+	// .doctor__bottom
+	&__bottom {
+		margin-top: 1.25rem;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.75rem;
+	}
+	// .doctor__btn
+	&__btn {
 	}
 }
 
@@ -273,11 +451,12 @@ body {
 	&__item-caption {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		text-align: left;
 		gap: 1rem;
 		font-size: 1.125rem;
 		font-weight: 500;
-		line-height: 100%;
+		line-height: 122.5%;
 		width: 100%;
 		&::before {
 			order: 1;

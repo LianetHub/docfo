@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Олег Фомин",
+        "doctor_image": "@img/doctors/oleg-fomin.jpg"
+    },
+    {
+        "name": "Ирина Иванова",
+        "doctor_image": "@img/doctors/irina-ivanova.jpg"
+    },
+    {
+        "name": "Олег Фомин",
+        "doctor_image": "@img/doctors/oleg-fomin.jpg"
+    }
+]

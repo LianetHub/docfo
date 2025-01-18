@@ -2,7 +2,7 @@
     <div class="sidebar__block">
         <div class="sidebar__title">Врачи онлайн</div>
         <div class="sidebar__doctors">
-            @@include('_doctor-card.html')
+            @@loop('_doctor-card.html', 'html/json/sidebar-doctors.json')
         </div>
     </div>
 </aside>
