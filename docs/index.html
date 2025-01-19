@@ -36,14 +36,16 @@
 	<meta property="twitter:url" content="https://docfo.ru">
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20250119152012">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250119152012">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20250119152150">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250119152150">
 </head>
 
 <body>
 	<div class="wrapper">
 		<div class="banner">
-			<img src="img/banner.png" alt="Баннер">
+			<picture>
+				<source srcset="img/banner.webp" type="image/webp"><img src="img/banner.png" alt="Баннер">
+			</picture>
 		</div>
 		<header class="header">
 			<div class="header__container">
@@ -123,7 +125,9 @@
 					</div>
 				</nav>
 				<div class="mobile-banner">
-					<img src="img/mobile-banner.png" alt="Баннер">
+					<picture>
+						<source srcset="img/mobile-banner.webp" type="image/webp"><img src="img/mobile-banner.png" alt="Баннер">
+					</picture>
 				</div>
 				<div class="page__main">
 					<main class="main">
@@ -192,7 +196,22 @@
 													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
 												</span>
 												<span class="case__doctors">
-													<span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
+													<span class="case__doctor">
+														<picture>
+															<source srcset="img/doctors/doctor-1.webp" type="image/webp">
+															<picture>
+																<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
+															</picture>
+														</picture>
+													</span> <span class="case__doctor">
+														<picture>
+															<source srcset="img/doctors/doctor-2.webp" type="image/webp"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора">
+														</picture>
+													</span> <span class="case__doctor">
+														<picture>
+															<source srcset="img/doctors/doctor-3.webp" type="image/webp"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
+														</picture>
+													</span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
 												</span>
 											</span>
 										</li>
@@ -224,7 +243,15 @@
 													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
 												</span>
 												<span class="case__doctors">
-													<span class="case__doctor"><img src="img/stub-doctor-sm.svg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
+													<span class="case__doctor"><img src="img/stub-doctor-sm.svg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor">
+														<picture>
+															<source srcset="img/doctors/doctor-3.webp" type="image/webp"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
+														</picture>
+													</span> <span class="case__doctor">
+														<picture>
+															<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
+														</picture>
+													</span>
 												</span>
 											</span>
 										</li>
@@ -259,10 +286,37 @@
 													<span class="case__more">
 														<span class="case__more-btn"> +3 </span>
 														<span class="case__more-body">
-															<span class="case__doctor"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
+															<span class="case__doctor">
+																<picture>
+																	<source srcset="img/doctors/doctor-2.webp" type="image/webp"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора">
+																</picture>
+															</span> <span class="case__doctor">
+																<picture>
+																	<source srcset="img/doctors/doctor-3.webp" type="image/webp"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
+																</picture>
+															</span> <span class="case__doctor">
+																<picture>
+																	<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
+																</picture>
+															</span>
 														</span>
 													</span>
-													<span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
+													<span class="case__doctor">
+														<picture>
+															<source srcset="img/doctors/doctor-1.webp" type="image/webp">
+															<picture>
+																<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
+															</picture>
+														</picture>
+													</span> <span class="case__doctor">
+														<picture>
+															<source srcset="img/doctors/doctor-2.webp" type="image/webp"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора">
+														</picture>
+													</span> <span class="case__doctor">
+														<picture>
+															<source srcset="img/doctors/doctor-3.webp" type="image/webp"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
+														</picture>
+													</span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
 												</span>
 											</span>
 										</li>
@@ -298,7 +352,22 @@
 													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
 												</span>
 												<span class="case__doctors">
-													<span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
+													<span class="case__doctor">
+														<picture>
+															<source srcset="img/doctors/doctor-1.webp" type="image/webp">
+															<picture>
+																<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
+															</picture>
+														</picture>
+													</span> <span class="case__doctor">
+														<picture>
+															<source srcset="img/doctors/doctor-2.webp" type="image/webp"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора">
+														</picture>
+													</span> <span class="case__doctor">
+														<picture>
+															<source srcset="img/doctors/doctor-3.webp" type="image/webp"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
+														</picture>
+													</span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
 												</span>
 											</span>
 										</li>
@@ -358,7 +427,9 @@
 								<li class="doctor">
 									<div class="doctor__side">
 										<a href="" class="doctor__image">
-											<img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+											<picture>
+												<source srcset="img/doctors/oleg-fomin.webp" type="image/webp"><img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+											</picture>
 										</a>
 										<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
 										<span class="doctor__status online"><span>Сейчас на сайте</span></span>
@@ -428,7 +499,9 @@
 								<li class="doctor">
 									<div class="doctor__side">
 										<a href="" class="doctor__image">
-											<img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+											<picture>
+												<source srcset="img/doctors/oleg-fomin.webp" type="image/webp"><img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+											</picture>
 										</a>
 										<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
 										<span class="doctor__status online"><span>Сейчас на сайте</span></span>
@@ -488,7 +561,9 @@
 										<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
 										<div class="review__author">
 											<div class="review__author-thumb">
-												<img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+												<picture>
+													<source srcset="img/clients/01.webp" type="image/webp"><img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+												</picture>
 											</div>
 											<div class="review__author-main">
 												<div class="review__author-name">Имя Фамилия</div>
@@ -518,7 +593,9 @@
 										<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
 										<div class="review__author">
 											<div class="review__author-thumb">
-												<img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+												<picture>
+													<source srcset="img/clients/01.webp" type="image/webp"><img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+												</picture>
 											</div>
 											<div class="review__author-main">
 												<div class="review__author-name">Имя Фамилия</div>
@@ -541,7 +618,9 @@
 								<div class="swiper-wrapper">
 									<div class="blog__slide swiper-slide">
 										<a href="" class="blog__slide-image">
-											<img src="img/blog/01.jpg" class="cover-image" alt="Постер статьи">
+											<picture>
+												<source srcset="img/blog/01.webp" type="image/webp"><img src="img/blog/01.jpg" class="cover-image" alt="Постер статьи">
+											</picture>
 										</a>
 										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
 										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
@@ -554,7 +633,9 @@
 									</div>
 									<div class="blog__slide swiper-slide">
 										<a href="" class="blog__slide-image">
-											<img src="img/blog/02.jpg" class="cover-image" alt="Постер статьи">
+											<picture>
+												<source srcset="img/blog/02.webp" type="image/webp"><img src="img/blog/02.jpg" class="cover-image" alt="Постер статьи">
+											</picture>
 										</a>
 										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
 										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
@@ -567,7 +648,9 @@
 									</div>
 									<div class="blog__slide swiper-slide">
 										<a href="" class="blog__slide-image">
-											<img src="img/blog/03.jpg" class="cover-image" alt="Постер статьи">
+											<picture>
+												<source srcset="img/blog/03.webp" type="image/webp"><img src="img/blog/03.jpg" class="cover-image" alt="Постер статьи">
+											</picture>
 										</a>
 										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
 										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
@@ -580,7 +663,9 @@
 									</div>
 									<div class="blog__slide swiper-slide">
 										<a href="" class="blog__slide-image">
-											<img src="img/blog/01.jpg" class="cover-image" alt="Постер статьи">
+											<picture>
+												<source srcset="img/blog/01.webp" type="image/webp"><img src="img/blog/01.jpg" class="cover-image" alt="Постер статьи">
+											</picture>
 										</a>
 										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
 										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
@@ -593,7 +678,9 @@
 									</div>
 									<div class="blog__slide swiper-slide">
 										<a href="" class="blog__slide-image">
-											<img src="img/blog/02.jpg" class="cover-image" alt="Постер статьи">
+											<picture>
+												<source srcset="img/blog/02.webp" type="image/webp"><img src="img/blog/02.jpg" class="cover-image" alt="Постер статьи">
+											</picture>
 										</a>
 										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
 										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
@@ -606,7 +693,9 @@
 									</div>
 									<div class="blog__slide swiper-slide">
 										<a href="" class="blog__slide-image">
-											<img src="img/blog/03.jpg" class="cover-image" alt="Постер статьи">
+											<picture>
+												<source srcset="img/blog/03.webp" type="image/webp"><img src="img/blog/03.jpg" class="cover-image" alt="Постер статьи">
+											</picture>
 										</a>
 										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
 										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
@@ -648,23 +737,23 @@
 							<ul class="faq__list">
 								<li class="faq__item">
 									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
+									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму&nbsp;создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
 								</li>
 								<li class="faq__item">
 									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
+									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму&nbsp;создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
 								</li>
 								<li class="faq__item">
 									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
+									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму&nbsp;создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
 								</li>
 								<li class="faq__item">
 									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
+									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму&nbsp;создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
 								</li>
 								<li class="faq__item">
 									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
+									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму&nbsp;создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
 								</li>
 							</ul>
 						</section>
@@ -676,7 +765,9 @@
 								<li class="doctor">
 									<div class="doctor__side">
 										<a href="" class="doctor__image">
-											<img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+											<picture>
+												<source srcset="img/doctors/oleg-fomin.webp" type="image/webp"><img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+											</picture>
 										</a>
 										<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
 										<span class="doctor__status online"><span>Сейчас на сайте</span></span>
@@ -707,7 +798,9 @@
 								<li class="doctor">
 									<div class="doctor__side">
 										<a href="" class="doctor__image">
-											<img src="img/doctors/irina-ivanova.jpg" class="cover-image" alt="Фото доктора">
+											<picture>
+												<source srcset="img/doctors/irina-ivanova.webp" type="image/webp"><img src="img/doctors/irina-ivanova.jpg" class="cover-image" alt="Фото доктора">
+											</picture>
 										</a>
 										<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
 										<span class="doctor__status"><span>Оффлайн</span></span>
@@ -738,7 +831,9 @@
 								<li class="doctor">
 									<div class="doctor__side">
 										<a href="" class="doctor__image">
-											<img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+											<picture>
+												<source srcset="img/doctors/oleg-fomin.webp" type="image/webp"><img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+											</picture>
 										</a>
 										<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
 										<span class="doctor__status online"><span>Сейчас на сайте</span></span>
@@ -822,7 +917,7 @@
 				</div>
 			</div>
 		</footer>
-		<script src="js/app.min.js?_v=20250119152012"></script>
+		<script src="js/app.min.js?_v=20250119152150"></script>
 	</div>
 </body>
 
