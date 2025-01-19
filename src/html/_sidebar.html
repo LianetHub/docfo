@@ -1,8 +1,8 @@
 <aside class="sidebar">
     <div class="sidebar__block">
-        <div class="sidebar__title">Врачи онлайн</div>
-        <div class="sidebar__doctors">
-            @@loop('_doctor-card.html', 'html/json/sidebar-doctors.json')
-        </div>
+        <h2 class="sidebar__title">Врачи онлайн</h2>
+        <ul class="sidebar__doctors">
+            @@loop('_doctor.html', 'html/json/sidebar-doctors.json')
+        </ul>
     </div>
 </aside>

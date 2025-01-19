@@ -188,13 +188,17 @@
 	align-items: center;
 	text-align: center;
 	user-select: none;
-	transition: all 0.3s ease 0s;
-	padding: 0.8rem 2.9rem;
+	transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 	border-radius: 0.75rem;
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 135%;
-	min-height: rem(52);
+	padding: 0.56rem 1.7rem;
+	min-height: rem(40);
+	@media (min-width: $md3) {
+		padding: 0.8rem 2.9rem;
+		min-height: rem(52);
+	}
 	&::before {
 		order: 1;
 	}

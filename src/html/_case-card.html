@@ -1,7 +1,13 @@
 <li class="case">
     <span class="case__header">
-        <div class="case__main">
+        <div class="case__row">
             <a href="" class="case__name">@@case_name</a>
+            <div class="case__side">
+                <div class="case__price">@@price</div>
+                <a href="" class="case__answers">@@answers</a>
+            </div>
+        </div>
+        <div class="case__main">
             <div class="case__main-row">
                 <a href="" class="case__position">@@position</a>
                 @@if(status==='closed'){
@@ -14,9 +20,6 @@
                 <span class="case__status open">Открыт</span>
                 }
             </div>
-        </div>
-        <div class="case__side">
-            <div class="case__price">@@price</div>
             <a href="" class="case__answers">@@answers</a>
         </div>
     </span>

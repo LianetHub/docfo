@@ -1,42 +1,67 @@
 .footer {
 	background: $black;
 	color: $white;
-	padding: 4rem 0 0;
 	overflow-x: hidden;
+	padding: rem(20) 0 0;
+	@media (min-width: $md5) {
+		padding: 4rem 0 0;
+	}
 	// .footer__container
 	&__container {
-		max-width: rem(1280);
+		@media (min-width: $md1) {
+			max-width: rem(1280);
+		}
 	}
 	// .footer__body
 	&__body {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
+		display: grid;
 		gap: 1rem;
-		padding-left: 19%;
-		position: relative;
+		row-gap: 1.5rem;
+		@media (min-width: $md5) {
+			grid-template-columns: repeat(2, 1fr);
+			align-items: start;
+		}
+		@media (min-width: $md3) {
+			padding-left: 19%;
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
 	}
 
 	// .footer__logo
 	&__logo {
-		position: absolute;
-		top: 0;
-		left: 0;
-		max-width: 15%;
+		width: fit-content;
+		@media (min-width: $md3) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-width: 15%;
+		}
 	}
 	// .footer__menu
 	&__menu {
+		margin-top: 1rem;
+		@media (min-width: $md5) {
+			margin-top: 0;
+		}
 		font-size: 1rem;
 		font-weight: 500;
 		line-height: 135%;
-		& ul li {
-			&:not(:last-child) {
-				margin-bottom: rem(10);
+		& ul {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: rem(10);
+			@media (min-width: $md5) {
+				grid-template-columns: 1fr;
 			}
-			& a {
-				@media (any-hover: hover) {
-					&:hover {
-						text-decoration: underline;
+			& li {
+				& a {
+					@media (any-hover: hover) {
+						&:hover {
+							text-decoration: underline;
+						}
 					}
 				}
 			}
@@ -44,16 +69,26 @@
 	}
 	// .footer__contacts
 	&__contacts {
+		margin-top: rem(20);
+		@media (min-width: $md3) {
+			margin-top: 0;
+		}
 	}
 	// .footer__caption
 	&__caption {
-		font-size: 1.25rem;
 		font-weight: 500;
 		line-height: 125%;
+		font-size: 1.125rem;
+		@media (min-width: $md5) {
+			font-size: 1.25rem;
+		}
 	}
 	// .footer__contacts-list
 	&__contacts-list {
-		margin-top: 1rem;
+		margin-top: 0.75rem;
+		@media (min-width: $md5) {
+			margin-top: 1rem;
+		}
 	}
 	// .footer__contacts-item
 	&__contacts-item {
@@ -66,13 +101,16 @@
 		display: flex;
 		align-items: center;
 		color: rgba(255, 255, 255, 0.8);
-		font-size: 1rem;
 		line-height: 135%;
 		gap: rem(10);
 		&::before {
-			font-size: 1.5rem;
+			font-size: 1.5em;
 		}
 		transition: color 0.3s ease;
+		font-size: 0.875rem;
+		@media (min-width: $md5) {
+			font-size: 1rem;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				color: $white;
@@ -81,7 +119,10 @@
 	}
 	// .footer__socials
 	&__socials {
-		margin-top: 1.5rem;
+		margin-top: 1.25rem;
+		@media (min-width: $md5) {
+			margin-top: 1.5rem;
+		}
 		font-size: 1.5rem;
 		display: flex;
 		gap: 0.37rem;
@@ -97,7 +138,11 @@
 	}
 	// .footer__side
 	&__side {
-		max-width: 20.4375rem;
+		margin-top: rem(20);
+		@media (min-width: $md3) {
+			margin-top: 0;
+			max-width: 20.4375rem;
+		}
 	}
 	// .footer__text
 	&__text {
@@ -122,9 +167,12 @@
 	}
 	// .footer__bottom
 	&__bottom {
-		margin-top: 2.87rem;
+		margin-top: 1.5rem;
+		@media (min-width: $md5) {
+			margin-top: 2.87rem;
+		}
 		display: flex;
-		padding: 1.5rem 0 1.75rem 19%;
+		flex-direction: column;
 		font-size: 0.875rem;
 		font-weight: 300;
 		line-height: 100%;
@@ -139,11 +187,23 @@
 			height: rem(1);
 			background: $white-10;
 		}
+		padding: rem(14) 0 rem(15);
+		@media (min-width: $md5) {
+			padding: 1.5rem 0 1.75rem;
+			flex-direction: row;
+		}
+		@media (min-width: $md3) {
+			padding: 1.5rem 0 1.75rem 19%;
+		}
 	}
 	// .footer__policies
 	&__policies {
 		display: flex;
 		gap: 1.75rem;
+		justify-content: space-between;
+		@media (min-width: $md5) {
+			justify-content: flex-start;
+		}
 	}
 	// .footer__policy
 	&__policy {
@@ -151,5 +211,13 @@
 	// .footer__copy
 	&__copy {
 		margin-left: auto;
+		margin-right: auto;
+		margin-top: rem(27);
+		font-size: 0.75rem;
+		@media (min-width: $md5) {
+			font-size: 0.875rem;
+			margin-right: 0;
+			margin-top: 0;
+		}
 	}
 }

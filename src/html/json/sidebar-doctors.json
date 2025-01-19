@@ -1,14 +1,32 @@
 [
     {
         "name": "Олег Фомин",
-        "doctor_image": "@img/doctors/oleg-fomin.jpg"
+        "rating": "4.8",
+        "experience": "8 лет",
+        "education": "Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.",
+        "status": "online",
+        "positions": 1,
+        "image": "@img/doctors/oleg-fomin.jpg",
+        "hasBtns": false
     },
     {
         "name": "Ирина Иванова",
-        "doctor_image": "@img/doctors/irina-ivanova.jpg"
+        "rating": "4.8",
+        "experience": "8 лет",
+        "education": "Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.",
+        "status": "offline",
+        "positions": 1,
+        "image": "@img/doctors/irina-ivanova.jpg",
+        "hasBtns": false
     },
     {
         "name": "Олег Фомин",
-        "doctor_image": "@img/doctors/oleg-fomin.jpg"
+        "rating": "4.8",
+        "experience": "8 лет",
+        "education": "Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.",
+        "status": "online",
+        "positions": 1,
+        "image": "@img/doctors/oleg-fomin.jpg",
+        "hasBtns": false
     }
 ]

@@ -6,10 +6,13 @@ h1,
 }
 h2,
 .h2 {
-	font-size: 2rem;
+	font-size: rem(24);
+	@media (min-width: $md4) {
+		letter-spacing: em(0.02, 2);
+		font-size: 2rem;
+	}
 	font-weight: 600;
 	line-height: 125%;
-	letter-spacing: em(0.02, 2);
 }
 h3,
 .h3 {

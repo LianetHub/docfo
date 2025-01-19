@@ -1,0 +1,19 @@
+[
+    {
+        "case_name": "Частые срыгивания у новорожденного. Частые срыгивания у новорожденного. ",
+        "price": "Бесплатно",
+        "answers": "10 Ответов",
+        "position": "Терапевт",
+        "status": "closed",
+        "person_name": "Елена Романчук",
+        "person_image": "@img/stub-user.svg",
+        "additional_doctors": "+3",
+        "date": "28.10.2024",
+        "doctors": [
+            "@img/doctors/doctor-1.jpg",
+            "@img/doctors/doctor-2.jpg",
+            "@img/doctors/doctor-3.jpg",
+            "@img/doctors/doctor-1.jpg"
+        ]
+    }
+]

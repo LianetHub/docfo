@@ -1,36 +1,60 @@
 .banner {
-	height: 12.5rem;
-	overflow: hidden;
 	& img {
 		width: 100%;
 	}
 }
+.mobile-banner {
+	@media (min-width: $md5) {
+		display: none;
+	}
+}
+
 .header {
 	background: $pink;
-	padding: rem(10) 0;
+	position: relative;
+	z-index: 10;
+	padding: rem(8) 0;
+	@media (min-width: $md4) {
+		padding: rem(10) 0;
+	}
 	// .header__container
 	&__container {
 		display: flex;
 		align-items: center;
+		gap: rem(10);
+		@media (min-width: $md4) {
+			gap: 1rem;
+		}
 	}
 	// .header__logo
 	&__logo {
 		margin-right: auto;
+		flex-shrink: 0;
+		& img {
+			height: rem(19);
+			@media (min-width: $md4) {
+				height: rem(32);
+			}
+			width: auto;
+		}
 	}
 	// .header__language
 	&__language {
-		font-size: 1rem;
-		font-weight: 500;
-		line-height: 135%;
-		gap: 0.38rem;
-		text-transform: uppercase;
-		display: flex;
-		align-items: center;
-		margin-right: 1rem;
-		&::before {
-			font-size: 1.5rem;
+		display: none;
+		@media (min-width: $md3) {
+			font-size: 1rem;
+			font-weight: 500;
+			line-height: 135%;
+			gap: 0.38rem;
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			margin-right: 1rem;
+			&::before {
+				font-size: 1.5rem;
+			}
+			transition: color 0.3s ease;
 		}
-		transition: color 0.3s ease;
 		@media (any-hover: hover) {
 			&:hover {
 				color: $accent;
@@ -39,27 +63,29 @@
 	}
 	// .header__search
 	&__search {
-		margin-right: 1rem;
-		display: flex;
-		width: 100%;
-		max-width: rem(48);
-		align-self: stretch;
-		transition: max-width 0.3s ease;
-		&.active {
-			max-width: rem(343);
-			.header__search-toggler {
-				display: none;
-			}
-			.header__search-field {
-				display: block;
+		display: none;
+		@media (min-width: $md4) {
+			display: flex;
+			width: 100%;
+			max-width: rem(40);
+			align-self: stretch;
+			transition: max-width 0.3s ease;
+			&.active {
+				max-width: rem(343);
+				.header__search-toggler {
+					display: none;
+				}
+				.header__search-field {
+					display: block;
+				}
 			}
 		}
+		@media (min-width: $md3) {
+			max-width: rem(48);
+		}
 	}
-
 	// .header__search-toggler
 	&__search-toggler {
-		width: rem(48);
-		height: rem(48);
 		border-radius: 0.75rem;
 		display: flex;
 		justify-content: center;
@@ -67,6 +93,12 @@
 		background: $white-43;
 		transition: background-color 0.3s ease;
 		font-size: 1.5rem;
+		width: rem(40);
+		height: rem(40);
+		@media (min-width: $md3) {
+			width: rem(48);
+			height: rem(48);
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: $white;
@@ -82,9 +114,12 @@
 
 		.form__control {
 			font-size: 1rem;
-			padding-left: rem(42);
 			width: 100%;
 			min-height: 100%;
+			padding: 0.5rem 1.12rem 0.5rem rem(42);
+			@media (min-width: $md3) {
+				padding: 0.69rem 1.12rem 0.69rem rem(42);
+			}
 		}
 	}
 	// .header__search-submit
@@ -98,11 +133,82 @@
 	// .header__actions
 	&__actions {
 		display: flex;
-		gap: 1rem;
+		align-items: center;
+		gap: rem(10);
+		@media (min-width: $md4) {
+			gap: 1rem;
+		}
 	}
 	// .header__btn
 	&__btn {
-		min-width: rem(183);
-		min-height: rem(48);
+		white-space: nowrap;
+		@media (min-width: $md3) {
+			min-height: rem(48);
+		}
+		@media (min-width: $md2) {
+			min-width: rem(183);
+		}
+		&.header__btn-sign {
+			@media (max-width: $md4) {
+				display: none;
+			}
+		}
+	}
+}
+
+.icon-menu {
+	flex-shrink: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	order: 1;
+	min-width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 0.625rem;
+	background: $white-43;
+	z-index: 11;
+	@media (min-width: $md3) {
+		display: none;
+	}
+	& span {
+		display: block;
+		padding: rem(2.5) rem(4);
+		transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s;
+		will-change: transform;
+		&::before {
+			content: "";
+			display: block;
+			height: rem(2);
+			border-radius: rem(2);
+			width: rem(20);
+			background: currentColor;
+			transition: transform 0.3s ease 0s;
+			will-change: transform;
+		}
+	}
+	.header.open-menu & {
+		& span {
+			transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+			&::before {
+				transition: transform 0.45s ease 0.35s, width 0.3s ease 0s;
+			}
+			&:first-child {
+				transform: translateY(rem(7));
+				&::before {
+					transform: rotate(-135deg);
+				}
+			}
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: translateY(rem(-7));
+				&::before {
+					transform: rotate(-225deg);
+				}
+			}
+		}
 	}
 }

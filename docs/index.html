@@ -10,12 +10,12 @@
 	<meta name="description" itemprop="description" content="Получить бесплатную онлайн консультацию врачей всех категорий на docfo.ru">
 	<meta name="keywords" itemprop="keywords" content="">
 	<!-- favicon -->
-	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-	<meta name="apple-mobile-web-app-title" content="CME" />
-	<link rel="manifest" href="/site.webmanifest" />
+	<!-- <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="CME" />
+    <link rel="manifest" href="/site.webmanifest" /> -->
 	<!-- favicon -->
 	<!-- Open Graph  -->
 	<meta property="og:type" content="business.business">
@@ -36,8 +36,8 @@
 	<meta property="twitter:url" content="https://docfo.ru">
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20250118214634">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250118214634">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20250119143618">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250119143618">
 </head>
 
 <body>
@@ -59,8 +59,13 @@
 					</div>
 				</form>
 				<div class="header__actions">
-					<a href="" class="header__btn btn btn-white">Вход</a>
+					<a href="" class="header__btn btn btn-white header__btn-sign">Вход</a>
 					<a href="" class="header__btn btn btn-primary">Задать вопрос</a>
+					<button type="button" aria-label="Открыть меню" class="menu__icon icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
 				</div>
 			</div>
 		</header>
@@ -107,567 +112,654 @@
 						</ul>
 					</div>
 				</nav>
-				<main class="main">
-					<section class="promo">
-						<div class="promo__banner">
-							<div class="promo__banner-offer">
-								<h1 class="promo__banner-title h2">Тысячи врачей готовы помочь вам онлайн!</h1>
-								<a href="" class="promo__banner-btn btn btn-white">Задать вопрос</a>
+				<div class="mobile-banner">
+					<img src="img/mobile-banner.png" alt="Баннер">
+				</div>
+				<div class="page__main">
+					<main class="main">
+						<section class="promo">
+							<div class="promo__banner">
+								<div class="promo__banner-offer">
+									<h1 class="promo__banner-title">Тысячи врачей готовы помочь вам онлайн!</h1>
+									<a href="" class="promo__banner-btn btn btn-white">Задать вопрос</a>
+								</div>
 							</div>
-						</div>
-						<ul class="promo__list">
-							<li class="promo__item">
-								<div class="promo__item-num h1">2 156</div>
-								<div class="promo__item-desc">врачей</div>
-							</li>
-							<li class="promo__item">
-								<div class="promo__item-num h1">2 000 000</div>
-								<div class="promo__item-desc">вопросов</div>
-							</li>
-							<li class="promo__item">
-								<div class="promo__item-num h1">24 057</div>
-								<div class="promo__item-desc">отзывов</div>
-							</li>
-							<li class="promo__item">
-								<div class="promo__item-num h1">245 000</div>
-								<div class="promo__item-desc">пользователей</div>
-							</li>
-						</ul>
-					</section>
-					<section class="cases">
-						<div class="cases__header">
-							<h2 class="cases__title">Популярные вопросы</h2>
-							<div class="cases__btns">
-								<button type="button" class="cases__btn btn btn-sm active">Платные</button>
-								<button type="button" class="cases__btn btn btn-sm">Бесплатные</button>
+							<ul class="promo__list">
+								<li class="promo__item">
+									<div class="promo__item-num">2 156</div>
+									<div class="promo__item-desc">врачей</div>
+								</li>
+								<li class="promo__item">
+									<div class="promo__item-num">2 000 000</div>
+									<div class="promo__item-desc">вопросов</div>
+								</li>
+								<li class="promo__item">
+									<div class="promo__item-num">24 057</div>
+									<div class="promo__item-desc">отзывов</div>
+								</li>
+								<li class="promo__item">
+									<div class="promo__item-num">245 000</div>
+									<div class="promo__item-desc">пользователей</div>
+								</li>
+							</ul>
+						</section>
+						<section class="cases">
+							<div class="cases__header">
+								<h2 class="cases__title">Популярные вопросы</h2>
+								<div class="cases__btns">
+									<button type="button" class="cases__btn btn btn-sm active">Платные</button>
+									<button type="button" class="cases__btn btn btn-sm">Бесплатные</button>
+								</div>
 							</div>
-						</div>
-						<div class="cases__body">
-							<div class="cases__block active">
-								<ul class="cases__list">
-									<li class="case">
-										<span class="case__header">
-											<div class="case__main">
-												<a href="" class="case__name">Расшифровка ЭКГ</a>
-												<div class="case__main-row">
-													<a href="" class="case__position">Терапевт</a>
-													<span class="case__status success">Вопрос закрыт</span>
+							<div class="cases__body">
+								<div class="cases__block active">
+									<ul class="cases__list">
+										<li class="case">
+											<span class="case__header">
+												<div class="case__row">
+													<a href="" class="case__name">Расшифровка ЭКГ</a>
+													<div class="case__side">
+														<div class="case__price">100₽</div>
+														<a href="" class="case__answers">10 Ответов</a>
+													</div>
 												</div>
-											</div>
-											<div class="case__side">
-												<div class="case__price">100₽</div>
-												<a href="" class="case__answers">10 Ответов</a>
-											</div>
-										</span>
-										<span class="case__body">
-											<span class="case__column">
-												<a href="" class="case__person">
-													<span class="case__person-thumb">
-														<img src="img/stub-user.svg" alt="Аватар пользователя">
-													</span>
-													<span class="case__person-name">Ирина Иванова</span>
-												</a>
-												<time datetime="2024-10-28" class="case__time">28.10.2024</time>
-											</span>
-											<span class="case__doctors">
-												<span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
-											</span>
-										</span>
-									</li>
-									<li class="case">
-										<span class="case__header">
-											<div class="case__main">
-												<a href="" class="case__name">Повышенные лейкоциты в моче, эпителий плоский большое количество, теперь боюсь что это такое?</a>
-												<div class="case__main-row">
-													<a href="" class="case__position">Клинический фармаколог</a>
-													<span class="case__status wait">Ожидает ответа</span>
+												<div class="case__main">
+													<div class="case__main-row">
+														<a href="" class="case__position">Терапевт</a>
+														<span class="case__status success">Вопрос закрыт</span>
+													</div>
+													<a href="" class="case__answers">10 Ответов</a>
 												</div>
-											</div>
-											<div class="case__side">
-												<div class="case__price">100₽</div>
-												<a href="" class="case__answers">10 Ответов</a>
-											</div>
-										</span>
-										<span class="case__body">
-											<span class="case__column">
-												<a href="" class="case__person">
-													<span class="case__person-thumb">
-														<img src="img/stub-user.svg" alt="Аватар пользователя">
-													</span>
-													<span class="case__person-name">Ирина Иванова</span>
-												</a>
-												<time datetime="2024-10-28" class="case__time">28.10.2024</time>
 											</span>
-											<span class="case__doctors">
-												<span class="case__doctor"><img src="img/stub-doctor-sm.svg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
-											</span>
-										</span>
-									</li>
-									<li class="case">
-										<span class="case__header">
-											<div class="case__main">
-												<a href="" class="case__name">Расшифровка ЭКГ</a>
-												<div class="case__main-row">
-													<a href="" class="case__position">Клинический фармаколог</a>
-													<span class="case__status open">Открыт</span>
-												</div>
-											</div>
-											<div class="case__side">
-												<div class="case__price">100₽</div>
-												<a href="" class="case__answers">10 Ответов</a>
-											</div>
-										</span>
-										<span class="case__body">
-											<span class="case__column">
-												<a href="" class="case__person">
-													<span class="case__person-thumb">
-														<img src="img/stub-user.svg" alt="Аватар пользователя">
-													</span>
-													<span class="case__person-name">Ирина Иванова</span>
-												</a>
-												<time datetime="2024-10-28" class="case__time">28.10.2024</time>
-											</span>
-											<span class="case__doctors">
-												<span class="case__more">
-													<span class="case__more-btn"> +3 </span>
-													<span class="case__more-body">
-														<span class="case__doctor"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
-													</span>
+											<span class="case__body">
+												<span class="case__column">
+													<a href="" class="case__person">
+														<span class="case__person-thumb">
+															<img src="img/stub-user.svg" alt="Аватар пользователя">
+														</span>
+														<span class="case__person-name">Ирина Иванова</span>
+													</a>
+													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
 												</span>
-												<span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
+												<span class="case__doctors">
+													<span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
+												</span>
 											</span>
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div class="cases__block"></div>
-						</div>
-					</section>
-					<section class="possibilities">
-						<h2 class="possibilities__title">Возможности сервиса</h2>
-						<ul class="possibilities__list">
-							<li class="possibilities__mode">
-								<div class="possibilities__mode-title">Бесплатный режим</div>
-								<div class="possibilities__mode-body">
-									<ul class="possibilities__mode-list">
-										<li>Постановка в очередь бесплатных вопросов</li>
-										<li>Без гарантии получения ответов</li>
-										<li>Среднее время публикации вопроса 1 день 16 часов</li>
-									</ul>
-									<p class="possibilities__mode-desc">Бесплатная консультация для тех, кто готов подождать. Возможность перевести консультацию в «платную» для получения дополнительных возможностей.</p>
-									<div class="possibilities__mode-price">0₽</div>
-									<a href="" class="possibilities__mode-btn btn btn-primary btn-fullwidth">Задать вопрос бесплатно</a>
-								</div>
-							</li>
-							<li class="possibilities__mode paid">
-								<div class="possibilities__mode-title">Платный режим</div>
-								<div class="possibilities__mode-body">
-									<ul class="possibilities__mode-list">
-										<li>Моментальная публикация</li>
-										<li>Возможность получить ответы нескольких врачей</li>
-										<li>Первые ответы в течение 1 часа</li>
-										<li>Возможность загрузить сканы или фотографии анализов</li>
-									</ul>
-									<p class="possibilities__mode-desc">Вы можете назначить вознаграждение больше. Чем выше вознаграждение — тем больше врачей ответит на Ваш вопрос.</p>
-									<div class="possibilities__mode-price">от 400₽</div>
-									<a href="" class="possibilities__mode-btn btn btn-pink btn-fullwidth">Задать платный вопрос</a>
-								</div>
-							</li>
-							<li class="possibilities__mode individual">
-								<div class="possibilities__mode-title">Индивидуальная консультация</div>
-								<div class="possibilities__mode-body">
-									<ul class="possibilities__mode-list">
-										<li>Углубленная консультация одного врача по Вашей проблеме</li>
-										<li>Возможность консультации с узкопрофильным специалистом</li>
-										<li>Индивидуальный подход</li>
-										<li>Приватный чат-диалог</li>
-									</ul>
-									<p class="possibilities__mode-desc">Каждый врач назначает стоимость своей консультации индивидуально. Для консультации перейдите в список врачей и выберите соответствующую специализацию.</p>
-									<div class="possibilities__mode-price">от 500₽</div>
-									<a href="" class="possibilities__mode-btn btn btn-primary btn-fullwidth">Выбрать врача</a>
-								</div>
-							</li>
-						</ul>
-					</section>
-					<section class="doctors">
-						<h2 class="doctors__title">Рекомендуемые врачи</h2>
-						<ul class="doctors__list">
-							<li class="doctor">
-								<div class="doctor__side">
-									<a href="" class="doctor__image">
-										<img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
-									</a>
-									<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
-									<span class="doctor__status online">Сейчас на сайте</span>
-								</div>
-								<div class="doctor__body">
-									<div class="doctor__header">
-										<a href="" class="doctor__name">Олег Фомин</a>
-										<div class="doctor__reviews">
-											<a href="" class="doctor__reviews-link">Смотреть отзывы</a>
-											<span class="rate-label icon-star">4.8</span>
-										</div>
-									</div>
-									<ul class="doctor__info">
-										<li class="doctor__info-item">
-											<span class="doctor__info-property">Опыт:</span>
-											<span class="doctor__info-value">8 лет</span>
 										</li>
-										<li class="doctor__info-item">
-											<span class="doctor__info-property">Образование:</span>
-											<span class="doctor__info-value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
+										<li class="case">
+											<span class="case__header">
+												<div class="case__row">
+													<a href="" class="case__name">Повышенные лейкоциты в моче, эпителий плоский большое количество, теперь боюсь что это такое?</a>
+													<div class="case__side">
+														<div class="case__price">100₽</div>
+														<a href="" class="case__answers">10 Ответов</a>
+													</div>
+												</div>
+												<div class="case__main">
+													<div class="case__main-row">
+														<a href="" class="case__position">Клинический фармаколог</a>
+														<span class="case__status wait">Ожидает ответа</span>
+													</div>
+													<a href="" class="case__answers">10 Ответов</a>
+												</div>
+											</span>
+											<span class="case__body">
+												<span class="case__column">
+													<a href="" class="case__person">
+														<span class="case__person-thumb">
+															<img src="img/stub-user.svg" alt="Аватар пользователя">
+														</span>
+														<span class="case__person-name">Ирина Иванова</span>
+													</a>
+													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
+												</span>
+												<span class="case__doctors">
+													<span class="case__doctor"><img src="img/stub-doctor-sm.svg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
+												</span>
+											</span>
+										</li>
+										<li class="case">
+											<span class="case__header">
+												<div class="case__row">
+													<a href="" class="case__name">Расшифровка ЭКГ</a>
+													<div class="case__side">
+														<div class="case__price">100₽</div>
+														<a href="" class="case__answers">10 Ответов</a>
+													</div>
+												</div>
+												<div class="case__main">
+													<div class="case__main-row">
+														<a href="" class="case__position">Клинический фармаколог</a>
+														<span class="case__status open">Открыт</span>
+													</div>
+													<a href="" class="case__answers">10 Ответов</a>
+												</div>
+											</span>
+											<span class="case__body">
+												<span class="case__column">
+													<a href="" class="case__person">
+														<span class="case__person-thumb">
+															<img src="img/stub-user.svg" alt="Аватар пользователя">
+														</span>
+														<span class="case__person-name">Ирина Иванова</span>
+													</a>
+													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
+												</span>
+												<span class="case__doctors">
+													<span class="case__more">
+														<span class="case__more-btn"> +3 </span>
+														<span class="case__more-body">
+															<span class="case__doctor"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
+														</span>
+													</span>
+													<span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
+												</span>
+											</span>
 										</li>
 									</ul>
-									<div class="doctor__position"><a href="">Диетолог</a>, <a href="">Терапевт</a></div>
-									<div class="doctor__bottom">
-										<a href="" class="doctor__btn btn btn-fullwidth btn-primary">Задать вопрос</a>
-										<a href="" class="doctor__btn btn btn-fullwidth btn-pink">Онлайн консультация 100₽</a>
-									</div>
 								</div>
-							</li>
-							<li class="doctor">
-								<div class="doctor__side">
-									<a href="" class="doctor__image">
-										<img src="img/stub-doctor.svg" class="cover-image" alt="Фото доктора">
-									</a>
-									<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
-									<span class="doctor__status">Оффлайн</span>
-								</div>
-								<div class="doctor__body">
-									<div class="doctor__header">
-										<a href="" class="doctor__name">Александр Твердохлебенко</a>
-										<div class="doctor__reviews">
-											<a href="" class="doctor__reviews-link">Смотреть отзывы</a>
-											<span class="rate-label icon-star">4.8</span>
-										</div>
-									</div>
-									<ul class="doctor__info">
-										<li class="doctor__info-item">
-											<span class="doctor__info-property">Опыт:</span>
-											<span class="doctor__info-value">8 лет</span>
-										</li>
-										<li class="doctor__info-item">
-											<span class="doctor__info-property">Образование:</span>
-											<span class="doctor__info-value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
-										</li>
-									</ul>
-									<div class="doctor__position"><a href="">Диетолог</a>, <a href="">Терапевт</a></div>
-									<div class="doctor__bottom">
-										<a href="" class="doctor__btn btn btn-fullwidth btn-primary">Задать вопрос</a>
-										<a href="" class="doctor__btn btn btn-fullwidth btn-pink">Онлайн консультация 100₽</a>
-									</div>
-								</div>
-							</li>
-							<li class="doctor">
-								<div class="doctor__side">
-									<a href="" class="doctor__image">
-										<img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
-									</a>
-									<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
-									<span class="doctor__status online">Сейчас на сайте</span>
-								</div>
-								<div class="doctor__body">
-									<div class="doctor__header">
-										<a href="" class="doctor__name">Олег Фомин</a>
-										<div class="doctor__reviews">
-											<a href="" class="doctor__reviews-link">Смотреть отзывы</a>
-											<span class="rate-label icon-star">4.8</span>
-										</div>
-									</div>
-									<ul class="doctor__info">
-										<li class="doctor__info-item">
-											<span class="doctor__info-property">Опыт:</span>
-											<span class="doctor__info-value">8 лет</span>
-										</li>
-										<li class="doctor__info-item">
-											<span class="doctor__info-property">Образование:</span>
-											<span class="doctor__info-value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
+								<div class="cases__block">
+									<ul class="cases__list">
+										<li class="case">
+											<span class="case__header">
+												<div class="case__row">
+													<a href="" class="case__name">Частые срыгивания у новорожденного. Частые срыгивания у новорожденного. </a>
+													<div class="case__side">
+														<div class="case__price">Бесплатно</div>
+														<a href="" class="case__answers">10 Ответов</a>
+													</div>
+												</div>
+												<div class="case__main">
+													<div class="case__main-row">
+														<a href="" class="case__position">Терапевт</a>
+														<span class="case__status success">Вопрос закрыт</span>
+													</div>
+													<a href="" class="case__answers">10 Ответов</a>
+												</div>
+											</span>
+											<span class="case__body">
+												<span class="case__column">
+													<a href="" class="case__person">
+														<span class="case__person-thumb">
+															<img src="img/stub-user.svg" alt="Аватар пользователя">
+														</span>
+														<span class="case__person-name">Елена Романчук</span>
+													</a>
+													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
+												</span>
+												<span class="case__doctors">
+													<span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора"></span> <span class="case__doctor"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора"></span>
+												</span>
+											</span>
 										</li>
 									</ul>
-									<div class="doctor__position"><a href="">Диетолог</a>, <a href="">Терапевт</a></div>
-									<div class="doctor__bottom">
-										<a href="" class="doctor__btn btn btn-fullwidth btn-primary">Задать вопрос</a>
-										<a href="" class="doctor__btn btn btn-fullwidth btn-pink">Онлайн консультация 100₽</a>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</section>
-					<section class="reviews">
-						<div class="reviews__header">
-							<div class="reviews__main">
-								<h2 class="reviews__title">Отзывы наших пациентов</h2>
-								<div class="reviews__total">
-									<div class="reviews__total-value">4.9</div>
-									<div class="review__stars">
-										<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
-									</div>
-									<span class="reviews__total-quantity">250+ отзывов</span>
 								</div>
 							</div>
-							<div class="reviews__controls">
-								<button type="button" class="reviews__prev swiper-button-prev"></button>
-								<button type="button" class="reviews__next swiper-button-next"></button>
+						</section>
+						<section class="possibilities">
+							<h2 class="possibilities__title">Возможности сервиса</h2>
+							<ul class="possibilities__list">
+								<li class="possibilities__mode">
+									<div class="possibilities__mode-title">Бесплатный режим</div>
+									<div class="possibilities__mode-body">
+										<ul class="possibilities__mode-list">
+											<li>Постановка в очередь бесплатных вопросов</li>
+											<li>Без гарантии получения ответов</li>
+											<li>Среднее время публикации вопроса 1 день 16 часов</li>
+										</ul>
+										<p class="possibilities__mode-desc">Бесплатная консультация для тех, кто готов подождать. Возможность перевести консультацию в «платную» для получения дополнительных возможностей.</p>
+										<div class="possibilities__mode-price">0₽</div>
+										<a href="" class="possibilities__mode-btn btn btn-primary btn-fullwidth">Задать вопрос бесплатно</a>
+									</div>
+								</li>
+								<li class="possibilities__mode paid">
+									<div class="possibilities__mode-title">Платный режим</div>
+									<div class="possibilities__mode-body">
+										<ul class="possibilities__mode-list">
+											<li>Моментальная публикация</li>
+											<li>Возможность получить ответы нескольких врачей</li>
+											<li>Первые ответы в течение 1 часа</li>
+											<li>Возможность загрузить сканы или фотографии анализов</li>
+										</ul>
+										<p class="possibilities__mode-desc">Вы можете назначить вознаграждение больше. Чем выше вознаграждение — тем больше врачей ответит на Ваш вопрос.</p>
+										<div class="possibilities__mode-price">от 400₽</div>
+										<a href="" class="possibilities__mode-btn btn btn-pink btn-fullwidth">Задать платный вопрос</a>
+									</div>
+								</li>
+								<li class="possibilities__mode individual">
+									<div class="possibilities__mode-title">Индивидуальная консультация</div>
+									<div class="possibilities__mode-body">
+										<ul class="possibilities__mode-list">
+											<li>Углубленная консультация одного врача по Вашей проблеме</li>
+											<li>Возможность консультации с узкопрофильным специалистом</li>
+											<li>Индивидуальный подход</li>
+											<li>Приватный чат-диалог</li>
+										</ul>
+										<p class="possibilities__mode-desc">Каждый врач назначает стоимость своей консультации индивидуально. Для консультации перейдите в список врачей и выберите соответствующую специализацию.</p>
+										<div class="possibilities__mode-price">от 500₽</div>
+										<a href="" class="possibilities__mode-btn btn btn-primary btn-fullwidth">Выбрать врача</a>
+									</div>
+								</li>
+							</ul>
+						</section>
+						<section class="doctors">
+							<h2 class="doctors__title">Рекомендуемые врачи</h2>
+							<ul class="doctors__list">
+								<li class="doctor">
+									<div class="doctor__side">
+										<a href="" class="doctor__image">
+											<img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+										</a>
+										<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
+										<span class="doctor__status online"><span>Сейчас на сайте</span></span>
+									</div>
+									<div class="doctor__body">
+										<div class="doctor__main">
+											<div class="doctor__header">
+												<a href="" class="doctor__name">Олег Фомин</a>
+												<div class="doctor__reviews">
+													<a href="" class="doctor__reviews-link">Смотреть отзывы</a>
+													<span class="rate-label icon-star">4.8</span>
+												</div>
+											</div>
+											<div class="doctor__row doctor__experience">
+												<span class="doctor__property">Опыт</span>
+												<span class="doctor__value">8 лет</span>
+											</div>
+											<div class="doctor__position">
+												<a href="">Диетолог</a>, <a href="">Терапевт</a>
+											</div>
+										</div>
+										<div class="doctor__row doctor__education">
+											<span class="doctor__property">Образование</span>
+											<span class="doctor__value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
+										</div>
+										<div class="doctor__bottom">
+											<a href="" class="doctor__btn btn btn-fullwidth btn-primary">Задать вопрос</a>
+											<a href="" class="doctor__btn btn btn-fullwidth btn-pink">Онлайн консультация 100₽</a>
+										</div>
+									</div>
+								</li>
+								<li class="doctor">
+									<div class="doctor__side">
+										<a href="" class="doctor__image">
+											<img src="img/stub-doctor.svg" class="cover-image" alt="Фото доктора">
+										</a>
+										<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
+										<span class="doctor__status"><span>Оффлайн</span></span>
+									</div>
+									<div class="doctor__body">
+										<div class="doctor__main">
+											<div class="doctor__header">
+												<a href="" class="doctor__name">Александр Твердохлебенко</a>
+												<div class="doctor__reviews">
+													<a href="" class="doctor__reviews-link">Смотреть отзывы</a>
+													<span class="rate-label icon-star">4.8</span>
+												</div>
+											</div>
+											<div class="doctor__row doctor__experience">
+												<span class="doctor__property">Опыт</span>
+												<span class="doctor__value">8 лет</span>
+											</div>
+											<div class="doctor__position">
+												<a href="">Диетолог</a>, <a href="">Терапевт</a>
+											</div>
+										</div>
+										<div class="doctor__row doctor__education">
+											<span class="doctor__property">Образование</span>
+											<span class="doctor__value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
+										</div>
+										<div class="doctor__bottom">
+											<a href="" class="doctor__btn btn btn-fullwidth btn-primary">Задать вопрос</a>
+											<a href="" class="doctor__btn btn btn-fullwidth btn-pink">Онлайн консультация 100₽</a>
+										</div>
+									</div>
+								</li>
+								<li class="doctor">
+									<div class="doctor__side">
+										<a href="" class="doctor__image">
+											<img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+										</a>
+										<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
+										<span class="doctor__status online"><span>Сейчас на сайте</span></span>
+									</div>
+									<div class="doctor__body">
+										<div class="doctor__main">
+											<div class="doctor__header">
+												<a href="" class="doctor__name">Олег Фомин</a>
+												<div class="doctor__reviews">
+													<a href="" class="doctor__reviews-link">Смотреть отзывы</a>
+													<span class="rate-label icon-star">4.8</span>
+												</div>
+											</div>
+											<div class="doctor__row doctor__experience">
+												<span class="doctor__property">Опыт</span>
+												<span class="doctor__value">8 лет</span>
+											</div>
+											<div class="doctor__position">
+												<a href="">Диетолог</a>, <a href="">Терапевт</a>
+											</div>
+										</div>
+										<div class="doctor__row doctor__education">
+											<span class="doctor__property">Образование</span>
+											<span class="doctor__value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
+										</div>
+										<div class="doctor__bottom">
+											<a href="" class="doctor__btn btn btn-fullwidth btn-primary">Задать вопрос</a>
+											<a href="" class="doctor__btn btn btn-fullwidth btn-pink">Онлайн консультация 100₽</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</section>
+						<section class="reviews">
+							<div class="reviews__header">
+								<div class="reviews__main">
+									<h2 class="reviews__title">Отзывы наших пациентов</h2>
+									<div class="reviews__total">
+										<div class="reviews__total-value">4.9</div>
+										<div class="review__stars">
+											<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+										</div>
+										<span class="reviews__total-quantity">250+ отзывов</span>
+									</div>
+								</div>
+								<div class="reviews__controls">
+									<button type="button" class="reviews__prev swiper-button-prev"></button>
+									<button type="button" class="reviews__next swiper-button-next"></button>
+								</div>
 							</div>
+							<div class="reviews__slider swiper">
+								<div class="swiper-wrapper">
+									<div class="review swiper-slide">
+										<div class="review__stars">
+											<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+										</div>
+										<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
+										<div class="review__author">
+											<div class="review__author-thumb">
+												<img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+											</div>
+											<div class="review__author-main">
+												<div class="review__author-name">Имя Фамилия</div>
+												<div class="review__author-type">Клиент</div>
+											</div>
+										</div>
+									</div>
+									<div class="review swiper-slide">
+										<div class="review__stars">
+											<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+										</div>
+										<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
+										<div class="review__author">
+											<div class="review__author-thumb">
+												<img src="img/stub-user.svg" class="cover-image" alt="Фото клиента">
+											</div>
+											<div class="review__author-main">
+												<div class="review__author-name">Ирина Иванова</div>
+												<div class="review__author-type">Клиент</div>
+											</div>
+										</div>
+									</div>
+									<div class="review swiper-slide">
+										<div class="review__stars">
+											<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+										</div>
+										<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
+										<div class="review__author">
+											<div class="review__author-thumb">
+												<img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+											</div>
+											<div class="review__author-main">
+												<div class="review__author-name">Имя Фамилия</div>
+												<div class="review__author-type">Клиент</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="blog">
+							<div class="blog__header">
+								<h2 class="blog__title">Блог</h2>
+								<div class="blog__controls">
+									<button type="button" class="blog__prev swiper-button-prev"></button>
+									<button type="button" class="blog__next swiper-button-next"></button>
+								</div>
+							</div>
+							<div class="blog__slider swiper">
+								<div class="swiper-wrapper">
+									<div class="blog__slide swiper-slide">
+										<a href="" class="blog__slide-image">
+											<img src="img/blog/01.jpg" class="cover-image" alt="Постер статьи">
+										</a>
+										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
+										<div class="blog__slide-footer">
+											<div class="blog__slide-company">
+												<img src="img/media/logo-runway.svg" alt="Логотип компании">
+											</div>
+											<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
+										</div>
+									</div>
+									<div class="blog__slide swiper-slide">
+										<a href="" class="blog__slide-image">
+											<img src="img/blog/02.jpg" class="cover-image" alt="Постер статьи">
+										</a>
+										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
+										<div class="blog__slide-footer">
+											<div class="blog__slide-company">
+												<img src="img/media/logo-runway.svg" alt="Логотип компании">
+											</div>
+											<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
+										</div>
+									</div>
+									<div class="blog__slide swiper-slide">
+										<a href="" class="blog__slide-image">
+											<img src="img/blog/03.jpg" class="cover-image" alt="Постер статьи">
+										</a>
+										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
+										<div class="blog__slide-footer">
+											<div class="blog__slide-company">
+												<img src="img/media/logo-runway.svg" alt="Логотип компании">
+											</div>
+											<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
+										</div>
+									</div>
+									<div class="blog__slide swiper-slide">
+										<a href="" class="blog__slide-image">
+											<img src="img/blog/01.jpg" class="cover-image" alt="Постер статьи">
+										</a>
+										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
+										<div class="blog__slide-footer">
+											<div class="blog__slide-company">
+												<img src="img/media/logo-runway.svg" alt="Логотип компании">
+											</div>
+											<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
+										</div>
+									</div>
+									<div class="blog__slide swiper-slide">
+										<a href="" class="blog__slide-image">
+											<img src="img/blog/02.jpg" class="cover-image" alt="Постер статьи">
+										</a>
+										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
+										<div class="blog__slide-footer">
+											<div class="blog__slide-company">
+												<img src="img/media/logo-runway.svg" alt="Логотип компании">
+											</div>
+											<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
+										</div>
+									</div>
+									<div class="blog__slide swiper-slide">
+										<a href="" class="blog__slide-image">
+											<img src="img/blog/03.jpg" class="cover-image" alt="Постер статьи">
+										</a>
+										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
+										<div class="blog__slide-footer">
+											<div class="blog__slide-company">
+												<img src="img/media/logo-runway.svg" alt="Логотип компании">
+											</div>
+											<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="media">
+							<h2 class="media__title">Сми о нас</h2>
+							<div class="media__items">
+								<div class="media__item">
+									<img src="img/media/logo-runway.svg" alt="Логотип компании">
+								</div>
+								<div class="media__item">
+									<img src="img/media/harvard.svg" alt="Логотип компании">
+								</div>
+								<div class="media__item">
+									<img src="img/media/world-health-organization.svg" alt="Логотип компании">
+								</div>
+								<div class="media__item">
+									<img src="img/media/logo-runway.svg" alt="Логотип компании">
+								</div>
+								<div class="media__item">
+									<img src="img/media/harvard.svg" alt="Логотип компании">
+								</div>
+								<div class="media__item">
+									<img src="img/media/world-health-organization.svg" alt="Логотип компании">
+								</div>
+							</div>
+						</section>
+						<section class="faq">
+							<h2 class="faq__title">Часто задаваемые вопросы</h2>
+							<ul class="faq__list">
+								<li class="faq__item">
+									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
+									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
+								</li>
+								<li class="faq__item">
+									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
+									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
+								</li>
+								<li class="faq__item">
+									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
+									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
+								</li>
+								<li class="faq__item">
+									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
+									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
+								</li>
+								<li class="faq__item">
+									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
+									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
+								</li>
+							</ul>
+						</section>
+					</main>
+					<aside class="sidebar">
+						<div class="sidebar__block">
+							<h2 class="sidebar__title">Врачи онлайн</h2>
+							<ul class="sidebar__doctors">
+								<li class="doctor">
+									<div class="doctor__side">
+										<a href="" class="doctor__image">
+											<img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+										</a>
+										<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
+										<span class="doctor__status online"><span>Сейчас на сайте</span></span>
+									</div>
+									<div class="doctor__body">
+										<div class="doctor__main">
+											<div class="doctor__header">
+												<a href="" class="doctor__name">Олег Фомин</a>
+												<div class="doctor__reviews">
+													<a href="" class="doctor__reviews-link">Смотреть отзывы</a>
+													<span class="rate-label icon-star">4.8</span>
+												</div>
+											</div>
+											<div class="doctor__row doctor__experience">
+												<span class="doctor__property">Опыт</span>
+												<span class="doctor__value">8 лет</span>
+											</div>
+											<div class="doctor__position">
+												<a href="">Диетолог</a>
+											</div>
+										</div>
+										<div class="doctor__row doctor__education">
+											<span class="doctor__property">Образование</span>
+											<span class="doctor__value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
+										</div>
+									</div>
+								</li>
+								<li class="doctor">
+									<div class="doctor__side">
+										<a href="" class="doctor__image">
+											<img src="img/doctors/irina-ivanova.jpg" class="cover-image" alt="Фото доктора">
+										</a>
+										<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
+										<span class="doctor__status"><span>Оффлайн</span></span>
+									</div>
+									<div class="doctor__body">
+										<div class="doctor__main">
+											<div class="doctor__header">
+												<a href="" class="doctor__name">Ирина Иванова</a>
+												<div class="doctor__reviews">
+													<a href="" class="doctor__reviews-link">Смотреть отзывы</a>
+													<span class="rate-label icon-star">4.8</span>
+												</div>
+											</div>
+											<div class="doctor__row doctor__experience">
+												<span class="doctor__property">Опыт</span>
+												<span class="doctor__value">8 лет</span>
+											</div>
+											<div class="doctor__position">
+												<a href="">Диетолог</a>
+											</div>
+										</div>
+										<div class="doctor__row doctor__education">
+											<span class="doctor__property">Образование</span>
+											<span class="doctor__value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
+										</div>
+									</div>
+								</li>
+								<li class="doctor">
+									<div class="doctor__side">
+										<a href="" class="doctor__image">
+											<img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+										</a>
+										<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
+										<span class="doctor__status online"><span>Сейчас на сайте</span></span>
+									</div>
+									<div class="doctor__body">
+										<div class="doctor__main">
+											<div class="doctor__header">
+												<a href="" class="doctor__name">Олег Фомин</a>
+												<div class="doctor__reviews">
+													<a href="" class="doctor__reviews-link">Смотреть отзывы</a>
+													<span class="rate-label icon-star">4.8</span>
+												</div>
+											</div>
+											<div class="doctor__row doctor__experience">
+												<span class="doctor__property">Опыт</span>
+												<span class="doctor__value">8 лет</span>
+											</div>
+											<div class="doctor__position">
+												<a href="">Диетолог</a>
+											</div>
+										</div>
+										<div class="doctor__row doctor__education">
+											<span class="doctor__property">Образование</span>
+											<span class="doctor__value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
+										</div>
+									</div>
+								</li>
+							</ul>
 						</div>
-						<div class="reviews__slider swiper">
-							<div class="swiper-wrapper">
-								<div class="review swiper-slide">
-									<div class="review__stars">
-										<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
-									</div>
-									<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
-									<div class="review__author">
-										<div class="review__author-thumb">
-											<img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
-										</div>
-										<div class="review__author-main">
-											<div class="review__author-name">Имя Фамилия</div>
-											<div class="review__author-type">Клиент</div>
-										</div>
-									</div>
-								</div>
-								<div class="review swiper-slide">
-									<div class="review__stars">
-										<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
-									</div>
-									<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
-									<div class="review__author">
-										<div class="review__author-thumb">
-											<img src="img/stub-user.svg" class="cover-image" alt="Фото клиента">
-										</div>
-										<div class="review__author-main">
-											<div class="review__author-name">Ирина Иванова</div>
-											<div class="review__author-type">Клиент</div>
-										</div>
-									</div>
-								</div>
-								<div class="review swiper-slide">
-									<div class="review__stars">
-										<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
-									</div>
-									<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
-									<div class="review__author">
-										<div class="review__author-thumb">
-											<img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
-										</div>
-										<div class="review__author-main">
-											<div class="review__author-name">Имя Фамилия</div>
-											<div class="review__author-type">Клиент</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section class="blog">
-						<div class="blog__header">
-							<h2 class="blog__title">Блог</h2>
-							<div class="blog__controls">
-								<button type="button" class="blog__prev swiper-button-prev"></button>
-								<button type="button" class="blog__next swiper-button-next"></button>
-							</div>
-						</div>
-						<div class="blog__slider swiper">
-							<div class="swiper-wrapper">
-								<div class="blog__slide swiper-slide">
-									<a href="" class="blog__slide-image">
-										<img src="img/blog/01.jpg" class="cover-image" alt="Постер статьи">
-									</a>
-									<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-									<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-									<div class="blog__slide-footer">
-										<div class="blog__slide-company">
-											<img src="img/media/logo-runway.svg" alt="Логотип компании">
-										</div>
-										<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
-									</div>
-								</div>
-								<div class="blog__slide swiper-slide">
-									<a href="" class="blog__slide-image">
-										<img src="img/blog/02.jpg" class="cover-image" alt="Постер статьи">
-									</a>
-									<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-									<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-									<div class="blog__slide-footer">
-										<div class="blog__slide-company">
-											<img src="img/media/logo-runway.svg" alt="Логотип компании">
-										</div>
-										<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
-									</div>
-								</div>
-								<div class="blog__slide swiper-slide">
-									<a href="" class="blog__slide-image">
-										<img src="img/blog/03.jpg" class="cover-image" alt="Постер статьи">
-									</a>
-									<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-									<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-									<div class="blog__slide-footer">
-										<div class="blog__slide-company">
-											<img src="img/media/logo-runway.svg" alt="Логотип компании">
-										</div>
-										<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
-									</div>
-								</div>
-								<div class="blog__slide swiper-slide">
-									<a href="" class="blog__slide-image">
-										<img src="img/blog/01.jpg" class="cover-image" alt="Постер статьи">
-									</a>
-									<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-									<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-									<div class="blog__slide-footer">
-										<div class="blog__slide-company">
-											<img src="img/media/logo-runway.svg" alt="Логотип компании">
-										</div>
-										<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
-									</div>
-								</div>
-								<div class="blog__slide swiper-slide">
-									<a href="" class="blog__slide-image">
-										<img src="img/blog/02.jpg" class="cover-image" alt="Постер статьи">
-									</a>
-									<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-									<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-									<div class="blog__slide-footer">
-										<div class="blog__slide-company">
-											<img src="img/media/logo-runway.svg" alt="Логотип компании">
-										</div>
-										<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
-									</div>
-								</div>
-								<div class="blog__slide swiper-slide">
-									<a href="" class="blog__slide-image">
-										<img src="img/blog/03.jpg" class="cover-image" alt="Постер статьи">
-									</a>
-									<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-									<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-									<div class="blog__slide-footer">
-										<div class="blog__slide-company">
-											<img src="img/media/logo-runway.svg" alt="Логотип компании">
-										</div>
-										<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section class="media">
-						<h2 class="media__title">Сми о нас</h2>
-						<div class="media__items">
-							<div class="media__item">
-								<img src="img/media/logo-runway.svg" alt="Логотип компании">
-							</div>
-							<div class="media__item">
-								<img src="img/media/harvard.svg" alt="Логотип компании">
-							</div>
-							<div class="media__item">
-								<img src="img/media/world-health-organization.svg" alt="Логотип компании">
-							</div>
-							<div class="media__item">
-								<img src="img/media/logo-runway.svg" alt="Логотип компании">
-							</div>
-							<div class="media__item">
-								<img src="img/media/harvard.svg" alt="Логотип компании">
-							</div>
-							<div class="media__item">
-								<img src="img/media/world-health-organization.svg" alt="Логотип компании">
-							</div>
-						</div>
-					</section>
-					<section class="faq">
-						<h2 class="faq__title">Часто задаваемые вопросы</h2>
-						<ul class="faq__list">
-							<li class="faq__item">
-								<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-								<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. <br> После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
-							</li>
-							<li class="faq__item">
-								<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-								<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. <br> После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
-							</li>
-							<li class="faq__item">
-								<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-								<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. <br> После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
-							</li>
-							<li class="faq__item">
-								<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-								<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. <br> После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
-							</li>
-							<li class="faq__item">
-								<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-								<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. <br> После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
-							</li>
-						</ul>
-					</section>
-				</main>
-				<aside class="sidebar">
-					<div class="sidebar__block">
-						<div class="sidebar__title">Врачи онлайн</div>
-						<div class="sidebar__doctors">
-							<a href="" class="doctor-card">
-								<span class="doctor-card__header">
-									<span class="doctor-card__image">
-										<img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
-									</span>
-									<span class="doctor-card__status online"></span>
-									<span class="doctor-card__rate rate-label icon-star">4.8</span>
-								</span>
-								<span class="doctor-card__name">Олег Фомин</span>
-								<span class="doctor-card__row">
-									<span class="doctor-card__experience">
-										<span class="doctor-card__experience-title">Опыт:</span>
-										<span class="doctor-card__experience-value">8 лет</span>
-									</span>
-									<span class="doctor-card__education">
-										<span class="doctor-card__education-btn"> Образование </span>
-										<span class="doctor-card__education-tooltip"> Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии. </span>
-									</span>
-								</span>
-								<span class="doctor-card__direction">Диетолог</span>
-							</a><a href="" class="doctor-card">
-								<span class="doctor-card__header">
-									<span class="doctor-card__image">
-										<img src="img/doctors/irina-ivanova.jpg" class="cover-image" alt="Фото доктора">
-									</span>
-									<span class="doctor-card__status online"></span>
-									<span class="doctor-card__rate rate-label icon-star">4.8</span>
-								</span>
-								<span class="doctor-card__name">Ирина Иванова</span>
-								<span class="doctor-card__row">
-									<span class="doctor-card__experience">
-										<span class="doctor-card__experience-title">Опыт:</span>
-										<span class="doctor-card__experience-value">8 лет</span>
-									</span>
-									<span class="doctor-card__education">
-										<span class="doctor-card__education-btn"> Образование </span>
-										<span class="doctor-card__education-tooltip"> Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии. </span>
-									</span>
-								</span>
-								<span class="doctor-card__direction">Диетолог</span>
-							</a><a href="" class="doctor-card">
-								<span class="doctor-card__header">
-									<span class="doctor-card__image">
-										<img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
-									</span>
-									<span class="doctor-card__status online"></span>
-									<span class="doctor-card__rate rate-label icon-star">4.8</span>
-								</span>
-								<span class="doctor-card__name">Олег Фомин</span>
-								<span class="doctor-card__row">
-									<span class="doctor-card__experience">
-										<span class="doctor-card__experience-title">Опыт:</span>
-										<span class="doctor-card__experience-value">8 лет</span>
-									</span>
-									<span class="doctor-card__education">
-										<span class="doctor-card__education-btn"> Образование </span>
-										<span class="doctor-card__education-tooltip"> Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии. </span>
-									</span>
-								</span>
-								<span class="doctor-card__direction">Диетолог</span>
-							</a>
-						</div>
-					</div>
-				</aside>
+					</aside>
+				</div>
 			</div>
 		</div>
 		<footer class="footer">
@@ -719,13 +811,8 @@
 					<div class="footer__copy"> 2025 @ All right reserved </div>
 				</div>
 			</div>
-		</footer> <!-- plugnis -->
-		<script src="js/libs/jquery-3.7.1.min.js?_v=20250118214634"></script>
-		<script src="js/libs/swiper-bundle.min.js?_v=20250118214634"></script>
-		<script src="js/libs/fancybox.umd.js?_v=20250118214634"></script>
-		<script src="js/libs/intlTelInput.min.js?_v=20250118214634"></script>
-		<!-- plugnis -->
-		<script src="js/app.min.js?_v=20250118214634"></script>
+		</footer>
+		<script src="js/app.min.js?_v=20250119143618"></script>
 	</div>
 </body>
 

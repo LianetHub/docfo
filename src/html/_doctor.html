@@ -4,31 +4,41 @@
             <img src="@@image" class="cover-image" alt="Фото доктора">
         </a>
         <button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
-        @@if(status==='online'){<span class="doctor__status online">Сейчас на сайте</span>}
-        @@if(status==='offline'){<span class="doctor__status">Оффлайн</span>}
+        @@if(status==='online'){<span class="doctor__status online"><span>Сейчас на сайте</span></span>}
+        @@if(status==='offline'){<span class="doctor__status"><span>Оффлайн</span></span>}
     </div>
     <div class="doctor__body">
-        <div class="doctor__header">
-            <a href="" class="doctor__name">@@name</a>
-            <div class="doctor__reviews">
-                <a href="" class="doctor__reviews-link">Смотреть отзывы</a>
-                <span class="rate-label icon-star">4.8</span>
+        <div class="doctor__main">
+            <div class="doctor__header">
+                <a href="" class="doctor__name">@@name</a>
+                <div class="doctor__reviews">
+                    <a href="" class="doctor__reviews-link">Смотреть отзывы</a>
+                    <span class="rate-label icon-star">4.8</span>
+                </div>
+            </div>
+            <div class="doctor__row doctor__experience">
+                <span class="doctor__property">Опыт</span>
+                <span class="doctor__value">8 лет</span>
+            </div>
+            <div class="doctor__position">
+                @@if(positions==2){
+                <a href="">Диетолог</a>,
+                <a href="">Терапевт</a>
+                }
+                @@if(positions==1){
+                <a href="">Диетолог</a>
+                }
             </div>
         </div>
-        <ul class="doctor__info">
-            <li class="doctor__info-item">
-                <span class="doctor__info-property">Опыт:</span>
-                <span class="doctor__info-value">8 лет</span>
-            </li>
-            <li class="doctor__info-item">
-                <span class="doctor__info-property">Образование:</span>
-                <span class="doctor__info-value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
-            </li>
-        </ul>
-        <div class="doctor__position"><a href="">Диетолог</a>, <a href="">Терапевт</a></div>
+        <div class="doctor__row doctor__education">
+            <span class="doctor__property">Образование</span>
+            <span class="doctor__value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
+        </div>
+        @@if(hasBtns===true){
         <div class="doctor__bottom">
             <a href="" class="doctor__btn btn btn-fullwidth btn-primary">Задать вопрос</a>
             <a href="" class="doctor__btn btn btn-fullwidth btn-pink">Онлайн консультация 100₽</a>
         </div>
+        }
     </div>
 </li>
