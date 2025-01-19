@@ -23,8 +23,8 @@
             <a href="" class="case__answers">@@answers</a>
         </div>
     </span>
-    <span class="case__body">
-        <span class="case__column">
+    <div class="case__body">
+        <div class="case__column">
             <a href="" class="case__person">
                 <span class="case__person-thumb">
                     <img src="@@person_image" alt="Аватар пользователя">
@@ -32,23 +32,67 @@
                 <span class="case__person-name">@@person_name</span>
             </a>
             <time datetime="2024-10-28" class="case__time">@@date</time>
-        </span>
-        @@if (doctors.length > 0 && doctors.length < 5) { <span class="case__doctors">
-            @@for (var i = 0; i < doctors.length; i++) { <span class="case__doctor"><img src="`+doctors[i]+`" class="cover-image" alt="Фото доктора"></span>}
-    </span>
-    }
-    @@if (doctors.length > 4) {
-    <span class="case__doctors">
-        <span class="case__more">
-            <span class="case__more-btn">
-                +3
-            </span>
-            <span class="case__more-body">
-                @@for (var i = 4; i < 7; i++) { <span class="case__doctor"><img src="`+doctors[i]+`" class="cover-image" alt="Фото доктора"></span>}
-        </span>
-    </span>
-    @@for (var i = 0; i < 4; i++) { <span class="case__doctor"><img src="`+doctors[i]+`" class="cover-image" alt="Фото доктора"></span>}
-        </span>
+        </div>
+        @@if (doctors===4){
+        <div class="case__doctors">
+            <div class="case__doctor">
+                <img src="@img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
+            </div>
+            <div class="case__doctor">
+                <img src="@img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора">
+            </div>
+            <div class="case__doctor">
+                <img src="@img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
+            </div>
+            <div class="case__doctor">
+                <img src="@img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
+            </div>
+        </div>
         }
-        </span>
+        @@if (doctors===3){
+        <div class="case__doctors">
+            <div class="case__doctor">
+                <img src="@img/stub-doctor-sm.svg" class="cover-image" alt="Фото доктора">
+            </div>
+            <div class="case__doctor">
+                <img src="@img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
+            </div>
+            <div class="case__doctor">
+                <img src="@img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
+            </div>
+        </div>
+        }
+        @@if (doctors===7){
+        <div class="case__doctors">
+            <div class="case__more">
+                <button type="button" class="case__more-btn">
+                    +3
+                </button>
+                <div class="case__more-body">
+                    <div class="case__doctor">
+                        <img src="@img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
+                    </div>
+                    <div class="case__doctor">
+                        <img src="@img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора">
+                    </div>
+                    <div class="case__doctor">
+                        <img src="@img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
+                    </div>
+                </div>
+            </div>
+            <div class="case__doctor">
+                <img src="@img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
+            </div>
+            <div class="case__doctor">
+                <img src="@img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора">
+            </div>
+            <div class="case__doctor">
+                <img src="@img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
+            </div>
+            <div class="case__doctor">
+                <img src="@img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
+            </div>
+        </div>
+        }
+    </div>
 </li>

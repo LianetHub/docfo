@@ -9,12 +9,7 @@
         "person_image": "@img/stub-user.svg",
         "additional_doctors": "+3",
         "date": "28.10.2024",
-        "doctors": [
-            "@img/doctors/doctor-1.jpg",
-            "@img/doctors/doctor-2.jpg",
-            "@img/doctors/doctor-3.jpg",
-            "@img/doctors/doctor-1.jpg"
-        ]
+        "doctors": 4
     },
     {
         "case_name": "Повышенные лейкоциты в моче, эпителий плоский большое количество, теперь боюсь что это такое?",
@@ -25,11 +20,7 @@
         "person_name": "Ирина Иванова",
         "person_image": "@img/stub-user.svg",
         "date": "28.10.2024",
-        "doctors": [
-            "@img/stub-doctor-sm.svg",
-            "@img/doctors/doctor-3.jpg",
-            "@img/doctors/doctor-1.jpg"
-        ]
+        "doctors": 3
     },
     {
         "case_name": "Расшифровка ЭКГ",
@@ -41,14 +32,6 @@
         "person_image": "@img/stub-user.svg",
         "additional_doctors": "+3",
         "date": "28.10.2024",
-        "doctors": [
-            "@img/doctors/doctor-1.jpg",
-            "@img/doctors/doctor-2.jpg",
-            "@img/doctors/doctor-3.jpg",
-            "@img/doctors/doctor-1.jpg",
-            "@img/doctors/doctor-2.jpg",
-            "@img/doctors/doctor-3.jpg",
-            "@img/doctors/doctor-1.jpg"
-        ]
+        "doctors": 7
     }
 ]
