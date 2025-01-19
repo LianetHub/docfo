@@ -254,7 +254,8 @@ body {
 	&__doctors-list {
 		margin-top: 0.75rem;
 		overflow-y: auto;
-		max-height: 22vh;
+		max-height: calc(100vh - 39rem);
+		min-height: rem(166);
 		line-height: 138.5%;
 		font-size: 1rem;
 		@media (min-width: $md3) {

@@ -160,10 +160,12 @@
 	// .footer__form-btn
 	&__form-btn {
 		border-radius: 0.75rem;
-		padding: rem(10);
 		font-size: 1.5rem;
 		aspect-ratio: 1;
 		min-height: 0;
+		&.btn {
+			padding: rem(10);
+		}
 	}
 	// .footer__bottom
 	&__bottom {

@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "Roboto";
-  font-display: swap;
-  src: url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -33,16 +33,16 @@
 @font-face {
   font-family: "Roboto";
   font-display: swap;
-  src: url("../fonts/Roboto-SemiBold.woff") format("woff"), url("../fonts/Roboto-SemiBold.woff2") format("woff2");
-  font-weight: 600;
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
   font-display: swap;
-  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/Roboto-SemiBold.woff") format("woff"), url("../fonts/Roboto-SemiBold.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -394,7 +394,8 @@ body {
 .menu__doctors-list {
   margin-top: 0.75rem;
   overflow-y: auto;
-  max-height: 22vh;
+  max-height: calc(100vh - 39rem);
+  min-height: 10.375rem;
   line-height: 138.5%;
   font-size: 1rem;
 }
@@ -1961,10 +1962,13 @@ h3,
 
 .footer__form-btn {
   border-radius: 0.75rem;
-  padding: 0.625rem;
   font-size: 1.5rem;
   aspect-ratio: 1;
   min-height: 0;
+}
+
+.footer__form-btn.btn {
+  padding: 0.625rem;
 }
 
 .footer__bottom {
