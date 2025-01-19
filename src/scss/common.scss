@@ -6,8 +6,10 @@ body {
 	line-height: normal;
 	color: $text;
 	background-color: $white-bg;
-	&:has(.open-menu) {
-		overflow: hidden;
+	&:has(.menu.active) {
+		@media (max-width: $md3) {
+			overflow: hidden;
+		}
 	}
 }
 
@@ -113,24 +115,89 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
+	bottom: 0;
+	right: 0;
 	width: 100%;
 	background: $pink;
 	z-index: 6;
 	overflow-x: hidden;
 	overflow-y: auto;
-	padding: 1rem;
-	@media (max-width: $md3) {
-		display: none;
+	padding: rem(65) 0 0.5rem;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+	&.active {
+		opacity: 1;
+		visibility: visible;
 	}
+
 	@media (min-width: $md3) {
 		flex: 0 0 12.8125rem;
 		padding: 0;
 		position: static;
 		top: auto;
 		left: auto;
+		bottom: auto;
+		right: auto;
 		overflow-y: visible;
 		overflow-x: visible;
 		background: transparent;
+		opacity: 1;
+		visibility: visible;
+	}
+	&__container {
+		@media (min-width: $md3) {
+			padding: 0;
+			box-sizing: border-box;
+		}
+	}
+	// .menu__header
+	&__header {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 0.5rem;
+		row-gap: 1rem;
+		margin-bottom: 1rem;
+		@media (min-width: $md3) {
+			display: none;
+		}
+	}
+	// .menu__language
+	&__language {
+		flex: 0 0 7.4375rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0.75rem;
+		gap: 0.38rem;
+		background: $white-43;
+		text-transform: uppercase;
+		&::before {
+			font-size: 1.5rem;
+		}
+	}
+	// .menu__sign
+	&__sign {
+		flex: 1 1 auto;
+	}
+	// .menu__search
+	&__search {
+		flex: 0 0 100%;
+		position: relative;
+		.form__control {
+			padding-left: 2.5rem;
+			font-size: 1rem;
+			padding-block: 0.56rem;
+			background: $white-43;
+		}
+	}
+	// .menu__search-submit
+	&__search-submit {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0.75rem;
+		font-size: 1.5rem;
 	}
 	// .menu__list
 	&__list {
@@ -169,24 +236,48 @@ body {
 	}
 	// .menu__doctors
 	&__doctors {
-		margin-top: 3.25rem;
+		margin-top: 1rem;
+		@media (min-width: $md3) {
+			margin-top: 3.25rem;
+		}
 	}
 	// .menu__doctors-title
 	&__doctors-title {
-		font-size: 1.5rem;
+		font-size: 1.125rem;
+		@media (min-width: $md3) {
+			font-size: 1.5rem;
+		}
 		font-weight: 600;
 		line-height: 125%;
 	}
 	// .menu__doctors-list
 	&__doctors-list {
-		margin-top: 1rem;
-		font-size: 1rem;
+		margin-top: 0.75rem;
+		overflow-y: auto;
+		max-height: 22vh;
 		line-height: 138.5%;
+		font-size: 1rem;
+		@media (min-width: $md3) {
+			overflow-y: visible;
+			max-height: none;
+			margin-top: 1rem;
+		}
+		&::-webkit-scrollbar {
+			width: rem(5);
+		}
+		&::-webkit-scrollbar-track {
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: rem(5);
+		}
 	}
 	// .menu__doctors-item
 	&__doctors-item {
 		&:not(:last-child) {
-			margin-bottom: 1rem;
+			margin-bottom: 0.5rem;
+			@media (min-width: $md3) {
+				margin-bottom: 1rem;
+			}
 		}
 	}
 	// .menu__doctors-link
@@ -346,136 +437,6 @@ body {
 		}
 	}
 }
-
-// .doctor-card {
-// 	border-radius: 0.75rem;
-// 	background: $white;
-// 	display: flex;
-// 	flex-direction: column;
-// 	padding: 0.75rem;
-// 	border: rem(1) solid $text-5;
-// 	transition: background-color 0.3s ease;
-// 	position: relative;
-// 	z-index: 1;
-// 	@media (any-hover: hover) {
-// 		&:hover {
-// 			background: #ebf4fa;
-// 			z-index: 2;
-// 		}
-// 	}
-// 	&:has(.doctor-card__education-tooltip.visible) {
-// 		z-index: 2;
-// 	}
-// 	// .doctor-card__header
-// 	&__header {
-// 		position: relative;
-// 		display: flex;
-// 		flex-direction: column;
-// 		align-items: center;
-// 	}
-// 	// .doctor-card__image
-// 	&__image {
-// 		width: 6.875rem;
-// 		height: 6.875rem;
-// 		flex-shrink: 0;
-// 		& img {
-// 			border-radius: 50%;
-// 		}
-// 	}
-// 	// .doctor-card__status
-// 	&__status {
-// 		position: absolute;
-// 		top: 0;
-// 		right: 0;
-// 		width: 0.625rem;
-// 		height: 0.625rem;
-// 		border-radius: 50%;
-// 		background: $grey;
-// 		&.online {
-// 			background: $green;
-// 		}
-// 	}
-// 	// .doctor-card__rate
-// 	&__rate {
-// 		position: absolute;
-// 		bottom: 0;
-// 		right: 0;
-// 	}
-// 	// .doctor-card__name
-// 	&__name {
-// 		margin-top: rem(10);
-// 		font-size: 1rem;
-// 		font-weight: 500;
-// 		line-height: 135%;
-// 	}
-// 	// .doctor-card__row
-// 	&__row {
-// 		display: flex;
-// 		justify-content: space-between;
-// 		align-items: center;
-// 		font-size: 0.8125rem;
-// 		line-height: 135%;
-// 	}
-// 	// .doctor-card__experience
-// 	&__experience {
-// 	}
-// 	// .doctor-card__experience-title
-// 	&__experience-title {
-// 	}
-// 	// .doctor-card__experience-value
-// 	&__experience-value {
-// 		color: $text-60;
-// 	}
-// 	// .doctor-card__education
-// 	&__education {
-// 		position: relative;
-// 	}
-// 	// .doctor-card__education-btn
-// 	&__education-btn {
-// 		text-decoration: underline;
-// 		text-decoration-style: dashed;
-// 		text-decoration-thickness: 0.05em;
-// 		text-underline-offset: rem(4);
-// 		@media (any-hover: hover) {
-// 			&:hover {
-// 				color: $accent;
-// 				& + .doctor-card__education-tooltip {
-// 					opacity: 1;
-// 					visibility: visible;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	// .doctor-card__education-tooltip
-// 	&__education-tooltip {
-// 		color: $text-80;
-// 		font-size: 0.75rem;
-// 		line-height: 135%;
-// 		position: absolute;
-// 		top: 100%;
-// 		right: 0;
-// 		min-width: rem(180);
-// 		background: $white;
-// 		padding: rem(10) rem(12);
-// 		opacity: 0;
-// 		visibility: hidden;
-// 		transition: opacity 0.3s ease, visibility 0.3s ease;
-
-// 		@media (hover: none) {
-// 			&.visible {
-// 				opacity: 1;
-// 				visibility: visible;
-// 			}
-// 		}
-// 	}
-
-// 	// .doctor-card__direction
-// 	&__direction {
-// 		font-size: 0.875rem;
-// 		font-weight: 500;
-// 		line-height: 150%;
-// 	}
-// }
 
 .doctor {
 	border-radius: 1rem;

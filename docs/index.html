@@ -36,8 +36,8 @@
 	<meta property="twitter:url" content="https://docfo.ru">
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20250119143618">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250119143618">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20250119152012">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250119152012">
 </head>
 
 <body>
@@ -54,14 +54,14 @@
 				<form action="#" class="header__search">
 					<button type="button" class="header__search-toggler icon-search"></button>
 					<div class="header__search-field">
-						<button type="submit" class="header__search-submit icon-search"></button>
-						<input type="text" name="search" class="form__control" placeholder="Поиск">
+						<button type="submit" tabindex="-1" class="header__search-submit icon-search"></button>
+						<input type="text" tabindex="-1" name="search" class="form__control" placeholder="Поиск">
 					</div>
 				</form>
 				<div class="header__actions">
 					<a href="" class="header__btn btn btn-white header__btn-sign">Вход</a>
 					<a href="" class="header__btn btn btn-primary">Задать вопрос</a>
-					<button type="button" aria-label="Открыть меню" class="menu__icon icon-menu">
+					<button type="button" aria-label="Открыть меню" class="header__menu-btn icon-menu">
 						<span></span>
 						<span></span>
 						<span></span>
@@ -72,44 +72,54 @@
 		<div class="page">
 			<div class="page__container">
 				<nav aria-label="Меню" class="menu">
-					<ul class="menu__list">
-						<li class="menu__item"><a href="" class="menu__link icon-consult">Консультации</a></li>
-						<li class="menu__item"><a href="" class="menu__link icon-medic">Врачи</a></li>
-						<li class="menu__item"><a href="" class="menu__link icon-medicine">Учреждения</a></li>
-						<li class="menu__item"><a href="" class="menu__link icon-info">Помощь</a></li>
-						<li class="menu__item"><a href="" class="menu__link icon-payment">Оплата</a></li>
-						<li class="menu__item"><a href="" class="menu__link icon-docs">Врачам</a></li>
-						<li class="menu__item"><a href="" class="menu__link icon-contacts">Контакты</a></li>
-					</ul>
-					<div class="menu__doctors">
-						<div class="menu__doctors-title">Врачи</div>
-						<ul class="menu__doctors-list">
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Акушер (12)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Венеролог (1)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Гастроэнтеролог (7)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Гинеколог (9)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Дерматолог (5)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Диетолог (12)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Инфекционист (6)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Кардиолог (5)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">ЛОР (1)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Невролог (7)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Онколог (5)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Ортопед (12)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Педиатр (5)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Пластический хирург (2)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психиатр (7)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психолог (8)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психотерапевт (5)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Пульмонолог (9)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Сексолог (2)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Стоматолог (19)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Терапевт (9)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Трихолог (9)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Уролог (9)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Хирург (9)</a></li>
-							<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Эндокринолог (9)</a></li>
+					<div class="menu__container">
+						<div class="menu__header">
+							<a href="" class="menu__language icon-globe">Ru</a>
+							<a href="" class="menu__sign btn btn-white">Вход</a>
+							<form action="#" class="menu__search">
+								<button type="submit" class="menu__search-submit icon-search"></button>
+								<input type="text" name="search" class="form__control" placeholder="Поиск">
+							</form>
+						</div>
+						<ul class="menu__list">
+							<li class="menu__item"><a href="" class="menu__link icon-consult">Консультации</a></li>
+							<li class="menu__item"><a href="" class="menu__link icon-medic">Врачи</a></li>
+							<li class="menu__item"><a href="" class="menu__link icon-medicine">Учреждения</a></li>
+							<li class="menu__item"><a href="" class="menu__link icon-info">Помощь</a></li>
+							<li class="menu__item"><a href="" class="menu__link icon-payment">Оплата</a></li>
+							<li class="menu__item"><a href="" class="menu__link icon-docs">Врачам</a></li>
+							<li class="menu__item"><a href="" class="menu__link icon-contacts">Контакты</a></li>
 						</ul>
+						<div class="menu__doctors">
+							<div class="menu__doctors-title">Врачи</div>
+							<ul class="menu__doctors-list">
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Акушер (12)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Венеролог (1)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Гастроэнтеролог (7)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Гинеколог (9)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Дерматолог (5)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Диетолог (12)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Инфекционист (6)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Кардиолог (5)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">ЛОР (1)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Невролог (7)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Онколог (5)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Ортопед (12)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Педиатр (5)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Пластический хирург (2)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психиатр (7)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психолог (8)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психотерапевт (5)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Пульмонолог (9)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Сексолог (2)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Стоматолог (19)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Терапевт (9)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Трихолог (9)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Уролог (9)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Хирург (9)</a></li>
+								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Эндокринолог (9)</a></li>
+							</ul>
+						</div>
 					</div>
 				</nav>
 				<div class="mobile-banner">
@@ -812,7 +822,7 @@
 				</div>
 			</div>
 		</footer>
-		<script src="js/app.min.js?_v=20250119143618"></script>
+		<script src="js/app.min.js?_v=20250119152012"></script>
 	</div>
 </body>
 

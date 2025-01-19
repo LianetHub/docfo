@@ -2,9 +2,13 @@
 	& img {
 		width: 100%;
 	}
+	display: none;
+	@media (min-width: $md3) {
+		display: block;
+	}
 }
 .mobile-banner {
-	@media (min-width: $md5) {
+	@media (min-width: $md3) {
 		display: none;
 	}
 }
@@ -188,7 +192,7 @@
 			will-change: transform;
 		}
 	}
-	.header.open-menu & {
+	&.active {
 		& span {
 			transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
 			&::before {

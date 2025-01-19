@@ -30,10 +30,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // header search toggler
         if (target.matches('.header__search-toggler')) {
-            document.querySelector('.header__search').classList.add('active');
+
+            const searchBox = document.querySelector('.header__search');
+            const searchField = searchBox.querySelector('.form__control');
+
+            searchBox.classList.add('active');
             setTimeout(() => {
-                document.querySelector('.header__search .form__control').focus()
-            }, 300)
+                searchField.focus()
+            }, 300);
+
+            searchField.addEventListener('blur', () => {
+                searchBox.classList.remove('active');
+            }, { once: true });
+        }
+
+        // toggle mobile menu
+        if (target.closest('.icon-menu')) {
+            const menuBtn = target.closest('.icon-menu');
+            const menu = document.querySelector('.menu');
+
+            menuBtn.classList.toggle('active');
+            menu.classList.toggle('active');
         }
 
         // favorite btn
@@ -77,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         }
 
+        // see more doctor education info in sidebar
         if (target.matches('.doctor__property') && target.closest('.sidebar__doctors') && document.body.classList.contains('_touch')) {
             e.preventDefault();
 
@@ -88,7 +106,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 educationMore.classList.remove('visible')
             }, { once: true });
         }
-    })
+    });
+
+
+
 
 
     // sliders
