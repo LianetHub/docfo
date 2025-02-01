@@ -669,6 +669,91 @@
 		flex-direction: column;
 		gap: rem(13);
 	}
+	// .doctors__filters
+	&__filters {
+		padding-top: 1.5rem;
+	}
+	// .doctors__filters-top
+	&__filters-top {
+		display: flex;
+		flex-direction: column;
+		gap: 0.87rem;
+		@media (min-width: $md5) {
+			gap: 1.31rem;
+		}
+		@media (min-width: $md1) {
+			align-items: flex-start;
+			flex-direction: row;
+		}
+	}
+	// .doctors__filters-search
+	&__filters-search {
+		position: relative;
+		flex: 1 1 auto;
+		&::before {
+			position: absolute;
+			width: 1.5rem;
+			height: 1.5rem;
+			font-size: 1.5rem;
+			right: 1rem;
+			top: 50%;
+			transform: translateY(-50%);
+			flex-shrink: 0;
+			z-index: 2;
+		}
+		.form__control {
+			background: #fff;
+		}
+	}
+	&__filters-selects {
+		display: grid;
+		gap: 0.5rem;
+		@media (min-width: $md5) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (min-width: $md1) {
+			.select {
+				max-width: 10.8125rem;
+			}
+		}
+	}
+	// .doctors__filters-checkboxes
+	&__filters-checkboxes {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		column-gap: 1.81rem;
+		@media (min-width: $md5) {
+			column-gap: 0.75rem;
+		}
+		.form__checkbox-text {
+			color: $text;
+		}
+	}
+}
+
+.select {
+	position: relative;
+	&::before {
+		@extend %ic, .icon-chevron-left;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%) rotate(-90deg);
+		right: 0.87rem;
+	}
+	& select {
+		appearance: none;
+		width: 100%;
+		border-radius: 0.625rem;
+		font-size: 0.875rem;
+		font-family: $fontfamily;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		font-weight: 500;
+		line-height: 135%;
+		padding: 0.78rem 2.25rem 0.78rem 0.87rem;
+	}
 }
 
 .reviews {

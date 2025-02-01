@@ -85,7 +85,7 @@
 						</div>
 						<ul class="menu__list">
 							<li class="menu__item"><a href="/consults.html" class="menu__link icon-consult">Консультации</a></li>
-							<li class="menu__item"><a href="/doctors.html" class="menu__link icon-medic">Врачи</a></li>
+							<li class="menu__item"><a href="/doctors.html" class="menu__link icon-medic active">Врачи</a></li>
 							<li class="menu__item"><a href="" class="menu__link icon-medicine">Учреждения</a></li>
 							<li class="menu__item"><a href="/support.html" class="menu__link icon-info">Помощь</a></li>
 							<li class="menu__item"><a href="/payment.html" class="menu__link icon-payment">Оплата</a></li>
@@ -131,316 +131,86 @@
 				</div>
 				<div class="page__main">
 					<main class="main">
-						<section class="promo">
-							<div class="promo__banner">
-								<div class="promo__banner-offer">
-									<h1 class="promo__banner-title">Тысячи врачей готовы помочь вам онлайн!</h1>
-									<a href="" class="promo__banner-btn btn btn-white">Задать вопрос</a>
-								</div>
-							</div>
-							<ul class="promo__list">
-								<li class="promo__item">
-									<div class="promo__item-num">2 156</div>
-									<div class="promo__item-desc">врачей</div>
-								</li>
-								<li class="promo__item">
-									<div class="promo__item-num">2 000 000</div>
-									<div class="promo__item-desc">вопросов</div>
-								</li>
-								<li class="promo__item">
-									<div class="promo__item-num">24 057</div>
-									<div class="promo__item-desc">отзывов</div>
-								</li>
-								<li class="promo__item">
-									<div class="promo__item-num">245 000</div>
-									<div class="promo__item-desc">пользователей</div>
-								</li>
-							</ul>
-						</section>
-						<section class="cases">
-							<div class="cases__header">
-								<h2 class="cases__title">Популярные вопросы</h2>
-								<div class="cases__btns">
-									<button type="button" class="cases__btn btn btn-sm active">Платные</button>
-									<button type="button" class="cases__btn btn btn-sm">Бесплатные</button>
-								</div>
-							</div>
-							<div class="cases__body">
-								<div class="cases__block active">
-									<ul class="cases__list">
-										<li class="case">
-											<span class="case__header">
-												<div class="case__row">
-													<a href="" class="case__name">Расшифровка ЭКГ</a>
-													<div class="case__side">
-														<div class="case__price">100₽</div>
-														<a href="" class="case__answers">10 Ответов</a>
-													</div>
-												</div>
-												<div class="case__main">
-													<div class="case__main-row">
-														<a href="" class="case__position">Терапевт</a>
-														<span class="case__status success">Вопрос закрыт</span>
-													</div>
-													<a href="" class="case__answers">10 Ответов</a>
-												</div>
-											</span>
-											<div class="case__body">
-												<div class="case__column">
-													<a href="" class="case__person">
-														<span class="case__person-thumb">
-															<img src="img/stub-user.svg" alt="Аватар пользователя">
-														</span>
-														<span class="case__person-name">Ирина Иванова</span>
-													</a>
-													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
-												</div>
-												<div class="case__doctors">
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-2.webp" type="image/webp"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-3.webp" type="image/webp"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="case">
-											<span class="case__header">
-												<div class="case__row">
-													<a href="" class="case__name">Повышенные лейкоциты в моче, эпителий плоский большое количество, теперь боюсь что это такое?</a>
-													<div class="case__side">
-														<div class="case__price">100₽</div>
-														<a href="" class="case__answers">10 Ответов</a>
-													</div>
-												</div>
-												<div class="case__main">
-													<div class="case__main-row">
-														<a href="" class="case__position">Клинический фармаколог</a>
-														<span class="case__status wait">Ожидает ответа</span>
-													</div>
-													<a href="" class="case__answers">10 Ответов</a>
-												</div>
-											</span>
-											<div class="case__body">
-												<div class="case__column">
-													<a href="" class="case__person">
-														<span class="case__person-thumb">
-															<img src="img/stub-user.svg" alt="Аватар пользователя">
-														</span>
-														<span class="case__person-name">Ирина Иванова</span>
-													</a>
-													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
-												</div>
-												<div class="case__doctors">
-													<div class="case__doctor">
-														<img src="img/stub-doctor-sm.svg" class="cover-image" alt="Фото доктора">
-													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-3.webp" type="image/webp"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="case">
-											<span class="case__header">
-												<div class="case__row">
-													<a href="" class="case__name">Расшифровка ЭКГ</a>
-													<div class="case__side">
-														<div class="case__price">100₽</div>
-														<a href="" class="case__answers">10 Ответов</a>
-													</div>
-												</div>
-												<div class="case__main">
-													<div class="case__main-row">
-														<a href="" class="case__position">Клинический фармаколог</a>
-														<span class="case__status open">Открыт</span>
-													</div>
-													<a href="" class="case__answers">10 Ответов</a>
-												</div>
-											</span>
-											<div class="case__body">
-												<div class="case__column">
-													<a href="" class="case__person">
-														<span class="case__person-thumb">
-															<img src="img/stub-user.svg" alt="Аватар пользователя">
-														</span>
-														<span class="case__person-name">Ирина Иванова</span>
-													</a>
-													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
-												</div>
-												<div class="case__doctors">
-													<div class="case__more">
-														<button type="button" class="case__more-btn"> +3 </button>
-														<div class="case__more-body">
-															<div class="case__doctor">
-																<picture>
-																	<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
-																</picture>
-															</div>
-															<div class="case__doctor">
-																<picture>
-																	<source srcset="img/doctors/doctor-2.webp" type="image/webp"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора">
-																</picture>
-															</div>
-															<div class="case__doctor">
-																<picture>
-																	<source srcset="img/doctors/doctor-3.webp" type="image/webp"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
-																</picture>
-															</div>
-														</div>
-													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-2.webp" type="image/webp"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-3.webp" type="image/webp"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<div class="cases__block">
-									<ul class="cases__list">
-										<li class="case">
-											<span class="case__header">
-												<div class="case__row">
-													<a href="" class="case__name">Частые срыгивания у новорожденного. Частые срыгивания у новорожденного. </a>
-													<div class="case__side">
-														<div class="case__price">Бесплатно</div>
-														<a href="" class="case__answers">10 Ответов</a>
-													</div>
-												</div>
-												<div class="case__main">
-													<div class="case__main-row">
-														<a href="" class="case__position">Терапевт</a>
-														<span class="case__status success">Вопрос закрыт</span>
-													</div>
-													<a href="" class="case__answers">10 Ответов</a>
-												</div>
-											</span>
-											<div class="case__body">
-												<div class="case__column">
-													<a href="" class="case__person">
-														<span class="case__person-thumb">
-															<img src="img/stub-user.svg" alt="Аватар пользователя">
-														</span>
-														<span class="case__person-name">Елена Романчук</span>
-													</a>
-													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
-												</div>
-												<div class="case__doctors">
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-2.webp" type="image/webp"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-3.webp" type="image/webp"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section class="possibilities">
-							<h2 class="possibilities__title">Возможности сервиса</h2>
-							<ul class="possibilities__list">
-								<li class="possibilities__mode">
-									<div class="possibilities__mode-title">Бесплатный режим</div>
-									<div class="possibilities__mode-body">
-										<ul class="possibilities__mode-list">
-											<li>Постановка в очередь бесплатных вопросов</li>
-											<li>Без гарантии получения ответов</li>
-											<li>Среднее время публикации вопроса 1 день 16 часов</li>
-										</ul>
-										<p class="possibilities__mode-desc">Бесплатная консультация для тех, кто готов подождать. Возможность перевести консультацию в «платную» для получения дополнительных возможностей.</p>
-										<div class="possibilities__mode-price">0₽</div>
-										<a href="" class="possibilities__mode-btn btn btn-primary btn-fullwidth">Задать вопрос бесплатно</a>
+						<div class="banner">
+							<picture>
+								<source srcset="img/banner-2.webp" type="image/webp"><img src="img/banner-2.png" alt="Баннер">
+							</picture>
+						</div>
+						<div class="doctors">
+							<form action="#" class="doctors__filters">
+								<div class="doctors__filters-top">
+									<div class="doctors__filters-search icon-search">
+										<input type="text" class="form__control" placeholder="Поиск по имени врача">
 									</div>
-								</li>
-								<li class="possibilities__mode paid">
-									<div class="possibilities__mode-title">Платный режим</div>
-									<div class="possibilities__mode-body">
-										<ul class="possibilities__mode-list">
-											<li>Моментальная публикация</li>
-											<li>Возможность получить ответы нескольких врачей</li>
-											<li>Первые ответы в течение 1 часа</li>
-											<li>Возможность загрузить сканы или фотографии анализов</li>
-										</ul>
-										<p class="possibilities__mode-desc">Вы можете назначить вознаграждение больше. Чем выше вознаграждение — тем больше врачей ответит на Ваш вопрос.</p>
-										<div class="possibilities__mode-price">от 400₽</div>
-										<a href="" class="possibilities__mode-btn btn btn-pink btn-fullwidth">Задать платный вопрос</a>
+									<div class="doctors__filters-selects">
+										<div class="select">
+											<select name="city">
+												<option value="0">Город</option>
+												<option value="moscow">Москва</option>
+												<option value="saint_petersburg">Санкт-Петербург</option>
+												<option value="novosibirsk">Новосибирск</option>
+												<option value="yekaterinburg">Екатеринбург</option>
+												<option value="kazan">Казань</option>
+												<option value="nizhny_novgorod">Нижний Новгород</option>
+												<option value="chelyabinsk">Челябинск</option>
+												<option value="samara">Самара</option>
+												<option value="rostov_on_don">Ростов-на-Дону</option>
+												<option value="ufa">Уфа</option>
+												<option value="omsk">Омск</option>
+											</select>
+										</div>
+										<div class="select">
+											<select name="specialization">
+												<option value="0">Специализация</option>
+												<option value="obstetrician">Акушер</option>
+												<option value="venereologist">Венеролог</option>
+												<option value="gastroenterologist">Гастроэнтеролог</option>
+												<option value="gynecologist">Гинеколог</option>
+												<option value="dermatologist">Дерматолог</option>
+												<option value="dietitian">Диетолог</option>
+												<option value="infectious_disease_specialist">Инфекционист</option>
+												<option value="cardiologist">Кардиолог</option>
+												<option value="lor">ЛОР</option>
+												<option value="neurologist">Невролог</option>
+												<option value="oncologist">Онколог</option>
+												<option value="orthopedist">Ортопед</option>
+												<option value="pediatrician">Педиатр</option>
+												<option value="plastic_surgeon">Пластический хирург</option>
+												<option value="psychiatrist">Психиатр</option>
+												<option value="psychologist">Психолог</option>
+												<option value="psychotherapist">Психотерапевт</option>
+												<option value="pulmonologist">Пульмонолог</option>
+												<option value="sexologist">Сексолог</option>
+												<option value="dentist">Стоматолог</option>
+												<option value="therapist">Терапевт</option>
+												<option value="trichologist">Трихолог</option>
+												<option value="urologist">Уролог</option>
+												<option value="surgeon">Хирург</option>
+												<option value="endocrinologist">Эндокринолог</option>
+											</select>
+										</div>
+										<div class="select">
+											<select name="scientific">
+												<option value="0">Научная степень</option>
+												<option value="phd">Кандидат наук</option>
+												<option value="dsc">Доктор наук</option>
+												<option value="professor">Профессор</option>
+												<option value="associate_professor">Доцент</option>
+											</select>
+										</div>
 									</div>
-								</li>
-								<li class="possibilities__mode individual">
-									<div class="possibilities__mode-title">Индивидуальная консультация</div>
-									<div class="possibilities__mode-body">
-										<ul class="possibilities__mode-list">
-											<li>Углубленная консультация одного врача по Вашей проблеме</li>
-											<li>Возможность консультации с узкопрофильным специалистом</li>
-											<li>Индивидуальный подход</li>
-											<li>Приватный чат-диалог</li>
-										</ul>
-										<p class="possibilities__mode-desc">Каждый врач назначает стоимость своей консультации индивидуально. Для консультации перейдите в список врачей и выберите соответствующую специализацию.</p>
-										<div class="possibilities__mode-price">от 500₽</div>
-										<a href="" class="possibilities__mode-btn btn btn-primary btn-fullwidth">Выбрать врача</a>
-									</div>
-								</li>
-							</ul>
-						</section>
-						<section class="doctors">
-							<h2 class="doctors__title">Рекомендуемые врачи</h2>
+								</div>
+								<div class="doctors__filters-checkboxes">
+									<label class="form__checkbox">
+										<input type="checkbox" name="reviews" class="form__checkbox-input hidden" hidden>
+										<span class="form__checkbox-text"> Наличие отзывов </span>
+									</label>
+									<label class="form__checkbox">
+										<input type="checkbox" name="online" class="form__checkbox-input hidden" hidden>
+										<span class="form__checkbox-text"> Сейчас на сайте </span>
+									</label>
+								</div>
+							</form>
 							<ul class="doctors__list">
 								<li class="doctor">
 									<div class="doctor__side">
@@ -552,204 +322,7 @@
 									</div>
 								</li>
 							</ul>
-						</section>
-						<section class="reviews">
-							<div class="reviews__header">
-								<div class="reviews__main">
-									<h2 class="reviews__title">Отзывы наших пациентов</h2>
-									<div class="reviews__total">
-										<div class="reviews__total-value">4.9</div>
-										<div class="review__stars">
-											<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
-										</div>
-										<span class="reviews__total-quantity">250+ отзывов</span>
-									</div>
-								</div>
-								<div class="reviews__controls">
-									<button type="button" class="reviews__prev swiper-button-prev"></button>
-									<button type="button" class="reviews__next swiper-button-next"></button>
-								</div>
-							</div>
-							<div class="reviews__slider swiper">
-								<div class="swiper-wrapper">
-									<div class="review swiper-slide">
-										<div class="review__stars">
-											<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
-										</div>
-										<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
-										<div class="review__author">
-											<div class="review__author-thumb">
-												<picture>
-													<source srcset="img/clients/01.webp" type="image/webp"><img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
-												</picture>
-											</div>
-											<div class="review__author-main">
-												<div class="review__author-name">Имя Фамилия</div>
-												<div class="review__author-type">Клиент</div>
-											</div>
-										</div>
-									</div>
-									<div class="review swiper-slide">
-										<div class="review__stars">
-											<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
-										</div>
-										<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
-										<div class="review__author">
-											<div class="review__author-thumb">
-												<img src="img/stub-user.svg" class="cover-image" alt="Фото клиента">
-											</div>
-											<div class="review__author-main">
-												<div class="review__author-name">Ирина Иванова</div>
-												<div class="review__author-type">Клиент</div>
-											</div>
-										</div>
-									</div>
-									<div class="review swiper-slide">
-										<div class="review__stars">
-											<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
-										</div>
-										<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
-										<div class="review__author">
-											<div class="review__author-thumb">
-												<picture>
-													<source srcset="img/clients/01.webp" type="image/webp"><img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
-												</picture>
-											</div>
-											<div class="review__author-main">
-												<div class="review__author-name">Имя Фамилия</div>
-												<div class="review__author-type">Клиент</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-						<section class="blog">
-							<div class="blog__header">
-								<h2 class="blog__title">Блог</h2>
-								<div class="blog__controls">
-									<button type="button" class="blog__prev swiper-button-prev"></button>
-									<button type="button" class="blog__next swiper-button-next"></button>
-								</div>
-							</div>
-							<div class="blog__slider swiper">
-								<div class="swiper-wrapper">
-									<div class="blog__slide swiper-slide">
-										<a href="" class="blog__slide-image">
-											<picture>
-												<source srcset="img/blog/01.webp" type="image/webp"><img src="img/blog/01.jpg" class="cover-image" alt="Постер статьи">
-											</picture>
-										</a>
-										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-										<div class="blog__slide-footer">
-											<div class="blog__slide-company">
-												<img src="img/media/logo-runway.svg" alt="Логотип компании">
-											</div>
-											<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
-										</div>
-									</div>
-									<div class="blog__slide swiper-slide">
-										<a href="" class="blog__slide-image">
-											<picture>
-												<source srcset="img/blog/02.webp" type="image/webp"><img src="img/blog/02.jpg" class="cover-image" alt="Постер статьи">
-											</picture>
-										</a>
-										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-										<div class="blog__slide-footer">
-											<div class="blog__slide-company">
-												<img src="img/media/logo-runway.svg" alt="Логотип компании">
-											</div>
-											<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
-										</div>
-									</div>
-									<div class="blog__slide swiper-slide">
-										<a href="" class="blog__slide-image">
-											<picture>
-												<source srcset="img/blog/03.webp" type="image/webp"><img src="img/blog/03.jpg" class="cover-image" alt="Постер статьи">
-											</picture>
-										</a>
-										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-										<div class="blog__slide-footer">
-											<div class="blog__slide-company">
-												<img src="img/media/logo-runway.svg" alt="Логотип компании">
-											</div>
-											<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
-										</div>
-									</div>
-									<div class="blog__slide swiper-slide">
-										<a href="" class="blog__slide-image">
-											<picture>
-												<source srcset="img/blog/01.webp" type="image/webp"><img src="img/blog/01.jpg" class="cover-image" alt="Постер статьи">
-											</picture>
-										</a>
-										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-										<div class="blog__slide-footer">
-											<div class="blog__slide-company">
-												<img src="img/media/logo-runway.svg" alt="Логотип компании">
-											</div>
-											<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
-										</div>
-									</div>
-									<div class="blog__slide swiper-slide">
-										<a href="" class="blog__slide-image">
-											<picture>
-												<source srcset="img/blog/02.webp" type="image/webp"><img src="img/blog/02.jpg" class="cover-image" alt="Постер статьи">
-											</picture>
-										</a>
-										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-										<div class="blog__slide-footer">
-											<div class="blog__slide-company">
-												<img src="img/media/logo-runway.svg" alt="Логотип компании">
-											</div>
-											<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
-										</div>
-									</div>
-									<div class="blog__slide swiper-slide">
-										<a href="" class="blog__slide-image">
-											<picture>
-												<source srcset="img/blog/03.webp" type="image/webp"><img src="img/blog/03.jpg" class="cover-image" alt="Постер статьи">
-											</picture>
-										</a>
-										<a href="" class="blog__slide-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-										<p class="blog__slide-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-										<div class="blog__slide-footer">
-											<div class="blog__slide-company">
-												<img src="img/media/logo-runway.svg" alt="Логотип компании">
-											</div>
-											<a href="" class="blog__slide-btn btn btn-primary btn-sm">Читать</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-						<section class="media">
-							<h2 class="media__title">Сми о нас</h2>
-							<div class="media__items">
-								<div class="media__item">
-									<img src="img/media/logo-runway.svg" alt="Логотип компании">
-								</div>
-								<div class="media__item">
-									<img src="img/media/harvard.svg" alt="Логотип компании">
-								</div>
-								<div class="media__item">
-									<img src="img/media/world-health-organization.svg" alt="Логотип компании">
-								</div>
-								<div class="media__item">
-									<img src="img/media/logo-runway.svg" alt="Логотип компании">
-								</div>
-								<div class="media__item">
-									<img src="img/media/harvard.svg" alt="Логотип компании">
-								</div>
-								<div class="media__item">
-									<img src="img/media/world-health-organization.svg" alt="Логотип компании">
-								</div>
-							</div>
-						</section>
+						</div>
 						<section class="faq">
 							<h2 class="faq__title">Часто задаваемые вопросы</h2>
 							<ul class="faq__list">

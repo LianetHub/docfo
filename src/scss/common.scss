@@ -1,3 +1,7 @@
+html {
+	scrollbar-gutter: stable;
+}
+
 body {
 	font-family: $fontfamily, sans-serif;
 	font-size: 1rem;
@@ -10,6 +14,9 @@ body {
 		@media (max-width: $md3) {
 			overflow: hidden;
 		}
+	}
+	&.locked {
+		overflow: hidden;
 	}
 }
 
@@ -106,6 +113,13 @@ body {
 			padding-bottom: rem(22);
 			@media (min-width: $md4) {
 				padding-bottom: rem(36);
+			}
+		}
+	}
+	& > .banner:first-child {
+		& + section {
+			@media (max-width: $md3) {
+				padding-top: 0;
 			}
 		}
 	}

@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // init modals
     const popupManager = new Popup();
 
+
+
     // click handlers
     document.addEventListener('click', (e) => {
 

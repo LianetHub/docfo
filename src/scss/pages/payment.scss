@@ -1,0 +1,24 @@
+.payment {
+	// .payment__title
+	&__title {
+		font-size: 1.5rem;
+		@media (min-width: $md5) {
+			font-size: 1.75rem;
+		}
+	}
+	// .payment__desc
+	&__desc {
+		margin-top: 1.5rem;
+		@media (min-width: $md5) {
+			margin-top: 1rem;
+		}
+		color: $text-80;
+		font-size: 1rem;
+		line-height: 135%;
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+}

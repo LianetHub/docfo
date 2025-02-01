@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Главная страница'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+
+            <div class="page">
+                <div class="page__container">
+                    @@include('./html/_menu.html', {
+                    "active": 2
+                    })
+                    <div class="mobile-banner">
+                        <img src="@img/mobile-banner.png" alt="Баннер">
+                    </div>
+                    <div class="page__main">
+                        <main class="main">
+                            <div class="banner">
+                                <img src="@img/banner-2.png" alt="Баннер">
+                            </div>
+                            <div class="doctors">
+                                <form action="#" class="doctors__filters">
+                                    <div class="doctors__filters-top">
+                                        <div class="doctors__filters-search icon-search">
+                                            <input type="text" class="form__control" placeholder="Поиск по имени врача">
+                                        </div>
+                                        <div class="doctors__filters-selects">
+                                            <div class="select">
+                                                <select name="city">
+                                                    <option value="0">Город</option>
+                                                    <option value="moscow">Москва</option>
+                                                    <option value="saint_petersburg">Санкт-Петербург</option>
+                                                    <option value="novosibirsk">Новосибирск</option>
+                                                    <option value="yekaterinburg">Екатеринбург</option>
+                                                    <option value="kazan">Казань</option>
+                                                    <option value="nizhny_novgorod">Нижний Новгород</option>
+                                                    <option value="chelyabinsk">Челябинск</option>
+                                                    <option value="samara">Самара</option>
+                                                    <option value="rostov_on_don">Ростов-на-Дону</option>
+                                                    <option value="ufa">Уфа</option>
+                                                    <option value="omsk">Омск</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <select name="specialization">
+                                                    <option value="0">Специализация</option>
+                                                    <option value="obstetrician">Акушер</option>
+                                                    <option value="venereologist">Венеролог</option>
+                                                    <option value="gastroenterologist">Гастроэнтеролог</option>
+                                                    <option value="gynecologist">Гинеколог</option>
+                                                    <option value="dermatologist">Дерматолог</option>
+                                                    <option value="dietitian">Диетолог</option>
+                                                    <option value="infectious_disease_specialist">Инфекционист</option>
+                                                    <option value="cardiologist">Кардиолог</option>
+                                                    <option value="lor">ЛОР</option>
+                                                    <option value="neurologist">Невролог</option>
+                                                    <option value="oncologist">Онколог</option>
+                                                    <option value="orthopedist">Ортопед</option>
+                                                    <option value="pediatrician">Педиатр</option>
+                                                    <option value="plastic_surgeon">Пластический хирург</option>
+                                                    <option value="psychiatrist">Психиатр</option>
+                                                    <option value="psychologist">Психолог</option>
+                                                    <option value="psychotherapist">Психотерапевт</option>
+                                                    <option value="pulmonologist">Пульмонолог</option>
+                                                    <option value="sexologist">Сексолог</option>
+                                                    <option value="dentist">Стоматолог</option>
+                                                    <option value="therapist">Терапевт</option>
+                                                    <option value="trichologist">Трихолог</option>
+                                                    <option value="urologist">Уролог</option>
+                                                    <option value="surgeon">Хирург</option>
+                                                    <option value="endocrinologist">Эндокринолог</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <select name="scientific">
+                                                    <option value="0">Научная степень</option>
+                                                    <option value="phd">Кандидат наук</option>
+                                                    <option value="dsc">Доктор наук</option>
+                                                    <option value="professor">Профессор</option>
+                                                    <option value="associate_professor">Доцент</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doctors__filters-checkboxes">
+                                        <label class="form__checkbox">
+                                            <input type="checkbox" name="reviews" class="form__checkbox-input hidden" hidden>
+                                            <span class="form__checkbox-text">
+                                                Наличие отзывов
+                                            </span>
+                                        </label>
+                                        <label class="form__checkbox">
+                                            <input type="checkbox" name="online" class="form__checkbox-input hidden" hidden>
+                                            <span class="form__checkbox-text">
+                                                Сейчас на сайте
+                                            </span>
+                                        </label>
+                                    </div>
+                                </form>
+                                <ul class="doctors__list">
+                                    @@loop('./html/_doctor.html', './html/json/home-recommedations.json')
+                                </ul>
+                            </div>
+                            @@include('./html/_faq.html')
+                        </main>
+                        @@include('./html/_sidebar.html')
+                    </div>
+                </div>
+            </div>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

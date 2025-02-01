@@ -23,7 +23,7 @@ export class Popup {
 		}
 
 		if (target.classList.contains('popup')) {
-			this.closePopup(target.closest('.popup'));
+			this.closePopup(target);
 		}
 	}
 
@@ -41,8 +41,11 @@ export class Popup {
 
 	openPopup(trigger) {
 		const popupName = trigger.getAttribute('data-href') || trigger.getAttribute('href')?.replace("#", "");
-		const modal = document.getElementById(popupName);
+		this.openPopupById(popupName, trigger);
+	}
 
+	openPopupById(popupId, trigger = null) {
+		const modal = document.getElementById(popupId);
 		if (!modal) return;
 
 		if (this.activePopup) {
@@ -53,7 +56,9 @@ export class Popup {
 
 		modal.classList.add('open');
 		this.setAttributes(modal, { 'aria-hidden': 'false', 'tabindex': '-1' });
-		this.setAttributes(trigger, { 'aria-expanded': 'true', 'data-modal': 'open' });
+		if (trigger) {
+			this.setAttributes(trigger, { 'aria-expanded': 'true', 'data-modal': 'open' });
+		}
 
 		this.activePopup = modal;
 		modal.dispatchEvent(new CustomEvent('popupOpen', { detail: { modal, trigger } }));
@@ -78,6 +83,13 @@ export class Popup {
 		modal.dispatchEvent(new CustomEvent('popupClose', { detail: { modal } }));
 	}
 
+	closePopupById(popupId) {
+		const modal = document.getElementById(popupId);
+		if (modal) {
+			this.closePopup(modal);
+		}
+	}
+
 	lockBody() {
 		document.body.classList.add('locked');
 	}
@@ -97,5 +109,3 @@ export class Popup {
 		});
 	}
 }
-
-

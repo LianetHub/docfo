@@ -2,20 +2,20 @@
     <div class="menu__container">
         <div class="menu__header">
             <a href="" class="menu__language icon-globe">Ru</a>
-            <a href="" class="menu__sign btn btn-white">Вход</a>
+            <a href="#sign-in" data-modal class="menu__sign btn btn-white">Вход</a>
             <form action="#" class="menu__search">
                 <button type="submit" class="menu__search-submit icon-search"></button>
                 <input type="text" name="search" class="form__control" placeholder="Поиск">
             </form>
         </div>
         <ul class="menu__list">
-            <li class="menu__item"><a href="" class="menu__link icon-consult">Консультации</a></li>
-            <li class="menu__item"><a href="" class="menu__link icon-medic">Врачи</a></li>
+            <li class="menu__item"><a href="/consults.html" class="menu__link icon-consult@@if(typeof active !== 'undefined' && active===1){ active}">Консультации</a></li>
+            <li class="menu__item"><a href="/doctors.html" class="menu__link icon-medic@@if(typeof active !== 'undefined' && active===2){ active}">Врачи</a></li>
             <li class="menu__item"><a href="" class="menu__link icon-medicine">Учреждения</a></li>
-            <li class="menu__item"><a href="" class="menu__link icon-info">Помощь</a></li>
-            <li class="menu__item"><a href="" class="menu__link icon-payment">Оплата</a></li>
+            <li class="menu__item"><a href="/support.html" class="menu__link icon-info@@if(typeof active !== 'undefined' && active===4){ active}">Помощь</a></li>
+            <li class="menu__item"><a href="/payment.html" class="menu__link icon-payment@@if(typeof active !== 'undefined' && active===5){ active}">Оплата</a></li>
             <li class="menu__item"><a href="" class="menu__link icon-docs">Врачам</a></li>
-            <li class="menu__item"><a href="" class="menu__link icon-contacts">Контакты</a></li>
+            <li class="menu__item"><a href="/contacts.html" class="menu__link icon-contacts@@if(typeof active !== 'undefined' && active===7){ active}">Контакты</a></li>
         </ul>
         <div class="menu__doctors">
             <div class="menu__doctors-title">Врачи</div>
