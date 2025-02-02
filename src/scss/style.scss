@@ -49,6 +49,10 @@ $text-60: rgba(
 	$color: $text,
 	$alpha: 0.6,
 );
+$text-40: rgba(
+	$color: $text,
+	$alpha: 0.4,
+);
 $text-10: rgba(
 	$color: $text,
 	$alpha: 0.1,
@@ -98,8 +102,11 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 // СТИЛИ СТРАНИЦ
 
 @import "pages/home";
+@import "pages/consults";
 @import "pages/support";
 @import "pages/contacts";
 @import "pages/payment";
 @import "pages/institutions";
 @import "pages/info";
+@import "pages/article";
+@import "pages/privacy";

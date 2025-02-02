@@ -34,7 +34,7 @@ h4,
 //============ МОДУЛИ ====================
 @import "modules/popup";
 @import "modules/slider";
-// @import "modules/breadcrumbs";
+@import "modules/breadcrumbs";
 // @import "modules/select";
 // @import "modules/pagination";
 // @import "modules/phone-input";
@@ -351,7 +351,7 @@ $scrollbarHover: darken(
 	width: rem(8);
 }
 ::-webkit-scrollbar-track {
-	background: #fff;
+	background: $white;
 }
 ::-webkit-scrollbar-thumb {
 	background: $scrollbarColor;

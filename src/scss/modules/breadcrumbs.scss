@@ -1,0 +1,51 @@
+.breads {
+	padding-bottom: 1.5rem;
+	@media (min-width: $md4) {
+		padding-top: 1.5rem;
+	}
+	// .breads__list
+	&__list {
+	}
+	// .breads__item
+	&__item {
+		display: inline;
+		// display: inline-flex;
+		// gap: 0.25rem;
+		// align-items: center;
+		&:not(:last-child) {
+			position: relative;
+			padding-right: 1.5rem;
+			&::before {
+				@extend %ic, .icon-chevron-right;
+				order: 1;
+				color: $accent;
+				width: 1.5rem;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				position: absolute;
+				top: 55%;
+				transform: translateY(-50%);
+				right: 0;
+			}
+		}
+	}
+	// .breads__link
+	&__link {
+		font-weight: 500;
+		color: $accent;
+		font-size: 0.875rem;
+		line-height: 135%;
+		&.active {
+			color: $text-60;
+			font-weight: 400;
+		}
+		&:not(.active) {
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

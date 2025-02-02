@@ -1,4 +1,4 @@
-export const mask = () => {
+export const inpuTelMaskRussia = () => {
     var phoneInputs = document.querySelectorAll('input[type="tel"]');
 
     var getInputNumbersValue = function (input) {

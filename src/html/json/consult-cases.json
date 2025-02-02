@@ -1,0 +1,41 @@
+[
+    {
+        "case_name": "Расшифровка ЭКГ",
+        "price": "100₽",
+        "answers": "10 Ответов",
+        "position": "Терапевт",
+        "person_name": "Ирина Иванова, 30 лет",
+        "person_image": "@img/stub-user.svg",
+        "additional_doctors": "+3",
+        "date": "28.10.2024",
+        "doctor_image": "@img/doctors/doctor-4.jpg",
+        "doctor_name": "Елена Романчук",
+        "doctor_position": "Кардиолог"
+    },
+    {
+        "case_name": "Повышенные лейкоциты в моче, эпителий плоский большое количество,  теперь боюсь что это такое?",
+        "price": "100₽",
+        "answers": "10 Ответов",
+        "position": "Терапевт",
+        "person_name": "Ирина Иванова, 30 лет",
+        "person_image": "@img/stub-user.svg",
+        "additional_doctors": "+3",
+        "date": "28.10.2024",
+        "doctor_image": "@img/doctors/doctor-4.jpg",
+        "doctor_name": "Елена Романчук",
+        "doctor_position": "Кардиолог"
+    },
+    {
+        "case_name": "Частые срыгивания у новорожденного. Частые срыгивания у новорожденного. ",
+        "price": "100₽",
+        "answers": "10 Ответов",
+        "position": "Терапевт",
+        "person_name": "Ирина Иванова, 30 лет",
+        "person_image": "@img/stub-user.svg",
+        "additional_doctors": "+3",
+        "date": "28.10.2024",
+        "doctor_image": "@img/doctors/doctor-4.jpg",
+        "doctor_name": "Елена Романчук",
+        "doctor_position": "Кардиолог"
+    }
+]

@@ -38,7 +38,7 @@
 		&:is(ul) {
 			& li {
 				&::before {
-					@extend %ic, .icon-check;
+					@extend %ic, .icon-check-alternate;
 					min-height: 1.35rem;
 				}
 			}

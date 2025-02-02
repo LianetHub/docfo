@@ -3,7 +3,9 @@
 import initSlideToggle from './modules/slideToggle.js';
 import isWebp from './modules/webp.js';
 import detectDevice from './modules/detectDevice.js';
+import { inpuTelMaskRussia } from './modules/maskRussia.js';
 import { Popup } from './modules/popup.js';
+import { FilePreview } from './modules/inputFileAttachments.js';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
@@ -20,8 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // detect user device
     detectDevice();
 
+    // input mask Russia
+    inpuTelMaskRussia();
+
     // init modals
     const popupManager = new Popup();
+
+    // init preview file attachments
+    const filePreview = new FilePreview();
+
 
 
 

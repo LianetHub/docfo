@@ -1,5 +1,5 @@
 <li class="case">
-    <span class="case__header">
+    <div class="case__header">
         <div class="case__row">
             <a href="" class="case__name">@@case_name</a>
             <div class="case__side">
@@ -10,6 +10,7 @@
         <div class="case__main">
             <div class="case__main-row">
                 <a href="" class="case__position">@@position</a>
+                @@if(typeof status !== 'undefined') {
                 @@if(status==='closed'){
                 <span class="case__status success">Вопрос закрыт</span>
                 }
@@ -19,10 +20,11 @@
                 @@if(status==='open'){
                 <span class="case__status open">Открыт</span>
                 }
+                }
             </div>
             <a href="" class="case__answers">@@answers</a>
         </div>
-    </span>
+    </div>
     <div class="case__body">
         <div class="case__column">
             <a href="" class="case__person">

@@ -17,9 +17,16 @@
                     </div>
                     <div class="page__main">
                         <main class="main">
+                            <div class="banner">
+                                <img src="@img/banner-2.png" alt="Баннер">
+                            </div>
                             <section class="cases">
+                                <h2 class="cases__title">Онлайн консультация врача гинеколога</h2>
                                 <div class="cases__header">
-                                    <h2 class="cases__title">Популярные вопросы</h2>
+                                    <form action="#" class="cases__search">
+                                        <input type="text" name="search" placeholder="Поиск" class="form__control">
+                                        <button type="submit" class="cases__search-btn icon-search"></button>
+                                    </form>
                                     <div class="cases__btns">
                                         <button type="button" class="cases__btn btn btn-sm active">Платные</button>
                                         <button type="button" class="cases__btn btn btn-sm">Бесплатные</button>
@@ -28,13 +35,85 @@
                                 <div class="cases__body">
                                     <div class="cases__block active">
                                         <ul class="cases__list">
-                                            @@loop('./html/_case-card.html', './html/json/home-cases.json')
+                                            @@loop('./html/_case-card-2.html', './html/json/consult-cases.json')
                                         </ul>
+                                        <a href="" class="cases__more">Показать еще</a>
                                     </div>
                                     <div class="cases__block">
                                         <ul class="cases__list">
                                             @@loop('./html/_case-card.html', './html/json/home-cases-free.json')
                                         </ul>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="question">
+                                <h2 class="question__title">Задать вопрос врачу</h2>
+                                <div class="question__body">
+                                    <form action="#" class="question__form form">
+                                        <div class="form__fields">
+                                            <div class="form__field">
+                                                <div class="select">
+                                                    <select name="specialization">
+                                                        <option value="therapist">Терапевт</option>
+                                                        <option value="obstetrician">Акушер</option>
+                                                        <option value="venereologist">Венеролог</option>
+                                                        <option value="gastroenterologist">Гастроэнтеролог</option>
+                                                        <option value="gynecologist">Гинеколог</option>
+                                                        <option value="dermatologist">Дерматолог</option>
+                                                        <option value="dietitian">Диетолог</option>
+                                                        <option value="infectious_disease_specialist">Инфекционист</option>
+                                                        <option value="cardiologist">Кардиолог</option>
+                                                        <option value="lor">ЛОР</option>
+                                                        <option value="neurologist">Невролог</option>
+                                                        <option value="oncologist">Онколог</option>
+                                                        <option value="orthopedist">Ортопед</option>
+                                                        <option value="pediatrician">Педиатр</option>
+                                                        <option value="plastic_surgeon">Пластический хирург</option>
+                                                        <option value="psychiatrist">Психиатр</option>
+                                                        <option value="psychologist">Психолог</option>
+                                                        <option value="psychotherapist">Психотерапевт</option>
+                                                        <option value="pulmonologist">Пульмонолог</option>
+                                                        <option value="sexologist">Сексолог</option>
+                                                        <option value="dentist">Стоматолог</option>
+                                                        <option value="trichologist">Трихолог</option>
+                                                        <option value="urologist">Уролог</option>
+                                                        <option value="surgeon">Хирург</option>
+                                                        <option value="endocrinologist">Эндокринолог</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form__hint">Выберите раздел. Если сомневаетесь, оставьте "Терапевт"</div>
+                                            </div>
+                                            <div class="form__field">
+                                                <input type="text" name="caption" class="form__control" placeholder="Краткий заголовок вопроса">
+                                                <div class="form__hint">Например: "Поднялась температура и неважно себя чувствую"</div>
+                                            </div>
+                                            <div class="form__field">
+                                                <textarea name="question" class="form__control" placeholder="Ваш вопрос врачу - постарайтесь описать проблему наиболее детально"></textarea>
+                                                <div class="form__row">
+                                                    <div class="form__hint">Необходимо ввести не менее 50 символов</div>
+                                                    <div class="form__side">
+                                                        <label class="form__file">
+                                                            <input type="file" multiple name="files[]" class="form__file-input hidden" hidden>
+                                                            <span class="form__file-btn icon-plus">Прикрепить файл</span>
+                                                        </label>
+                                                        <div class="form__hint">*Файлы видны только врачам</div>
+                                                    </div>
+                                                </div>
+                                                <ul class="form__attachment"></ul>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="question__form-btn btn btn-primary">Отправить</button>
+                                    </form>
+                                    <div class="question__banner">
+                                        <div class="question__banner-body">
+                                            <h3 class="question__banner-title">
+                                                Задайте индивидуальный вопрос, чтобы получить ответ быстрее!
+                                            </h3>
+                                            <a href="" class="question__banner-btn btn btn-white">Перейти к индивидуальной консультации</a>
+                                        </div>
+                                        <div class="question__banner-image">
+                                            <img src="@img/doctors/individual-1.png" alt="Фото доктора">
+                                        </div>
                                     </div>
                                 </div>
                             </section>

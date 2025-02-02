@@ -18,11 +18,23 @@
 	}
 }
 
+.icon-play-circle:before {
+	content: "\e91a";
+}
+.icon-trash:before {
+	content: "\e91c";
+}
+.icon-plus:before {
+	content: "\e91b";
+}
 .icon-check-alternate:before {
 	content: "\e918";
 }
 .icon-close:before {
 	content: "\e917";
+}
+.icon-share:before {
+	content: "\e919";
 }
 .icon-lock:before {
 	content: "\e915";
