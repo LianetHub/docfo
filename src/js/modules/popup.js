@@ -41,7 +41,11 @@ export class Popup {
 
 	openPopup(trigger) {
 		const popupName = trigger.getAttribute('data-href') || trigger.getAttribute('href')?.replace("#", "");
-		this.openPopupById(popupName, trigger);
+		if (popupName && /\.(jpg|jpeg|png|gif|webp)$/i.test(popupName)) {
+			this.openImagePopup(popupName);
+		} else {
+			this.openPopupById(popupName, trigger);
+		}
 	}
 
 	openPopupById(popupId, trigger = null) {
@@ -64,6 +68,29 @@ export class Popup {
 		modal.dispatchEvent(new CustomEvent('popupOpen', { detail: { modal, trigger } }));
 	}
 
+	openImagePopup(imageSrc) {
+		let modal = document.getElementById('image-popup');
+
+		if (!modal) {
+			modal = document.createElement('div');
+			modal.id = 'image-popup';
+			modal.classList.add('popup');
+			modal.innerHTML = `
+				<button class="popup__close icon-close" data-close-modal></button>
+				<div class="popup__picture">            
+					<img src="" class="popup__image" alt="Изображение">
+				</div>
+			`;
+			document.body.appendChild(modal);
+		}
+
+		modal.querySelector('.popup__image').src = imageSrc;
+
+		setTimeout(() => {
+			this.openPopupById('image-popup');
+		}, 0)
+	}
+
 	closePopup(modal, unlockBody = true) {
 		if (!modal) return;
 
@@ -77,6 +104,10 @@ export class Popup {
 
 		if (unlockBody) {
 			this.unlockBody();
+		}
+
+		if (modal.id === 'image-popup') {
+			setTimeout(() => modal.remove(), 300);
 		}
 
 		this.activePopup = null;

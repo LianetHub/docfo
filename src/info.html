@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Главная страница'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+
+            <div class="page">
+                <div class="page__container">
+                    @@include('./html/_menu.html', {
+                    "active": 6
+                    })
+                    <div class="mobile-banner">
+                        <img src="@img/mobile-banner.png" alt="Баннер">
+                    </div>
+                    <div class="page__main">
+                        <main class="main">
+                            <div class="banner">
+                                <img src="@img/banner-2.png" alt="Баннер">
+                            </div>
+                            <section class="promo">
+                                <div class="promo__banner sm-banner">
+                                    <div class="promo__banner-offer">
+                                        <h1 class="promo__banner-title">Предлагаем возможность заработка на сайте, отвечая на платные и бесплатные вопросы пользователей.</h1>
+                                        <a href="" class="promo__banner-btn btn btn-white">Стать врачом-консультантом</a>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <h2 class="info__title">Для этого необходимо:</h2>
+                                    <ol class="info__list">
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                    </ol>
+                                    <div class="info__warning">
+                                        За каждый принятый ответ на платный вопрос пользователя врач-консультант получает денежное вознаграждение.
+                                    </div>
+                                    <h2 class="info__title">Преимущества</h2>
+                                    <ul class="info__list">
+                                        <li>Реклама собственных услуг.</li>
+                                        <li>Привлечение дополнительных клиентов через сайт.</li>
+                                        <li>Создание персональной анкеты врача.</li>
+                                        <li>Дополнительный заработок.</li>
+                                    </ul>
+                                    <div class="info__more">Ответы на некоторые вопросы можно найти на странице <a href="/support.html">Помощь</a></div>
+                                </div>
+                            </section>
+                            @@include('./html/_support.html', {
+                            "title": "Регистрация врача"
+                            })
+                        </main>
+                        @@include('./html/_sidebar-ad.html')
+                    </div>
+                </div>
+            </div>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

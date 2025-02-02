@@ -21,12 +21,12 @@
                                 <img src="@img/banner-2.png" alt="Баннер">
                             </div>
                             <div class="doctors">
-                                <form action="#" class="doctors__filters">
-                                    <div class="doctors__filters-top">
-                                        <div class="doctors__filters-search icon-search">
-                                            <input type="text" class="form__control" placeholder="Поиск по имени врача">
+                                <form action="#" class="filters">
+                                    <div class="filters__top">
+                                        <div class="filters__search icon-search">
+                                            <input type="text" class="form__control" name="search" placeholder="Поиск по имени врача">
                                         </div>
-                                        <div class="doctors__filters-selects">
+                                        <div class="filters__selects">
                                             <div class="select">
                                                 <select name="city">
                                                     <option value="0">Город</option>
@@ -84,7 +84,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="doctors__filters-checkboxes">
+                                    <div class="filters__checkboxes">
                                         <label class="form__checkbox">
                                             <input type="checkbox" name="reviews" class="form__checkbox-input hidden" hidden>
                                             <span class="form__checkbox-text">

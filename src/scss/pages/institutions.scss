@@ -1,0 +1,171 @@
+.institutions {
+	padding-bottom: rem(22);
+	@media (min-width: $md4) {
+		padding-bottom: rem(36);
+	}
+	// .institutions__list
+	&__list {
+		display: grid;
+		column-gap: rem(12);
+		margin-top: 1.5rem;
+		row-gap: rem(10);
+		@media (min-width: $md5) {
+			row-gap: rem(16);
+			margin-top: 1rem;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (min-width: $md4) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	// .institutions__item
+	&__item {
+	}
+	// .institutions__card
+	&__card {
+		margin-top: 1rem;
+		display: flex;
+		border-radius: 1rem;
+		background: $white;
+		flex-direction: column;
+		padding: 1rem;
+		gap: 0.87rem;
+		@media (min-width: $md4) {
+			gap: 2rem;
+			padding: 1.25rem;
+			flex-direction: row;
+		}
+	}
+	// .institutions__card-image
+	&__card-image {
+		@media (min-width: $md4) {
+			width: 15rem;
+			height: 17.5rem;
+		}
+		flex-shrink: 0;
+		& img {
+			border-radius: 0.75rem;
+		}
+	}
+	// .institutions__card-body
+	&__card-body {
+		flex: 1 1 auto;
+	}
+	// .institutions__card-title
+	&__card-title {
+		font-size: 1.25rem;
+		font-weight: 500;
+		line-height: 125%;
+		letter-spacing: normal;
+	}
+	// .institutions__card-list
+	&__card-list {
+		margin-top: 1rem;
+		font-size: 0.875rem;
+		@media (min-width: $md5) {
+			margin-top: 1.25rem;
+			font-size: 1rem;
+		}
+		line-height: 135%;
+	}
+	// .institutions__card-row
+	&__card-row {
+		&:not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
+		@media (max-width: $md5) {
+			display: flex;
+			gap: 0.13rem;
+			flex-direction: column;
+		}
+	}
+	// .institutions__card-property
+	&__card-property {
+		font-weight: 500;
+	}
+	// .institutions__card-value
+	&__card-value {
+		color: $text-80;
+		&:is(a) {
+			transition: color 0.3s ease;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $accent;
+				}
+			}
+		}
+	}
+	// .institutions__card-socials
+	&__card-socials {
+		margin-top: 1.25rem;
+		display: flex;
+		gap: 0.38rem;
+		font-size: 1.5rem;
+	}
+	// .institutions__card-social
+	&__card-social {
+		transition: color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+}
+
+.institution {
+	border-radius: 1rem;
+	background: $white;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	transition: background-color 0.3s ease;
+	padding: 1.25rem 1rem;
+	@media (min-width: $md5) {
+		padding: 0.75rem;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #ebf4fa;
+		}
+	}
+	// .institution__image
+	&__image {
+		position: relative;
+		height: 0;
+		padding-bottom: 50%;
+		@media (min-width: $md5) {
+			padding-bottom: 75%;
+		}
+		width: 100%;
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 0.75rem;
+		}
+	}
+	// .institution__body
+	&__body {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+	}
+	// .institution__title
+	&__title {
+		margin-top: 0.75rem;
+		font-weight: 500;
+		line-height: 135%;
+		font-size: 0.875rem;
+		@media (min-width: $md5) {
+			font-size: 1rem;
+		}
+	}
+	// .institution__address
+	&__address {
+		color: $text-60;
+		margin-top: 0.5rem;
+		font-size: 0.875rem;
+		line-height: 135%;
+	}
+}

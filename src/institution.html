@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Главная страница'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+
+            <div class="page">
+                <div class="page__container">
+                    @@include('./html/_menu.html', {
+                    "active": 3
+                    })
+                    <div class="mobile-banner">
+                        <img src="@img/mobile-banner.png" alt="Баннер">
+                    </div>
+                    <div class="page__main">
+                        <main class="main">
+                            <div class="banner">
+                                <img src="@img/banner-2.png" alt="Баннер">
+                            </div>
+                            <div class="institutions">
+                                <form action="#" class="filters">
+                                    <div class="filters__top">
+                                        <div class="filters__search icon-search">
+                                            <input type="text" name="search" class="form__control" placeholder="Поиск по адресу">
+                                        </div>
+                                        <div class="filters__selects">
+                                            <div class="select">
+                                                <select name="institutions">
+                                                    <option value="0">Типы учреждений</option>
+                                                    <option value="hospital">Больница</option>
+                                                    <option value="clinic">Клиника</option>
+                                                    <option value="polyclinic">Поликлиника</option>
+                                                    <option value="diagnostic_center">Диагностический центр</option>
+                                                    <option value="maternity_hospital">Роддом</option>
+                                                    <option value="rehabilitation_center">Реабилитационный центр</option>
+                                                    <option value="dental_clinic">Стоматологическая клиника</option>
+                                                    <option value="medical_lab">Медицинская лаборатория</option>
+                                                    <option value="sanatorium">Санаторий</option>
+                                                    <option value="pharmacy">Аптека</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <select name="city">
+                                                    <option value="0">Город</option>
+                                                    <option value="moscow">Москва</option>
+                                                    <option value="saint_petersburg">Санкт-Петербург</option>
+                                                    <option value="novosibirsk">Новосибирск</option>
+                                                    <option value="yekaterinburg">Екатеринбург</option>
+                                                    <option value="kazan">Казань</option>
+                                                    <option value="nizhny_novgorod">Нижний Новгород</option>
+                                                    <option value="chelyabinsk">Челябинск</option>
+                                                    <option value="samara">Самара</option>
+                                                    <option value="rostov_on_don">Ростов-на-Дону</option>
+                                                    <option value="ufa">Уфа</option>
+                                                    <option value="omsk">Омск</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <select name="disctirct">
+                                                    <option value="0">Район</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filters__checkboxes">
+                                        <label class="form__checkbox">
+                                            <input type="checkbox" name="reviews" class="form__checkbox-input hidden" hidden>
+                                            <span class="form__checkbox-text">
+                                                Наличие отзывов
+                                            </span>
+                                        </label>
+                                        <label class="form__checkbox">
+                                            <input type="checkbox" name="around-the-clock" class="form__checkbox-input hidden" hidden>
+                                            <span class="form__checkbox-text">
+                                                Круглосуточно
+                                            </span>
+                                        </label>
+                                    </div>
+                                </form>
+
+                                <div class="institutions__card">
+                                    <a href="@img/institutions/01.jpg" data-modal class="institutions__card-image">
+                                        <img src="@img/institutions/01.jpg" class="cover-image" alt="Изображение учреждения">
+                                    </a>
+                                    <div class="institutions__card-body">
+                                        <h2 class="institutions__card-title">Центр лечения позвоночника и суставов</h2>
+                                        <ul class="institutions__card-list">
+                                            <li class="institutions__card-row">
+                                                <span class="institutions__card-property">Город:</span>
+                                                <span class="institutions__card-value">Москва</span>
+                                            </li>
+                                            <li class="institutions__card-row">
+                                                <span class="institutions__card-property">Адрес:</span>
+                                                <span class="institutions__card-value">Ярославль, Толбухина проспект, 17а</span>
+                                            </li>
+                                            <li class="institutions__card-row">
+                                                <span class="institutions__card-property">Телефон:</span>
+                                                <a href="tel:+7777777777" class="institutions__card-value">+7 777 777 777</a>
+                                            </li>
+                                            <li class="institutions__card-row">
+                                                <span class="institutions__card-property">Сайт:</span>
+                                                <a href="example.com" target="_blank" class="institutions__card-value">example.com</a>
+                                            </li>
+                                        </ul>
+                                        <div class="institutions__card-socials">
+                                            <a href="" class="institutions__card-social icon-instagram"></a>
+                                            <a href="" class="institutions__card-social icon-instagram"></a>
+                                            <a href="" class="institutions__card-social icon-instagram"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('./html/_faq.html')
+                        </main>
+                        @@include('./html/_sidebar-ad.html')
+                    </div>
+                </div>
+            </div>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

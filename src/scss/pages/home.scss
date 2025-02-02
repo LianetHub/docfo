@@ -6,7 +6,7 @@
 		padding: rem(20) rem(12) rem(24);
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-image: url("@img/promo.jpg"), linear-gradient(90deg, #328ecc 0%, #3f8abe 80.36%, rgba(63, 138, 190, 0) 100%);
+		background-image: url("@img/promo.jpg"), linear-gradient(90deg, #328ecc 0%, #3f8abe 80.36%);
 		background-position: 65% 0;
 		@media (min-width: $md5) {
 			background-position: 100% 0;
@@ -14,6 +14,48 @@
 		}
 		@media (min-width: $md1) {
 			padding: rem(54) rem(56);
+		}
+		&.sm-banner {
+			@media (min-width: $md5) {
+				background-position: calc(100% + rem(100)) bottom, 0 0;
+			}
+			@media (min-width: $md3) {
+				background-position: calc(100% + rem(15)) bottom, 0 0;
+			}
+			.promo__banner-title {
+				letter-spacing: normal;
+				font-size: 1rem;
+				@media (max-width: $md4) {
+					max-width: 11.875rem;
+				}
+				@media (min-width: $md4) {
+					font-size: 1.25rem;
+				}
+				@media (min-width: $md1) {
+					font-size: 1.5rem;
+				}
+			}
+			.promo__banner-offer {
+				max-width: 100%;
+				@media (min-width: $md4) {
+					max-width: rem(360);
+				}
+				@media (min-width: $md1) {
+					max-width: rem(520);
+				}
+			}
+			.promo__banner-btn {
+				margin-top: rem(18);
+				@media (max-width: $md5) {
+					width: 100%;
+				}
+				@media (min-width: $md3) {
+					max-width: 18.9375rem;
+				}
+			}
+			@media (min-width: $md1) {
+				padding: rem(52) rem(32);
+			}
 		}
 	}
 	// .promo__banner-offer
@@ -44,6 +86,7 @@
 		margin-top: rem(16);
 		padding-inline: 1.25rem;
 		border-radius: 0.625rem;
+		min-height: rem(40);
 		@media (min-width: $md5) {
 			border-radius: 0.75rem;
 			padding-block: rem(13);
@@ -668,67 +711,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: rem(13);
-	}
-	// .doctors__filters
-	&__filters {
-		padding-top: 1.5rem;
-	}
-	// .doctors__filters-top
-	&__filters-top {
-		display: flex;
-		flex-direction: column;
-		gap: 0.87rem;
-		@media (min-width: $md5) {
-			gap: 1.31rem;
-		}
-		@media (min-width: $md1) {
-			align-items: flex-start;
-			flex-direction: row;
-		}
-	}
-	// .doctors__filters-search
-	&__filters-search {
-		position: relative;
-		flex: 1 1 auto;
-		&::before {
-			position: absolute;
-			width: 1.5rem;
-			height: 1.5rem;
-			font-size: 1.5rem;
-			right: 1rem;
-			top: 50%;
-			transform: translateY(-50%);
-			flex-shrink: 0;
-			z-index: 2;
-		}
-		.form__control {
-			background: #fff;
-		}
-	}
-	&__filters-selects {
-		display: grid;
-		gap: 0.5rem;
-		@media (min-width: $md5) {
-			grid-template-columns: repeat(3, 1fr);
-		}
-		@media (min-width: $md1) {
-			.select {
-				max-width: 10.8125rem;
-			}
-		}
-	}
-	// .doctors__filters-checkboxes
-	&__filters-checkboxes {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.75rem;
-		column-gap: 1.81rem;
-		@media (min-width: $md5) {
-			column-gap: 0.75rem;
-		}
-		.form__checkbox-text {
-			color: $text;
-		}
 	}
 }
 

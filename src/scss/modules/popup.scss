@@ -19,7 +19,8 @@
 	&.open {
 		opacity: 1;
 		visibility: visible;
-		.popup__body {
+		.popup__body,
+		.popup__picture {
 			transform: scale(1);
 		}
 	}
@@ -50,7 +51,7 @@
 		width: 1.5rem;
 		height: 1.5rem;
 		font-size: 1.125rem;
-
+		background: transparent;
 		border-radius: 50%;
 		transition: color 0.3s ease 0s;
 		@media (any-hover: hover) {
@@ -58,6 +59,14 @@
 				color: $red;
 			}
 		}
+	}
+	// .popup__picture
+	&__picture {
+		margin: auto;
+		width: fit-content;
+		cursor: default;
+		transform: scale(0);
+		transition: transform 0.3s ease;
 	}
 }
 

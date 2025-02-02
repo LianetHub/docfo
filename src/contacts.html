@@ -20,19 +20,31 @@
                             <div class="banner">
                                 <img src="@img/banner-2.png" alt="Баннер">
                             </div>
-
+                            <section class="contacts">
+                                <h1 class="contacts__title">Обратная связь</h1>
+                                <div class="contacts__body">
+                                    <div class="contacts__block">
+                                        <p>Служба “Клиентской поддержки” работает для вас:</p>
+                                        <p>Пн-Пт с 09:00 до 18:00</p>
+                                        <p>Вы можете связаться с нами по любым вопросам, отправив письмо на example@gmail.com или заполнив форму обратной связи, указав тему обращения.</p>
+                                    </div>
+                                    <div class="contacts__block">
+                                        <div class="contacts__caption">По вопросам сотрудничества:</div>
+                                        <a href="mailto:example@gmail.com" class="contacts__link">example@gmail.com</a>
+                                        <div class="contacts__caption">По вопросам рекламы:</div>
+                                        <a href="mailto:example@gmail.com" class="contacts__link">example@gmail.com</a>
+                                    </div>
+                                    <div class="contacts__block">
+                                        <h2>Наши реквизиты:</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                    </div>
+                                </div>
+                            </section>
                             @@include('./html/_support.html', {
                             "title": "Нужна помощь?"
                             })
                         </main>
-                        <aside class="sidebar">
-                            <div class="desktop-banner">
-                                <img src="@img/banner-height.png" alt="Баннер">
-                            </div>
-                            <div class="mobile-banner">
-                                <img src="@img/mobile-banner.png" alt="Баннер">
-                            </div>
-                        </aside>
+                        @@include('./html/_sidebar-ad.html')
                     </div>
                 </div>
             </div>
