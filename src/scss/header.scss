@@ -154,9 +154,16 @@
 			gap: 1rem;
 		}
 	}
+	// .header__person-actions
+	&__person-actions {
+		@media (max-width: $md3) {
+			display: none;
+		}
+	}
 	// .header__btn
 	&__btn {
 		white-space: nowrap;
+		min-height: rem(40);
 		@media (min-width: $md3) {
 			min-height: rem(48);
 		}
@@ -164,7 +171,7 @@
 			min-width: rem(183);
 		}
 		&.header__btn-sign {
-			@media (max-width: $md4) {
+			@media (max-width: $md3) {
 				display: none;
 			}
 		}

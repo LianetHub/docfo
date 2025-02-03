@@ -1,0 +1,20 @@
+.lk {
+	// .lk__title
+	&__title {
+	}
+	// .lk__body
+	&__body {
+	}
+	// .lk__form
+	&__form {
+	}
+	// .lk__form-fields
+	&__form-fields {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+	}
+	// .lk__form-btn
+	&__form-btn {
+	}
+}

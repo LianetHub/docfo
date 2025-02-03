@@ -1,0 +1,83 @@
+<nav aria-label="Меню" class="menu">
+    <div class="menu__container">
+        <div class="menu__header">
+            <a href="" class="menu__language icon-globe">Ru</a>
+            <div class="menu__person-actions person-actions">
+                <a href="" class="person-actions__notify icon-bell">
+                    <span class="person-actions__notify-quantity">1</span>
+                </a>
+                <div class="person-actions__wallet">0 ₽</div>
+                <div class="person-actions__user">
+                    <a href="" class="person-actions__user-thumb">
+                        <img src="@img/thumb.png" class="cover-image" alt="Аватар пользователя">
+                    </a>
+                    <button type="button" aria-label="Открыть меню пользователя" class="person-actions__user-btn icon-down"></button>
+                    <ul class="person-actions__user-menu">
+                        <li class="person-actions__user-item"><a href="/lk.html" class="person-actions__user-link@@if(typeof lkActive !== 'undefined' && lkActive===1){ active}">Личные данные</a></li>
+                        <li class="person-actions__user-item"><a href="/lk-messages.html" class="person-actions__user-link@@if(typeof lkActive !== 'undefined' && lkActive===2){ active}">Сообщения</a></li>
+                        <li class="person-actions__user-item"><a href="/lk-questions.html" class="person-actions__user-link@@if(typeof lkActive !== 'undefined' && lkActive===3){ active}">Вопросы</a></li>
+                        <li class="person-actions__user-item"><a href="/lk-alerts.html" class="person-actions__user-link@@if(typeof lkActive !== 'undefined' && lkActive===4){ active}">Оповещения</a></li>
+                        <li class="person-actions__user-item"><a href="/lk-history.html" class="person-actions__user-link@@if(typeof lkActive !== 'undefined' && lkActive===5){ active}">История операций</a></li>
+                        <li class="person-actions__user-item"><a href="/lk-favorite.html" class="person-actions__user-link@@if(typeof lkActive !== 'undefined' && lkActive===6){ active}">Избранное</a></li>
+                        <li class="person-actions__user-item"><a href="/logout" class="person-actions__user-link link-logout">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+            <form action="#" class="menu__search">
+                <button type="submit" class="menu__search-submit icon-search"></button>
+                <input type="text" name="search" class="form__control" placeholder="Поиск">
+            </form>
+        </div>
+        <div class="menu__desktop">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="/lk.html" class="menu__link@@if(typeof lkActive !== 'undefined' && lkActive===1){ active}">Личные данные</a></li>
+                <li class="menu__item"><a href="/lk-messages.html" class="menu__link@@if(typeof lkActive !== 'undefined' && lkActive===2){ active}">Сообщения</a></li>
+                <li class="menu__item"><a href="/lk-questions.html" class="menu__link@@if(typeof lkActive !== 'undefined' && lkActive===3){ active}">Вопросы</a></li>
+                <li class="menu__item"><a href="/lk-alerts.html" class="menu__link@@if(typeof lkActive !== 'undefined' && lkActive===4){ active}">Оповещения</a></li>
+                <li class="menu__item"><a href="/lk-history.html" class="menu__link@@if(typeof lkActive !== 'undefined' && lkActive===5){ active}">История операций</a></li>
+                <li class="menu__item"><a href="/lk-favorite.html" class="menu__link@@if(typeof lkActive !== 'undefined' && lkActive===6){ active}">Избранное</a></li>
+            </ul>
+        </div>
+        <div class="menu__mobile">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="/consults.html" class="menu__link icon-consult@@if(typeof active !== 'undefined' && active===1){ active}">Консультации</a></li>
+                <li class="menu__item"><a href="/doctors.html" class="menu__link icon-medic@@if(typeof active !== 'undefined' && active===2){ active}">Врачи</a></li>
+                <li class="menu__item"><a href="/institutions.html" class="menu__link icon-medicine@@if(typeof active !== 'undefined' && active===3){ active}">Учреждения</a></li>
+                <li class="menu__item"><a href="/support.html" class="menu__link icon-info@@if(typeof active !== 'undefined' && active===4){ active}">Помощь</a></li>
+                <li class="menu__item"><a href="/payment.html" class="menu__link icon-payment@@if(typeof active !== 'undefined' && active===5){ active}">Оплата</a></li>
+                <li class="menu__item"><a href="/info.html" class="menu__link icon-docs@@if(typeof active !== 'undefined' && active===6){ active}">Врачам</a></li>
+                <li class="menu__item"><a href="/contacts.html" class="menu__link icon-contacts@@if(typeof active !== 'undefined' && active===7){ active}">Контакты</a></li>
+            </ul>
+            <div class="menu__doctors">
+                <div class="menu__doctors-title">Врачи</div>
+                <ul class="menu__doctors-list">
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Акушер (12)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Венеролог (1)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Гастроэнтеролог (7)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Гинеколог (9)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Дерматолог (5)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Диетолог (12)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Инфекционист (6)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Кардиолог (5)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">ЛОР (1)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Невролог (7)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Онколог (5)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Ортопед (12)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Педиатр (5)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Пластический хирург (2)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психиатр (7)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психолог (8)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психотерапевт (5)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Пульмонолог (9)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Сексолог (2)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Стоматолог (19)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Терапевт (9)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Трихолог (9)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Уролог (9)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Хирург (9)</a></li>
+                    <li class="menu__doctors-item"><a href="" class="menu__doctors-link">Эндокринолог (9)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

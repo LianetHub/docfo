@@ -17,7 +17,12 @@
 		display: block;
 	}
 }
-
+.icon-down:before {
+	content: "\e91e";
+}
+.icon-bell:before {
+	content: "\e91d";
+}
 .icon-play-circle:before {
 	content: "\e91a";
 }

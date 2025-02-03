@@ -841,30 +841,6 @@
 	}
 }
 
-.select {
-	position: relative;
-	&::before {
-		@extend %ic, .icon-chevron-left;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%) rotate(-90deg);
-		right: 0.87rem;
-	}
-	& select {
-		appearance: none;
-		width: 100%;
-		border-radius: 0.625rem;
-		font-size: 0.875rem;
-		font-family: $fontfamily;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		overflow: hidden;
-		font-weight: 500;
-		line-height: 135%;
-		padding: 0.78rem 2.25rem 0.78rem 0.87rem;
-	}
-}
-
 .reviews {
 	display: flex;
 	flex-direction: column;

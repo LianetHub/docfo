@@ -117,6 +117,27 @@ document.addEventListener("DOMContentLoaded", () => {
                 educationMore.classList.remove('visible')
             }, { once: true });
         }
+
+        // open user menu
+        if (target.classList.contains('person-actions__user-btn')) {
+            target.classList.toggle('active');
+            target?.nextElementSibling.classList.toggle('active');
+        }
+
+
+        // close only if any menu is active
+        if (document.querySelector('.person-actions__user-btn.active')) {
+            document.querySelectorAll('.person-actions__user').forEach(userContainer => {
+                const userButton = userContainer.querySelector('.person-actions__user-btn');
+                const userMenu = userButton?.nextElementSibling;
+
+                if (userButton?.classList.contains('active') && !userContainer.contains(target)) {
+                    userButton.classList.remove('active');
+                    userMenu?.classList.remove('active');
+                }
+            });
+        }
+
     });
 
 

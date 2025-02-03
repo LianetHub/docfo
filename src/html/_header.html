@@ -15,7 +15,30 @@
             </div>
         </form>
         <div class="header__actions">
-            <a href="#sign-in" data-modal class="header__btn btn btn-white header__btn-sign">Вход</a>
+            @@if(login===true){
+            <div class="header__person-actions person-actions">
+                <a href="" class="person-actions__notify icon-bell">
+                    <span class="person-actions__notify-quantity">1</span>
+                </a>
+                <div class="person-actions__wallet">0 ₽</div>
+                <div class="person-actions__user">
+                    <a href="" class="person-actions__user-thumb">
+                        <img src="@img/thumb.png" class="cover-image" alt="Аватар пользователя">
+                    </a>
+                    <button type="button" aria-label="Открыть меню пользователя" class="person-actions__user-btn icon-down"></button>
+                    <ul class="person-actions__user-menu">
+                        <li class="person-actions__user-item"><a href="/lk.html" class="person-actions__user-link@@if(typeof active !== 'undefined' && active===1){ active}">Личные данные</a></li>
+                        <li class="person-actions__user-item"><a href="/lk-messages.html" class="person-actions__user-link@@if(typeof active !== 'undefined' && active===2){ active}">Сообщения</a></li>
+                        <li class="person-actions__user-item"><a href="/lk-questions.html" class="person-actions__user-link@@if(typeof active !== 'undefined' && active===3){ active}">Вопросы</a></li>
+                        <li class="person-actions__user-item"><a href="/lk-alerts.html" class="person-actions__user-link@@if(typeof active !== 'undefined' && active===4){ active}">Оповещения</a></li>
+                        <li class="person-actions__user-item"><a href="/lk-history.html" class="person-actions__user-link@@if(typeof active !== 'undefined' && active===5){ active}">История операций</a></li>
+                        <li class="person-actions__user-item"><a href="/lk-favorite.html" class="person-actions__user-link@@if(typeof active !== 'undefined' && active===6){ active}">Избранное</a></li>
+                        <li class="person-actions__user-item"><a href="/logout" class="person-actions__user-link link-logout">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+            }
+            @@if(login===false){<a href="#sign-in" data-modal class="header__btn btn btn-white header__btn-sign">Вход</a>}
             <a href="" class="header__btn btn btn-primary">Задать вопрос</a>
             <button type="button" aria-label="Открыть меню" class="header__menu-btn icon-menu">
                 <span></span>
