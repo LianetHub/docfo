@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }, { once: true });
         }
 
+
         // open user menu
         if (target.classList.contains('person-actions__user-btn')) {
             target.classList.toggle('active');
@@ -138,7 +139,51 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
+        // copy btn
+        if (target.classList.contains('copy-btn')) {
+            var textToCopy = target.previousElementSibling.textContent;
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(textToCopy).then(function () {
+                    showTooltip(target);
+                }).catch(function (err) {
+                    console.error('Ошибка при копировании: ', err);
+                });
+            } else {
+                var textArea = document.createElement("textarea");
+                textArea.value = textToCopy;
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showTooltip(target);
+                } catch (err) {
+                    console.error('Ошибка при копировании: ', err);
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+
+
+
     });
+
+
+    function showTooltip(element) {
+        var tooltip = document.createElement('span');
+        tooltip.classList.add('tooltip');
+        tooltip.textContent = 'Скопировано';
+
+        element.innerHTML += tooltip.outerHTML;
+
+        setTimeout(function () {
+            var tooltipElement = element.querySelector('.tooltip');
+            if (tooltipElement) {
+                tooltipElement.remove();
+            }
+        }, 1000);
+    }
 
 
 

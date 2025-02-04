@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Главная страница'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+
+            <div class="page">
+                <div class="page__container">
+                    @@include('./html/_menu.html', {
+                    })
+                    <div class="mobile-banner">
+                        <img src="@img/mobile-banner.png" alt="Баннер">
+                    </div>
+                    <div class="page__main">
+                        <main class="main">
+                            <div class="banner">
+                                <img src="@img/banner-2.png" alt="Баннер">
+                            </div>
+                            <section class="case">
+                                <div class="case__caption">
+                                    <h1 class="case__title">
+                                        <span class="color-accent">Вопрос терапевту /</span> Заголовок вопроса Расшифровка анализа крови
+                                    </h1>
+                                    <span class="case__number">
+                                        <span>Вопрос N 1474849</span>
+                                        <button type="button" class="copy-btn"></button>
+                                    </span>
+                                </div>
+                                <div class="case__author">
+                                    <a href="" class="case__person">
+                                        <span class="case__person-thumb">
+                                            <img src="@img/stub-user.svg" alt="Аватар пользователя">
+                                        </span>
+                                        <span class="case__person-name">Ирина Иванова</span>
+                                    </a>
+                                    <time datetime="2024-10-28" class="case__time">28.10.2024</time>
+                                </div>
+                                <div class="case__main">
+                                    <div class="case__main-row">
+                                        <div class="case__views icon-eye">3 просмотра</div>
+                                        <span class="case__status success">Вопрос закрыт</span>
+                                    </div>
+                                    <div class="case__answers">2 Ответа</div>
+                                </div>
+                                <div class="case__text">
+                                    Добрый день! Скажите пожалуйста могут ли магнитные бури влиять на самочувствие? Последние пол года в период магнитных бурь и за день до них беспокоит головная боль в висках, легкая тошнота. Может нужно пройти какие-то обследования? Сдала анализы сходила к врачу и начала лечение ,но давление все еще мучает. Днем 128/90 и 135/95 и к вечеру 140/100 или 135/90 как то так.
+                                </div>
+                                <ul class="case__list">
+                                    <li class="case__list-item">
+                                        <div class="case__list-property">Возраст:</div>
+                                        <div class="case__list-value">30 лет</div>
+                                    </li>
+                                    <li class="case__list-item">
+                                        <div class="case__list-property">Хронические болезни:</div>
+                                        <div class="case__list-value">Неаллергическом хронический вазомоторный ринит</div>
+                                    </li>
+                                </ul>
+                                <div class="case__bottom">
+                                    <a href="" class="case__position">Гинекология</a>
+                                    <div class="case__price">100₽</div>
+                                </div>
+                            </section>
+
+                            @@include('./html/_faq.html')
+                        </main>
+                        @@include('./html/_sidebar.html')
+                    </div>
+                </div>
+            </div>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

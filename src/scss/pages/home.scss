@@ -260,6 +260,24 @@
 	&:not(:last-child) {
 		margin-bottom: 0.75rem;
 	}
+	// .case__caption
+	&__caption {
+	}
+	// .case__title
+	&__title {
+		display: inline;
+		font-size: 2rem;
+		line-height: 125%;
+		letter-spacing: normal;
+	}
+	&__number {
+		display: inline-flex;
+		align-items: center;
+		color: $text-80;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 135%;
+	}
 	// .case__header
 	&__header {
 		display: block;
@@ -284,7 +302,6 @@
 		}
 		.case__answers {
 			margin-bottom: -100%;
-
 			@media (max-width: $md4) {
 				display: none;
 			}
@@ -293,8 +310,10 @@
 	// .case__main
 	&__main {
 		.case__answers {
-			@media (min-width: $md4) {
-				display: none;
+			&:is(a) {
+				@media (min-width: $md4) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -333,6 +352,17 @@
 			flex-direction: row;
 		}
 	}
+	&__views {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		color: $text-60;
+		font-size: 0.875rem;
+		line-height: 135%;
+		&::before {
+			font-size: 1.5rem;
+		}
+	}
 	// .case__text
 	&__text {
 		position: relative;
@@ -343,6 +373,31 @@
 		@media (min-width: $md5) {
 			font-size: 1rem;
 		}
+	}
+	// .case__list
+	&__list {
+		margin-top: 1rem;
+	}
+	// .case__list-item
+	&__list-item {
+		display: flex;
+		align-items: center;
+		gap: 0.38rem;
+		&:not(:last-child) {
+			margin-bottom: 0.38rem;
+		}
+	}
+	// .case__list-property
+	&__list-property {
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 135%;
+	}
+	// .case__list-value
+	&__list-value {
+		color: $text-80;
+		font-size: 1rem;
+		line-height: 135%;
 	}
 	// .case__text-more
 	&__text-more {
@@ -680,6 +735,11 @@
 				z-index: #{11 - $i};
 			}
 		}
+	}
+	&__bottom {
+		margin-top: 1.25rem;
+		display: flex;
+		justify-content: space-between;
 	}
 }
 

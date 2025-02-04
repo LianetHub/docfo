@@ -1,8 +1,8 @@
-.question {
-	// .question__title
+.consult {
+	// .consult__title
 	&__title {
 	}
-	// .question__body
+	// .consult__body
 	&__body {
 		margin-top: 1.5rem;
 		background: $white;
@@ -12,7 +12,7 @@
 			padding: 1.25rem;
 		}
 	}
-	// .question__form
+	// .consult__form
 	&__form {
 		textarea {
 			min-height: 9rem;
@@ -26,7 +26,7 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	// .question__banner
+	// .consult__banner
 	&__banner {
 		position: relative;
 		margin-top: 0.88rem;
@@ -40,7 +40,7 @@
 			padding: 1.5rem;
 		}
 	}
-	// .question__banner-body
+	// .consult__banner-body
 	&__banner-body {
 		display: flex;
 		align-items: center;
@@ -60,19 +60,19 @@
 			max-width: 27.25rem;
 		}
 	}
-	// .question__banner-title
+	// .consult__banner-title
 	&__banner-title {
 		font-size: 1.125rem;
 		@media (min-width: $md3) {
 			font-size: 1.25rem;
 		}
 	}
-	// .question__banner-btn
+	// .consult__banner-btn
 	&__banner-btn {
 		width: 100%;
 		padding-inline: 1rem;
 	}
-	// .question__banner-image
+	// .consult__banner-image
 	&__banner-image {
 		@media (min-width: $md4) {
 			position: absolute;
