@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?8n1ovy');
-  src:  url('fonts/icons.eot?8n1ovy#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?8n1ovy') format('truetype'),
-    url('fonts/icons.woff?8n1ovy') format('woff'),
-    url('fonts/icons.svg?8n1ovy#icons') format('svg');
+  src:  url('fonts/icons.eot?ht7goe');
+  src:  url('fonts/icons.eot?ht7goe#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?ht7goe') format('truetype'),
+    url('fonts/icons.woff?ht7goe') format('woff'),
+    url('fonts/icons.svg?ht7goe#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-dislike:before {
+  content: "\e925";
+}
+.icon-like:before {
+  content: "\e926";
+}
+.icon-readed:before {
+  content: "\e922";
+}
+.icon-sended:before {
+  content: "\e923";
+}
+.icon-check-best:before {
+  content: "\e924";
+}
+.icon-edit:before {
+  content: "\e921";
+}
 .icon-lock:before {
   content: "\e920";
 }

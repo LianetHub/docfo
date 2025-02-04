@@ -266,17 +266,25 @@
 	// .case__title
 	&__title {
 		display: inline;
-		font-size: 2rem;
 		line-height: 125%;
 		letter-spacing: normal;
+		font-size: 1.125rem;
+		@media (min-width: $md5) {
+			font-size: 2rem;
+		}
 	}
 	&__number {
 		display: inline-flex;
 		align-items: center;
+		gap: 0.25rem;
 		color: $text-80;
-		font-size: 1rem;
 		font-weight: 500;
 		line-height: 135%;
+		font-size: 0.875rem;
+		margin-left: 1.5em;
+		@media (min-width: $md5) {
+			font-size: 1rem;
+		}
 	}
 	// .case__header
 	&__header {
@@ -352,15 +360,29 @@
 			flex-direction: row;
 		}
 	}
+	// .case__main-line
+	&__main-line {
+		display: flex;
+		gap: 0.62rem;
+		flex-wrap: wrap;
+		align-items: center;
+		flex-direction: row;
+		@media (min-width: $md5) {
+			gap: 1rem;
+		}
+	}
 	&__views {
 		display: flex;
 		align-items: center;
 		gap: 0.25rem;
 		color: $text-60;
-		font-size: 0.875rem;
 		line-height: 135%;
+		font-size: 0.75rem;
+		@media (min-width: $md5) {
+			font-size: 0.875rem;
+		}
 		&::before {
-			font-size: 1.5rem;
+			font-size: em(1.5, 0.875);
 		}
 	}
 	// .case__text
@@ -377,27 +399,25 @@
 	// .case__list
 	&__list {
 		margin-top: 1rem;
+		line-height: 135%;
+		font-size: 0.875rem;
+		@media (min-width: $md5) {
+			font-size: 1rem;
+		}
 	}
 	// .case__list-item
 	&__list-item {
-		display: flex;
-		align-items: center;
-		gap: 0.38rem;
 		&:not(:last-child) {
 			margin-bottom: 0.38rem;
 		}
 	}
 	// .case__list-property
 	&__list-property {
-		font-size: 1rem;
 		font-weight: 500;
-		line-height: 135%;
 	}
 	// .case__list-value
 	&__list-value {
 		color: $text-80;
-		font-size: 1rem;
-		line-height: 135%;
 	}
 	// .case__text-more
 	&__text-more {

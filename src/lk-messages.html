@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Личный кабинет'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "login": true,
+            "lk-active": 2
+            })
+
+            <div class="page">
+                <div class="page__container">
+                    @@include('./html/_menu-lk.html', {
+                    'lkActive': 2
+                    })
+                    <div class="mobile-banner">
+                        <img src="@img/mobile-banner.png" alt="Баннер">
+                    </div>
+                    <div class="page__main">
+                        <main class="main">
+                            <div class="banner">
+                                <img src="@img/banner-2.png" alt="Баннер">
+                            </div>
+                            <div class="chat">
+                                <button type="button" class="chat__back icon-chevron-left active">Назад</button>
+                                <div class="chat__side">
+                                    <form action="#" class="chat__form">
+                                        <input type="text" name="search" class="form__control" placeholder="Поиск">
+                                        <button type="search" class="chat__form-btn icon-search"></button>
+                                    </form>
+                                    <ul class="chat__list">
+                                        <li class="chat__list-item">
+                                            <a href="" class="chat__block">
+                                                <span class="chat__person-thumb">
+                                                    <img src="@img/thumb.png" class="cover-image" alt="Аватар пользователя">
+                                                </span>
+                                                <span class="chat__block-content">
+                                                    <span class="chat__person-name">David Moore</span>
+                                                    <span class="chat__block-message">Lorem Ipsum has</span>
+                                                </span>
+                                                <span class="chat__block-info">
+                                                    <span class="chat__block-time">18:30</span>
+                                                    <span class="chat__block-quantity">2</span>
+                                                </span>
+                                            </a>
+                                            <a href="" class="chat__block">
+                                                <span class="chat__person-thumb">
+                                                    <img src="@img/doctors/doctor-4.jpg" class="cover-image" alt="Аватар пользователя">
+                                                </span>
+                                                <span class="chat__block-content">
+                                                    <span class="chat__person-name">Lessica</span>
+                                                    <span class="chat__block-message">Lorem Ipsum has 💙</span>
+                                                </span>
+                                                <span class="chat__block-info">
+                                                    <span class="chat__block-time">18:30</span>
+                                                    <span class="chat__block-quantity">1</span>
+                                                </span>
+                                            </a>
+                                            <a href="" class="chat__block active">
+                                                <span class="chat__person-thumb">
+                                                    <img src="@img/doctors/doctor-2.jpg" class="cover-image" alt="Аватар пользователя">
+                                                </span>
+                                                <span class="chat__block-content">
+                                                    <span class="chat__person-name">Emily</span>
+                                                    <span class="chat__block-message">Lorem Ipsum has</span>
+                                                </span>
+                                                <span class="chat__block-info">
+                                                    <span class="chat__block-time">17:44</span>
+                                                </span>
+                                            </a>
+                                            <a href="" class="chat__block online">
+                                                <span class="chat__person-thumb">
+                                                    <img src="@img/doctors/doctor-1.jpg" class="cover-image" alt="Аватар пользователя">
+                                                </span>
+                                                <span class="chat__block-content">
+                                                    <span class="chat__person-name">Greg Lan</span>
+                                                    <span class="chat__block-message">Lorem Ipsum has</span>
+                                                </span>
+                                                <span class="chat__block-info">
+                                                    <span class="chat__block-time">Wed</span>
+                                                </span>
+                                            </a>
+                                            <a href="" class="chat__block">
+                                                <span class="chat__person-thumb">
+                                                    P
+                                                </span>
+                                                <span class="chat__block-content">
+                                                    <span class="chat__person-name">Piter</span>
+                                                    <span class="chat__block-message">Lorem Ipsum has</span>
+                                                </span>
+                                                <span class="chat__block-info">
+                                                    <span class="chat__block-time">Wed</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chat__content active">
+                                    <div class="chat__header">
+                                        <div class="chat__person">
+                                            <a href="" class="chat__person-thumb">
+                                                <img src="@img/doctors/doctor-2.jpg" class="cover-image" alt="Аватар пользователя">
+                                            </a>
+                                            <div class="chat__person-body">
+                                                <a href="" class="chat__person-name">Emily</a>
+                                                <div class="chat__person-subtitle">Была в сети 5 мин назад</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat__body">
+                                        <div class="chat__date">24.12.2024</div>
+                                        <div class="chat__message input">
+                                            <div class="chat__message-body">
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                            </div>
+                                            <div class="chat__time">24.12.2024</div>
+                                        </div>
+                                        <div class="chat__message readed">
+                                            <div class="chat__message-body">
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                            </div>
+                                            <div class="chat__time">24.12.2024</div>
+                                        </div>
+                                        <div class="chat__message input">
+                                            <div class="chat__message-body">
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                            </div>
+                                            <div class="chat__time">24.12.2024</div>
+                                        </div>
+                                        <div class="chat__date">Сегодня</div>
+                                        <div class="chat__message sended">
+                                            <div class="chat__message-body">
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                            </div>
+                                            <div class="chat__time">24.12.2024</div>
+                                        </div>
+                                    </div>
+                                    <form action="#" class="chat__footer">
+                                        <textarea name="message" class="form__control" placeholder="Отправить сообщение"></textarea>
+                                        <div class="chat__footer-bottom">
+                                            <label class="form__file">
+                                                <input type="file" multiple name="files[]" class="form__file-input hidden" hidden>
+                                                <span class="form__file-btn icon-plus">Прикрепить файл</span>
+                                            </label>
+                                            <button type="submit" class="chat__footer-btn btn btn-primary">Отправить</button>
+                                        </div>
+                                        <ul class="form__attachment"></ul>
+                                    </form>
+                                </div>
+                            </div>
+                        </main>
+                        @@include('./html/_sidebar.html')
+                    </div>
+                </div>
+            </div>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

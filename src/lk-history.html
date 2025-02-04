@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Личный кабинет'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "login": true,
+            "lk-active": 5
+            })
+
+            <div class="page">
+                <div class="page__container">
+                    @@include('./html/_menu-lk.html', {
+                    'lkActive': 5
+                    })
+                    <div class="mobile-banner">
+                        <img src="@img/mobile-banner.png" alt="Баннер">
+                    </div>
+                    <div class="page__main">
+                        <main class="main">
+                            <div class="banner">
+                                <img src="@img/banner-2.png" alt="Баннер">
+                            </div>
+                            <section class="lk">
+                                <h1 class="lk__title title-sm">История операций</h1>
+                                <div class="lk__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Номер</th>
+                                                <th>Операция</th>
+                                                <th>Сумма</th>
+                                                <th>Комиссия</th>
+                                                <th>Дата</th>
+                                                <th>Статус</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-label="Номер">№5397766</td>
+                                                <td data-label="Операция">
+                                                    <span class="fw-medium">Завершена консультация</span> <br>
+                                                    с врачом Анастасия Остапенко
+                                                </td>
+                                                <td data-label="Сумма">100₽</td>
+                                                <td data-label="Комиссия">0₽</td>
+                                                <td data-label="Дата"><span class="text-nowrap">28 января 2024</span>20:44</td>
+                                                <td data-label="Статус">Выполнено</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Номер">№5397766</td>
+                                                <td data-label="Операция">
+                                                    <span class="fw-medium">Пополнение лицевого счета 1000 руб. в&nbsp;счет оплаты платного вопроса</span> <br>
+                                                    <a href="">#2094993</a>
+                                                </td>
+                                                <td data-label="Сумма">100₽</td>
+                                                <td data-label="Комиссия">0₽</td>
+                                                <td data-label="Дата"><span class="text-nowrap">28 января 2024</span>20:44</td>
+                                                <td data-label="Статус">Выполнено</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Номер">№5397766</td>
+                                                <td data-label="Операция">
+                                                    <span class="fw-medium">Пополнение лицевого счета 1000 руб. в&nbsp;счет оплаты платного вопроса</span> <br>
+                                                    <a href="">#2094993</a>
+                                                </td>
+                                                <td data-label="Сумма">100₽</td>
+                                                <td data-label="Комиссия">0₽</td>
+                                                <td data-label="Дата"><span class="text-nowrap">28 января 2024</span>20:44</td>
+                                                <td data-label="Статус">Выполнено</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Номер">№5397766</td>
+                                                <td data-label="Операция">
+                                                    <span class="fw-medium">Пополнение лицевого счета 1000 руб. в&nbsp;счет оплаты платного вопроса</span> <br>
+                                                    <a href="">#2094993</a>
+                                                </td>
+                                                <td data-label="Сумма">100₽</td>
+                                                <td data-label="Комиссия">0₽</td>
+                                                <td data-label="Дата"><span class="text-nowrap">28 января 2024</span>20:44</td>
+                                                <td data-label="Статус">Выполнено</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Номер">№5397766</td>
+                                                <td data-label="Операция">
+                                                    <span class="fw-medium">Пополнение лицевого счета 1000 руб. в&nbsp;счет оплаты платного вопроса</span> <br>
+                                                    <a href="">#2094993</a>
+                                                </td>
+                                                <td data-label="Сумма">100₽</td>
+                                                <td data-label="Комиссия">0₽</td>
+                                                <td data-label="Дата"><span class="text-nowrap">28 января 2024</span>20:44</td>
+                                                <td data-label="Статус">Выполнено</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Номер">№5397766</td>
+                                                <td data-label="Операция">
+                                                    <span class="fw-medium">Пополнение лицевого счета 1000 руб. в&nbsp;счет оплаты платного вопроса</span> <br>
+                                                    <a href="">#2094993</a>
+                                                </td>
+                                                <td data-label="Сумма">100₽</td>
+                                                <td data-label="Комиссия">0₽</td>
+                                                <td data-label="Дата"><span class="text-nowrap">28 января 2024</span>20:44</td>
+                                                <td data-label="Статус">Выполнено</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                        </main>
+                        @@include('./html/_sidebar.html')
+                    </div>
+                </div>
+            </div>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

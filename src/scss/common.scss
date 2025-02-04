@@ -117,8 +117,11 @@ body {
 		}
 	}
 	& > .banner:first-child {
+		@media (min-width: $md3) {
+			margin-bottom: 2.25rem;
+		}
 		& + section {
-			@media (max-width: $md3) {
+			@media (min-width: $md3) {
 				padding-top: 0;
 			}
 		}
@@ -970,7 +973,6 @@ body {
 }
 
 .filters {
-	padding-top: 1.5rem;
 	// .filters__top
 	&__top {
 		display: flex;

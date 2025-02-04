@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Docfo | Помощь</title>
+	<title>Docfo | Личный кабинет</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +30,7 @@
 	<!-- Open Graph  -->
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:title" content="Помощь">
+	<meta property="twitter:title" content="Личный кабинет">
 	<meta property="twitter:description" content="">
 	<meta property="twitter:site" content="">
 	<meta property="twitter:url" content="https://docfo.ru">
@@ -61,7 +61,29 @@
 					</div>
 				</form>
 				<div class="header__actions">
-					<a href="#sign-in" data-modal class="header__btn btn btn-white header__btn-sign">Вход</a>
+					<div class="header__person-actions person-actions">
+						<a href="" class="person-actions__notify icon-bell">
+							<span class="person-actions__notify-quantity">1</span>
+						</a>
+						<div class="person-actions__wallet">0 ₽</div>
+						<div class="person-actions__user">
+							<a href="" class="person-actions__user-thumb">
+								<picture>
+									<source srcset="img/thumb.webp" type="image/webp"><img src="img/thumb.png" class="cover-image" alt="Аватар пользователя">
+								</picture>
+							</a>
+							<button type="button" aria-label="Открыть меню пользователя" class="person-actions__user-btn icon-down"></button>
+							<ul class="person-actions__user-menu">
+								<li class="person-actions__user-item"><a href="/lk.html" class="person-actions__user-link">Личные данные</a></li>
+								<li class="person-actions__user-item"><a href="/lk-messages.html" class="person-actions__user-link">Сообщения</a></li>
+								<li class="person-actions__user-item"><a href="/lk-questions.html" class="person-actions__user-link">Вопросы</a></li>
+								<li class="person-actions__user-item"><a href="/lk-alerts.html" class="person-actions__user-link">Оповещения</a></li>
+								<li class="person-actions__user-item"><a href="/lk-history.html" class="person-actions__user-link">История операций</a></li>
+								<li class="person-actions__user-item"><a href="/lk-favorite.html" class="person-actions__user-link">Избранное</a></li>
+								<li class="person-actions__user-item"><a href="/logout" class="person-actions__user-link link-logout">Выйти</a></li>
+							</ul>
+						</div>
+					</div>
 					<a href="" class="header__btn btn btn-primary">Задать вопрос</a>
 					<button type="button" aria-label="Открыть меню" class="header__menu-btn icon-menu">
 						<span></span>
@@ -77,50 +99,84 @@
 					<div class="menu__container">
 						<div class="menu__header">
 							<a href="" class="menu__language icon-globe">Ru</a>
-							<a href="#sign-in" data-modal class="menu__sign btn btn-white">Вход</a>
+							<div class="menu__person-actions person-actions">
+								<a href="" class="person-actions__notify icon-bell">
+									<span class="person-actions__notify-quantity">1</span>
+								</a>
+								<div class="person-actions__wallet">0 ₽</div>
+								<div class="person-actions__user">
+									<a href="" class="person-actions__user-thumb">
+										<picture>
+											<source srcset="img/thumb.webp" type="image/webp"><img src="img/thumb.png" class="cover-image" alt="Аватар пользователя">
+										</picture>
+									</a>
+									<button type="button" aria-label="Открыть меню пользователя" class="person-actions__user-btn icon-down"></button>
+									<ul class="person-actions__user-menu">
+										<li class="person-actions__user-item"><a href="/lk.html" class="person-actions__user-link">Личные данные</a></li>
+										<li class="person-actions__user-item"><a href="/lk-messages.html" class="person-actions__user-link active">Сообщения</a></li>
+										<li class="person-actions__user-item"><a href="/lk-questions.html" class="person-actions__user-link">Вопросы</a></li>
+										<li class="person-actions__user-item"><a href="/lk-alerts.html" class="person-actions__user-link">Оповещения</a></li>
+										<li class="person-actions__user-item"><a href="/lk-history.html" class="person-actions__user-link">История операций</a></li>
+										<li class="person-actions__user-item"><a href="/lk-favorite.html" class="person-actions__user-link">Избранное</a></li>
+										<li class="person-actions__user-item"><a href="/logout" class="person-actions__user-link link-logout">Выйти</a></li>
+									</ul>
+								</div>
+							</div>
 							<form action="#" class="menu__search">
 								<button type="submit" class="menu__search-submit icon-search"></button>
 								<input type="text" name="search" class="form__control" placeholder="Поиск">
 							</form>
 						</div>
-						<ul class="menu__list">
-							<li class="menu__item"><a href="/consults.html" class="menu__link icon-consult">Консультации</a></li>
-							<li class="menu__item"><a href="/doctors.html" class="menu__link icon-medic">Врачи</a></li>
-							<li class="menu__item"><a href="/institutions.html" class="menu__link icon-medicine">Учреждения</a></li>
-							<li class="menu__item"><a href="/support.html" class="menu__link icon-info active">Помощь</a></li>
-							<li class="menu__item"><a href="/payment.html" class="menu__link icon-payment">Оплата</a></li>
-							<li class="menu__item"><a href="/info.html" class="menu__link icon-docs">Врачам</a></li>
-							<li class="menu__item"><a href="/contacts.html" class="menu__link icon-contacts">Контакты</a></li>
-						</ul>
-						<div class="menu__doctors">
-							<div class="menu__doctors-title">Врачи</div>
-							<ul class="menu__doctors-list">
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Акушер (12)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Венеролог (1)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Гастроэнтеролог (7)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Гинеколог (9)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Дерматолог (5)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Диетолог (12)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Инфекционист (6)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Кардиолог (5)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">ЛОР (1)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Невролог (7)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Онколог (5)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Ортопед (12)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Педиатр (5)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Пластический хирург (2)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психиатр (7)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психолог (8)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психотерапевт (5)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Пульмонолог (9)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Сексолог (2)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Стоматолог (19)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Терапевт (9)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Трихолог (9)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Уролог (9)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Хирург (9)</a></li>
-								<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Эндокринолог (9)</a></li>
+						<div class="menu__desktop">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="/lk.html" class="menu__link">Личные данные</a></li>
+								<li class="menu__item"><a href="/lk-messages.html" class="menu__link active">Сообщения</a></li>
+								<li class="menu__item"><a href="/lk-questions.html" class="menu__link">Вопросы</a></li>
+								<li class="menu__item"><a href="/lk-alerts.html" class="menu__link">Оповещения</a></li>
+								<li class="menu__item"><a href="/lk-history.html" class="menu__link">История операций</a></li>
+								<li class="menu__item"><a href="/lk-favorite.html" class="menu__link">Избранное</a></li>
 							</ul>
+						</div>
+						<div class="menu__mobile">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="/consults.html" class="menu__link icon-consult">Консультации</a></li>
+								<li class="menu__item"><a href="/doctors.html" class="menu__link icon-medic">Врачи</a></li>
+								<li class="menu__item"><a href="/institutions.html" class="menu__link icon-medicine">Учреждения</a></li>
+								<li class="menu__item"><a href="/support.html" class="menu__link icon-info">Помощь</a></li>
+								<li class="menu__item"><a href="/payment.html" class="menu__link icon-payment">Оплата</a></li>
+								<li class="menu__item"><a href="/info.html" class="menu__link icon-docs">Врачам</a></li>
+								<li class="menu__item"><a href="/contacts.html" class="menu__link icon-contacts">Контакты</a></li>
+							</ul>
+							<div class="menu__doctors">
+								<div class="menu__doctors-title">Врачи</div>
+								<ul class="menu__doctors-list">
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Акушер (12)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Венеролог (1)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Гастроэнтеролог (7)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Гинеколог (9)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Дерматолог (5)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Диетолог (12)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Инфекционист (6)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Кардиолог (5)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">ЛОР (1)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Невролог (7)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Онколог (5)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Ортопед (12)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Педиатр (5)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Пластический хирург (2)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психиатр (7)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психолог (8)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Психотерапевт (5)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Пульмонолог (9)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Сексолог (2)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Стоматолог (19)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Терапевт (9)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Трихолог (9)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Уролог (9)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Хирург (9)</a></li>
+									<li class="menu__doctors-item"><a href="" class="menu__doctors-link">Эндокринолог (9)</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</nav>
@@ -136,86 +192,133 @@
 								<source srcset="img/banner-2.webp" type="image/webp"><img src="img/banner-2.png" alt="Баннер">
 							</picture>
 						</div>
-						<section class="faq">
-							<h2 class="faq__title">Часто задаваемые вопросы</h2>
-							<ul class="faq__list">
-								<li class="faq__item">
-									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
-								</li>
-								<li class="faq__item">
-									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
-								</li>
-								<li class="faq__item">
-									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
-								</li>
-								<li class="faq__item">
-									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
-								</li>
-								<li class="faq__item">
-									<button type="button" class="faq__item-caption icon-chevron-right"> Как задать вопрос врачам? </button>
-									<p class="faq__item-answer"> Чтобы задать вопрос на сайте вам необходимо заполнить форму создания вопроса. После публикации вопроса его увидят врачи и смогут вам ответить. Вопрос закроется автоматически через 5 дней после публикации. </p>
-								</li>
-							</ul>
-						</section>
-						<section class="instructions">
-							<h2 class="instructions__title">Инструкции по использованию сайта</h2>
-							<div class="instructions__body">
-								<a href="" class="instructions__video icon-play-circle">
-									<picture>
-										<source srcset="img/poster.webp" type="image/webp"><img src="img/poster.png" class="cover-image" alt="Постер">
-									</picture>
-								</a>
-								<ol class="instructions__list">
-									<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-								</ol>
+						<div class="chat">
+							<button type="button" class="chat__back icon-chevron-left active">Назад</button>
+							<div class="chat__side">
+								<form action="#" class="chat__form">
+									<input type="text" name="search" class="form__control" placeholder="Поиск">
+									<button type="search" class="chat__form-btn icon-search"></button>
+								</form>
+								<ul class="chat__list">
+									<li class="chat__list-item">
+										<a href="" class="chat__block">
+											<span class="chat__person-thumb">
+												<picture>
+													<source srcset="img/thumb.webp" type="image/webp"><img src="img/thumb.png" class="cover-image" alt="Аватар пользователя">
+												</picture>
+											</span>
+											<span class="chat__block-content">
+												<span class="chat__person-name">David Moore</span>
+												<span class="chat__block-message">Lorem Ipsum has</span>
+											</span>
+											<span class="chat__block-info">
+												<span class="chat__block-time">18:30</span>
+												<span class="chat__block-quantity">2</span>
+											</span>
+										</a>
+										<a href="" class="chat__block">
+											<span class="chat__person-thumb">
+												<picture>
+													<source srcset="img/doctors/doctor-4.webp" type="image/webp"><img src="img/doctors/doctor-4.jpg" class="cover-image" alt="Аватар пользователя">
+												</picture>
+											</span>
+											<span class="chat__block-content">
+												<span class="chat__person-name">Lessica</span>
+												<span class="chat__block-message">Lorem Ipsum has 💙</span>
+											</span>
+											<span class="chat__block-info">
+												<span class="chat__block-time">18:30</span>
+												<span class="chat__block-quantity">1</span>
+											</span>
+										</a>
+										<a href="" class="chat__block active">
+											<span class="chat__person-thumb">
+												<picture>
+													<source srcset="img/doctors/doctor-2.webp" type="image/webp"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Аватар пользователя">
+												</picture>
+											</span>
+											<span class="chat__block-content">
+												<span class="chat__person-name">Emily</span>
+												<span class="chat__block-message">Lorem Ipsum has</span>
+											</span>
+											<span class="chat__block-info">
+												<span class="chat__block-time">17:44</span>
+											</span>
+										</a>
+										<a href="" class="chat__block online">
+											<span class="chat__person-thumb">
+												<picture>
+													<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Аватар пользователя">
+												</picture>
+											</span>
+											<span class="chat__block-content">
+												<span class="chat__person-name">Greg Lan</span>
+												<span class="chat__block-message">Lorem Ipsum has</span>
+											</span>
+											<span class="chat__block-info">
+												<span class="chat__block-time">Wed</span>
+											</span>
+										</a>
+										<a href="" class="chat__block">
+											<span class="chat__person-thumb"> P </span>
+											<span class="chat__block-content">
+												<span class="chat__person-name">Piter</span>
+												<span class="chat__block-message">Lorem Ipsum has</span>
+											</span>
+											<span class="chat__block-info">
+												<span class="chat__block-time">Wed</span>
+											</span>
+										</a>
+									</li>
+								</ul>
 							</div>
-						</section>
-						<section class="support">
-							<div class="support__content">
-								<h2 class="support__title">Нужна помощь?</h2>
-								<p class="support__subtitle">Введите ваши данные и наш менеджер с вами свяжется</p>
-								<div class="support__body">
-									<form action="#" class="support__form form">
-										<div class="form__fields">
-											<div class="form__field">
-												<div class="form__label">Имя</div>
-												<input type="text" name="name" class="form__control" placeholder="Введите имя">
-											</div>
-											<div class="form__field">
-												<div class="form__label">Номер телефона</div>
-												<input type="tel" name="phone" class="form__control" placeholder="Введите номер телефона">
-											</div>
-											<div class="form__field">
-												<div class="form__label">Почта</div>
-												<input type="email" name="email" class="form__control" placeholder="Введите почту">
-											</div>
-											<div class="form__field">
-												<div class="form__label">Вопрос</div>
-												<textarea name="question" class="form__control" placeholder="Текст вопроса"></textarea>
-											</div>
-										</div>
-										<button type="submit" class="form__btn btn btn-primary btn-fullwidth">Отправить</button>
-									</form>
-									<figure class="support__manager">
-										<div class="support__manager-image">
+							<div class="chat__content active">
+								<div class="chat__header">
+									<div class="chat__person">
+										<a href="" class="chat__person-thumb">
 											<picture>
-												<source srcset="img/manager.webp" type="image/webp"><img src="img/manager.png" alt="Фото менеджера">
+												<source srcset="img/doctors/doctor-2.webp" type="image/webp"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Аватар пользователя">
 											</picture>
+										</a>
+										<div class="chat__person-body">
+											<a href="" class="chat__person-name">Emily</a>
+											<div class="chat__person-subtitle">Была в сети 5 мин назад</div>
 										</div>
-										<figcaption class="support__manager-desc">
-											<strong>Сокол Инна</strong> Менеджер
-										</figcaption>
-									</figure>
+									</div>
 								</div>
+								<div class="chat__body">
+									<div class="chat__date">24.12.2024</div>
+									<div class="chat__message input">
+										<div class="chat__message-body"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s </div>
+										<div class="chat__time">24.12.2024</div>
+									</div>
+									<div class="chat__message readed">
+										<div class="chat__message-body"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s </div>
+										<div class="chat__time">24.12.2024</div>
+									</div>
+									<div class="chat__message input">
+										<div class="chat__message-body"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s </div>
+										<div class="chat__time">24.12.2024</div>
+									</div>
+									<div class="chat__date">Сегодня</div>
+									<div class="chat__message sended">
+										<div class="chat__message-body"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s </div>
+										<div class="chat__time">24.12.2024</div>
+									</div>
+								</div>
+								<form action="#" class="chat__footer">
+									<textarea name="message" class="form__control" placeholder="Отправить сообщение"></textarea>
+									<div class="chat__footer-bottom">
+										<label class="form__file">
+											<input type="file" multiple name="files[]" class="form__file-input hidden" hidden>
+											<span class="form__file-btn icon-plus">Прикрепить файл</span>
+										</label>
+										<button type="submit" class="chat__footer-btn btn btn-primary">Отправить</button>
+									</div>
+									<ul class="form__attachment"></ul>
+								</form>
 							</div>
-						</section>
+						</div>
 					</main>
 					<aside class="sidebar">
 						<div class="sidebar__block">

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Личный кабинет'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "login": true,
+            "lk-active": 4
+            })
+
+            <div class="page">
+                <div class="page__container">
+                    @@include('./html/_menu-lk.html', {
+                    'lkActive': 4
+                    })
+                    <div class="mobile-banner">
+                        <img src="@img/mobile-banner.png" alt="Баннер">
+                    </div>
+                    <div class="page__main">
+                        <main class="main">
+                            <div class="banner">
+                                <img src="@img/banner-2.png" alt="Баннер">
+                            </div>
+                            <section class="lk">
+                                <h1 class="lk__title title-sm">Оповещения</h1>
+                                <div class="lk__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Оповещение</th>
+                                                <th>Дата</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-label="Оповещение">
+                                                    <span class="lk__table-caption">Открытие диалога</span>
+                                                    <span class="lk__table-message">Диалог открыт в течение 7 дней. Теперь вы можете написать врачу <a href="">Анастасия Остапенко</a> через личные сообщения. Врач получил оповещение о поступлении оплаты и сможет ответить вам в ближайшее время.</span>
+                                                </td>
+                                                <td data-label="Дата"><span class="text-nowrap">28 января 2024</span> <br> 20:44</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Оповещение">
+                                                    <span class="lk__table-caption">Ваш вопрос был закрыт автоматически</span>
+                                                    <span class="lk__table-message">Ваш вопрос <a href="">"Панкреатит? Диагноз, лечение"</a> был закрыт автоматически, так как после его публикации прошло 5 дней.</span>
+                                                </td>
+                                                <td data-label="Дата"><span class="text-nowrap">28 января 2024</span> <br> 20:44</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Оповещение">
+                                                    <span class="lk__table-caption">Новый ответ на вопрос</span>
+                                                    <span class="lk__table-message">Вы получили новый ответ от врача на свой вопрос <a href="">"Панкреатит? Диагноз, лечение"</a>. Вам необходимо <a href="">выбрать</a> наиболее подходящие ответы, чтобы разделить вознаграждение между теми специалистами, чьи ответы вам понравились.</span>
+                                                </td>
+                                                <td data-label="Дата"><span class="text-nowrap">28 января 2024</span> <br> 20:44</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Оповещение">
+                                                    <span class="lk__table-caption">Открытие диалога</span>
+                                                    <span class="lk__table-message">Диалог открыт в течение 7 дней. Теперь вы можете написать врачу <a href="">Анастасия Остапенко</a> через личные сообщения. Врач получил оповещение о поступлении оплаты и сможет ответить вам в ближайшее время.</span>
+                                                </td>
+                                                <td data-label="Дата"><span class="text-nowrap">28 января 2024</span> <br> 20:44</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                        </main>
+                        @@include('./html/_sidebar.html')
+                    </div>
+                </div>
+            </div>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

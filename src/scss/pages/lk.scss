@@ -1,9 +1,22 @@
 .lk {
 	// .lk__title
 	&__title {
+		&.title-sm {
+			font-size: 1.25rem;
+			@media (min-width: $md5) {
+				font-size: 1.5rem;
+			}
+		}
 	}
 	// .lk__body
 	&__body {
+		margin-top: 1.25rem;
+		border-radius: 1rem;
+		background: $white;
+		padding: 1.25rem 1rem;
+		@media (min-width: $md5) {
+			padding: 1.25rem;
+		}
 	}
 	// .lk__form
 	&__form {
@@ -11,10 +24,524 @@
 	// .lk__form-fields
 	&__form-fields {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1rem;
+		margin-top: 1.25rem;
+		@media (min-width: $md5) {
+			margin-top: 1.06rem;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (min-width: $md1) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		gap: 1.25rem;
+		.form__field {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+		.form__radio-btns {
+			flex: 1 1 auto;
+		}
 	}
 	// .lk__form-btn
 	&__form-btn {
+		margin-top: 1.25rem;
+		padding: 0.7rem 1rem;
+		width: 100%;
+		@media (min-width: $md5) {
+			min-height: rem(48);
+			width: calc(50% - rem(10));
+		}
+		@media (min-width: $md1) {
+			width: calc(33.33% - rem(15));
+		}
+	}
+	// .lk__form-avatar
+	&__form-avatar {
+		position: relative;
+		width: rem(116);
+		height: rem(116);
+		background: url("@img/stub-add-image.svg") center / 2.375rem no-repeat, $accent-10;
+		border-radius: 50%;
+		margin-right: auto;
+		margin-left: auto;
+		@media (min-width: $md5) {
+			margin-left: 0;
+		}
+		& img {
+			border-radius: 50%;
+		}
+	}
+	// .lk__form-avatar-btns
+	&__form-avatar-btns {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: -0.875rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+	// .lk__form-avatar-btn
+	&__form-avatar-btn {
+		border-radius: 0.25rem;
+		border: rem(1) solid $text-5;
+		background: $white;
+		display: flex;
+		width: 1.75rem;
+		height: 1.75rem;
+		padding: 0.25rem;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		font-size: 1.25rem;
+		color: #a81d28;
+		transition: background-color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $pink;
+			}
+		}
+	}
+	// .lk__table
+	&__table {
+		margin-top: 1.25rem;
+		& table {
+			width: 100%;
+			border-radius: 1rem;
+			overflow: hidden;
+			& th {
+				border-bottom: rem(1) solid $text-5;
+				background: $pink;
+				font-size: 1rem;
+				font-weight: 500;
+				line-height: 135%;
+				padding: 1rem 0.5rem;
+				text-align: left;
+				&:first-child {
+					padding-left: 1.25rem;
+					border-radius: 1rem 0 0 0;
+				}
+				&:last-child {
+					border-radius: 0 1rem 0 0;
+					padding-right: 1.25rem;
+				}
+			}
+			& thead {
+				@media (max-width: $md4) {
+					display: none;
+				}
+			}
+			& tr {
+				border-bottom: rem(1) solid $text-5;
+				background: $white;
+				font-size: 0.875rem;
+				line-height: 135%;
+				display: flex;
+				flex-direction: column;
+				gap: 0.875rem;
+				@media (max-width: $md4) {
+					padding: 1.25rem 1rem;
+					border-radius: 1rem;
+					&:not(:last-child) {
+						margin-bottom: 0.62rem;
+					}
+				}
+				& td {
+					@media (max-width: $md4) {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.5rem;
+						br {
+							display: none;
+						}
+						&::before {
+							content: attr(data-label) ":";
+							font-weight: 500;
+						}
+					}
+				}
+				@media (min-width: $md4) {
+					display: table-row;
+					&:nth-child(even) {
+						background: #f8f8f8;
+					}
+					& td {
+						padding: 0.75rem 0.5rem;
+						vertical-align: top;
+
+						&:first-child {
+							padding-left: 1.25rem;
+						}
+						&:last-child {
+							padding-right: 1.25rem;
+						}
+					}
+				}
+				& a {
+					color: $accent;
+					@media (any-hover: hover) {
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+	// .lk__table-caption
+	&__table-caption {
+		font-weight: 500;
+		@media (min-width: $md4) {
+			font-size: 1rem;
+			display: block;
+			margin-bottom: 0.25rem;
+		}
+	}
+}
+
+.chat {
+	margin-top: rem(24);
+	display: flex;
+	flex-direction: column;
+	@media (min-width: $md4) {
+		border-radius: 1rem;
+		flex-direction: row;
+		border: rem(1) solid $text-5;
+		background: $white;
+		overflow: hidden;
+	}
+	// .chat__back
+	&__back {
+		align-items: center;
+		color: $accent;
+		font-size: 1rem;
+		gap: 0.25rem;
+		line-height: 135%;
+		margin-bottom: 1.35rem;
+		display: none;
+		&.active {
+			display: inline-flex;
+		}
+		@media (min-width: $md4) {
+			display: none !important;
+		}
+	}
+	// .chat__side
+	&__side {
+		display: none;
+		&.active {
+			display: block;
+		}
+		border-radius: 0.75rem;
+		border: rem(1) solid $text-5;
+		background: $white;
+		padding: 1rem 1rem 0.75rem;
+		@media (min-width: $md4) {
+			border: 0;
+			display: block;
+			flex: 0 0 rem(270);
+			padding: 1.25rem;
+			border-right: rem(1) solid $text-5;
+		}
+	}
+	// .chat__form
+	&__form {
+		position: relative;
+		.form__control {
+			border-radius: 0.75rem;
+			border: rem(1) solid $text-5;
+			background: $white-bg;
+			padding-left: 2.62rem;
+			color: $text;
+		}
+	}
+	// .chat__form-btn
+	&__form-btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0.75rem;
+		z-index: 2;
+		font-size: 1.5rem;
+	}
+	// .chat__list
+	&__list {
+		margin-top: 0.5rem;
+		margin-left: -1rem;
+		margin-right: -1rem;
+		@media (min-width: $md4) {
+			margin-left: -1.25rem;
+			margin-right: -1.25rem;
+		}
+	}
+	// .chat__list-item
+	&__list-item {
+	}
+	// .chat__block
+	&__block {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+		transition: background-color 0.3s ease;
+		&.online {
+			.chat__person-thumb {
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0.06rem;
+					right: 0;
+					width: 0.5625rem;
+					height: 0.5625rem;
+					border-radius: 50%;
+					background: $green;
+					border: rem(1) solid $white;
+					flex-shrink: 0;
+				}
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: $white-bg;
+			}
+		}
+		&.active {
+			background: $white-bg;
+		}
+	}
+	// .chat__person-thumb
+	&__person-thumb {
+		position: relative;
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 50%;
+		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(50, 142, 204, 0.4);
+		color: $white;
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 100%;
+		& img {
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	// .chat__block-content
+	&__block-content {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+	}
+	// .chat__person-name
+	&__person-name {
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 135%;
+	}
+	// .chat__block-message
+	&__block-message {
+		margin-top: 0.06rem;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		color: $text-60;
+		font-size: 0.75rem;
+		line-height: 135%;
+	}
+	// .chat__block-info
+	&__block-info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: right;
+		padding: 0.25rem 0;
+		align-self: flex-start;
+	}
+	// .chat__block-time
+	&__block-time {
+		color: $text-60;
+		font-size: 0.625rem;
+		line-height: 135%;
+	}
+	// .chat__block-quantity
+	&__block-quantity {
+		margin-top: 0.31rem;
+		color: $white;
+		background: $green;
+		font-size: 0.625rem;
+		line-height: 100%;
+		width: 0.875rem;
+		height: 0.875rem;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .chat__content
+	&__content {
+		flex: 1 1 auto;
+		border-radius: 0rem 0rem 0.9375rem 0rem;
+		background: $accent-10;
+		display: flex;
+		flex-direction: column;
+		border-radius: 0.75rem;
+		border: rem(1) solid $text-5;
+		border-radius: 1rem;
+		height: rem(650);
+		@media (min-width: $md4) {
+			border-radius: 0 1rem 1rem 0;
+		}
+		@media (max-width: $md4) {
+			display: none;
+			&.active {
+				display: flex;
+			}
+		}
+	}
+	// .chat__header
+	&__header {
+		border-bottom: rem(1) solid $text-5;
+		padding: 1.25rem 1rem 0.62rem;
+		background: $white;
+		border-radius: 1rem 1rem 0 0;
+		@media (min-width: $md4) {
+			border-radius: 0 1rem 0 0;
+		}
+	}
+	// .chat__person
+	&__person {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+	// .chat__person-body
+	&__person-body {
+	}
+	// .chat__person-subtitle
+	&__person-subtitle {
+		color: $text-60;
+		font-size: 0.75rem;
+		line-height: 135%;
+	}
+	&__body {
+		flex: 1 1 auto;
+		align-content: end;
+
+		overflow-y: auto;
+		padding: rem(12) rem(8) rem(24);
+		@media (min-width: $md4) {
+			padding: rem(12) rem(16) rem(24);
+		}
+	}
+	// .chat__footer
+	&__footer {
+		padding: 0 1rem 1.19rem;
+		border-radius: 0 0 1rem 1rem;
+		@media (min-width: $md4) {
+			border-radius: 0 0 1rem 0;
+		}
+		.form__control {
+			background: $white;
+			font-size: 0.75rem;
+		}
+		.form__file-btn {
+			font-size: 0.75rem;
+		}
+		.form__attachment {
+			grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+			grid-auto-rows: 5rem;
+		}
+	}
+	// .chat__footer-bottom
+	&__footer-bottom {
+		margin-top: 0.75rem;
+		display: flex;
+		gap: 1rem;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	&__footer-btn {
+		margin-left: auto;
+
+		padding: 0.44rem 1rem;
+		min-height: 0;
+		font-weight: 500;
+	}
+	// .chat__date
+	&__date {
+		color: $text-60;
+		text-align: center;
+		font-size: 0.625rem;
+		font-weight: 500;
+		line-height: 135%;
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+	// .chat__message
+	&__message {
+		border-radius: 0.625rem;
+		padding: 0.55rem 0.7rem 0.3rem;
+		color: $text-80;
+		font-size: 0.75rem;
+		line-height: 135%;
+		margin-left: auto;
+		border: rem(1) solid $accent-40;
+		background: rgba(50, 142, 204, 0.1);
+		max-width: 80%;
+		@media (min-width: $md4) {
+			max-width: 75%;
+		}
+		&.input {
+			border: rem(1) solid $text-10;
+			background: $white;
+			margin-left: 0;
+		}
+		&.readed {
+			.chat__time {
+				&::before {
+					@extend %ic, .icon-readed;
+				}
+			}
+		}
+		&.sended {
+			.chat__time {
+				&::before {
+					@extend %ic, .icon-sended;
+				}
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+	// .chat__message-body
+	&__message-body {
+	}
+	// .chat__time
+	&__time {
+		color: $text-60;
+		text-align: right;
+		font-size: 0.625rem;
+		font-weight: 500;
+		line-height: 135%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 0.25rem;
+		&::before {
+			order: 1;
+			font-size: 1rem;
+			color: $accent;
+		}
 	}
 }

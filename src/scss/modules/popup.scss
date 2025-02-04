@@ -68,6 +68,35 @@
 		transform: scale(0);
 		transition: transform 0.3s ease;
 	}
+
+	// .popup__status
+	&__status {
+		width: 3.5rem;
+		height: 3.5rem;
+		font-size: 2rem;
+		border-radius: 50%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $accent-10;
+		color: $accent;
+	}
+	// .popup__title
+	&__title {
+		&.text-center {
+			max-width: 16.625rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&:not(:first-child) {
+			margin-top: 1.31rem;
+		}
+	}
+	// .popup__btn
+	&__btn {
+		margin-top: 1.31rem;
+	}
 }
 
 .login {

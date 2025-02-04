@@ -17,6 +17,24 @@
 		display: block;
 	}
 }
+.icon-dislike:before {
+	content: "\e925";
+}
+.icon-like:before {
+	content: "\e926";
+}
+.icon-readed:before {
+	content: "\e922";
+}
+.icon-sended:before {
+	content: "\e923";
+}
+.icon-check-best:before {
+	content: "\e924";
+}
+.icon-edit:before {
+	content: "\e921";
+}
 .icon-lock:before {
 	content: "\e920";
 }

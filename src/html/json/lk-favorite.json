@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Олег Фомин",
+        "rating": "4.8",
+        "experience": "8 лет",
+        "education": "Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.",
+        "status": "online",
+        "positions": 2,
+        "image": "@img/doctors/oleg-fomin.jpg",
+        "favoriteActive": true,
+        "hasBtns": true
+    },
+    {
+        "name": "Александр Твердохлебенко",
+        "rating": "4.8",
+        "experience": "8 лет",
+        "education": "Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.",
+        "status": "offline",
+        "positions": 2,
+        "image": "@img/stub-doctor.svg",
+        "favoriteActive": true,
+        "hasBtns": true
+    }
+]

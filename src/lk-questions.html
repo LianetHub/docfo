@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Личный кабинет'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "login": true,
+            "lk-active": 3
+            })
+
+            <div class="page">
+                <div class="page__container">
+                    @@include('./html/_menu-lk.html', {
+                    'lkActive': 3
+                    })
+                    <div class="mobile-banner">
+                        <img src="@img/mobile-banner.png" alt="Баннер">
+                    </div>
+                    <div class="page__main">
+                        <main class="main">
+                            <div class="banner">
+                                <img src="@img/banner-2.png" alt="Баннер">
+                            </div>
+                            <section class="lk">
+                                <h1 class="lk__title title-sm">Вопросы</h1>
+                                <div class="lk__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Номер</th>
+                                                <th>Вопрос</th>
+                                                <th>Вознагр.</th>
+                                                <th>Ответы</th>
+                                                <th>Создан</th>
+                                                <th>Публ.</th>
+                                                <th>Статус</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-label="Номер"> №397766</td>
+                                                <td data-label="Вопрос"><a href="">Сколько держится температура при ветрянке</a> <br> Инфекционист</td>
+                                                <td data-label="Вознаграждение">Платный <br> 1000₽</td>
+                                                <td data-label="Ответы">17/0</td>
+                                                <td data-label="Создан"><span class="text-nowrap">28 января 2024</span></td>
+                                                <td data-label="Публикация"><span class="text-nowrap">28 января 2024</span>, <br> 20:44</td>
+                                                <td data-label="Статус">Закрыт</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Номер"> №397766</td>
+                                                <td data-label="Вопрос"><a href="">Сколько держится температура при ветрянке</a> <br> Инфекционист</td>
+                                                <td data-label="Вознаграждение">Платный <br> 1000₽</td>
+                                                <td data-label="Ответы">17/0</td>
+                                                <td data-label="Создан"><span class="text-nowrap">28 января 2024</span></td>
+                                                <td data-label="Публикация"><span class="text-nowrap">28 января 2024</span>, <br> 20:44</td>
+                                                <td data-label="Статус">Закрыт</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Номер"> №397766</td>
+                                                <td data-label="Вопрос"><a href="">Сколько держится температура при ветрянке</a> <br> Инфекционист</td>
+                                                <td data-label="Вознаграждение">Платный <br> 1000₽</td>
+                                                <td data-label="Ответы">17/0</td>
+                                                <td data-label="Создан"><span class="text-nowrap">28 января 2024</span></td>
+                                                <td data-label="Публикация"><span class="text-nowrap">28 января 2024</span>, <br> 20:44</td>
+                                                <td data-label="Статус">Закрыт</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Номер"> №397766</td>
+                                                <td data-label="Вопрос"><a href="">Сколько держится температура при ветрянке</a> <br> Инфекционист</td>
+                                                <td data-label="Вознаграждение">Платный <br> 1000₽</td>
+                                                <td data-label="Ответы">17/0</td>
+                                                <td data-label="Создан"><span class="text-nowrap">28 января 2024</span></td>
+                                                <td data-label="Публикация"><span class="text-nowrap">28 января 2024</span>, <br> 20:44</td>
+                                                <td data-label="Статус">Закрыт</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Номер"> №397766</td>
+                                                <td data-label="Вопрос"><a href="">Сколько держится температура при ветрянке</a> <br> Инфекционист</td>
+                                                <td data-label="Вознаграждение">Платный <br> 1000₽</td>
+                                                <td data-label="Ответы">17/0</td>
+                                                <td data-label="Создан"><span class="text-nowrap">28 января 2024</span></td>
+                                                <td data-label="Публикация"><span class="text-nowrap">28 января 2024</span>, <br> 20:44</td>
+                                                <td data-label="Статус">Закрыт</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Номер"> №397766</td>
+                                                <td data-label="Вопрос"><a href="">Сколько держится температура при ветрянке</a> <br> Инфекционист</td>
+                                                <td data-label="Вознаграждение">Платный <br> 1000₽</td>
+                                                <td data-label="Ответы">17/0</td>
+                                                <td data-label="Создан"><span class="text-nowrap">28 января 2024</span></td>
+                                                <td data-label="Публикация"><span class="text-nowrap">28 января 2024</span>, <br> 20:44</td>
+                                                <td data-label="Статус">Закрыт</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                        </main>
+                        @@include('./html/_sidebar.html')
+                    </div>
+                </div>
+            </div>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

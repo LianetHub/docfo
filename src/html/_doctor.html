@@ -3,7 +3,7 @@
         <a href="" class="doctor__image">
             <img src="@@image" class="cover-image" alt="Фото доктора">
         </a>
-        <button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
+        <button type="button" aria-label="Добавить в избранное" class="favorite-btn@@if(typeof favoriteActive !== 'undefined'){ active}"></button>
         @@if(status==='online'){<span class="doctor__status online"><span>Сейчас на сайте</span></span>}
         @@if(status==='offline'){<span class="doctor__status"><span>Оффлайн</span></span>}
     </div>

@@ -165,6 +165,37 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
+        // chat page - back to chat list
+        if (target.classList.contains('chat__back')) {
+            target.classList.remove('active');
+            document.querySelector('.chat__side').classList.add('active');
+            document.querySelector('.chat__content').classList.remove('active');
+        }
+
+        // toggle active state like/dislike
+        if (target.matches('.answer__action-btn')) {
+            target.classList.toggle('active');
+            target.previousElementSibling?.classList.remove('active');
+            target.nextElementSibling?.classList.remove('active');
+
+        }
+
+        // toggle visible more ansers
+        if (target.matches('.answer__more')) {
+            target.classList.toggle('active');
+
+            if (target.classList.contains('active')) {
+                target.textContent = "Свернуть";
+            } else {
+                target.textContent = "Развернуть";
+            }
+
+            target.style.setProperty('pointer-events', 'none');
+            target.closest('.answer')?.querySelector('.answer__more-list').slideToggle(300, () => {
+                target.removeAttribute('style');
+            })
+        }
+
 
 
     });
@@ -184,8 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }, 1000);
     }
-
-
 
 
 
