@@ -39,6 +39,31 @@
 		@media (min-width: $md5) {
 			padding: rem(24);
 		}
+		&.popup__body-xl {
+			max-width: 51.375rem;
+		}
+		.doctor {
+			background: $text-5;
+			.doctor__side {
+				@media (max-width: $md6) {
+					grid-column: span 2;
+				}
+				@media (min-width: $md5) {
+					flex: 0 0 9.75rem;
+				}
+			}
+			.doctor__main {
+				@media (max-width: $md6) {
+					grid-column: span 2;
+				}
+			}
+			.doctor__bottom {
+				grid-template-columns: repeat(1, 1fr);
+				@media (min-width: $md3) {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+		}
 	}
 	// .popup__close
 	&__close {
@@ -58,6 +83,9 @@
 			&:hover {
 				color: $red;
 			}
+		}
+		& + .popup__title {
+			margin-top: 0 !important;
 		}
 	}
 	// .popup__picture
@@ -85,7 +113,6 @@
 	// .popup__title
 	&__title {
 		&.text-center {
-			max-width: 16.625rem;
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -93,9 +120,212 @@
 			margin-top: 1.31rem;
 		}
 	}
+	&__subtitle {
+		margin-top: 0.75rem;
+		color: $grey;
+		color: $text-80;
+		font-size: 0.875rem;
+		line-height: 135%;
+	}
+	// .popup__form
+	&__form {
+		margin-top: 1.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
 	// .popup__btn
 	&__btn {
 		margin-top: 1.31rem;
+	}
+	// .popup__consults
+	&__consults {
+		margin-top: rem(20);
+	}
+	// .popup__consults-title
+	&__consults-title {
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 135%;
+	}
+	// .popup__consults-cards
+	&__consults-cards {
+		margin-top: 1rem;
+		display: grid;
+		gap: 1rem;
+		@media (min-width: $md4) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .popup__consults-card
+	&__consults-card {
+		background: $white;
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	// .popup__consults-input
+	&__consults-input {
+		&:checked {
+			& + .popup__consults-btn {
+				border: rem(1) solid $accent;
+
+				.popup__consults-caption {
+					background: $accent-10;
+					&::before {
+						border-color: $accent;
+						background: $accent;
+						box-shadow: inset 0 0 0 0.25rem $white;
+					}
+				}
+				.popup__consults-list {
+					& > span {
+						&::before {
+							background: $accent-10;
+							color: $accent;
+						}
+					}
+				}
+			}
+		}
+	}
+	// .popup__consults-btn
+	&__consults-btn {
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		border-radius: 1rem;
+		border: rem(1) solid $text-10;
+		min-height: 100%;
+	}
+	// .popup__consults-body
+	&__consults-body {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+		@media (min-width: $md5) {
+			padding: 1.25rem;
+		}
+	}
+	// .popup__consults-caption
+	&__consults-caption {
+		background: $text-5;
+		width: 100%;
+		padding: 1.38rem 1rem;
+		@media (min-width: $md5) {
+			padding: 1.69rem 1.25rem;
+		}
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		border-radius: 1rem 1rem 0 0;
+		gap: 0.75rem;
+		color: $grey;
+		&::before {
+			content: "";
+			display: flex;
+			width: 1.5rem;
+			height: 1.5rem;
+			flex-shrink: 0;
+			padding: 0.25rem;
+			border-radius: 1.5rem;
+			border: rem(1) solid rgba(33, 33, 33, 0.1);
+			transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+		}
+	}
+	// .popup__consults-name
+	&__consults-name {
+		font-weight: 600;
+		line-height: 125%;
+		font-size: 1.25rem;
+		@media (min-width: $md5) {
+			font-size: 1.5rem;
+		}
+	}
+	// .popup__consults-price
+	&__consults-price {
+		font-size: 1rem;
+		line-height: 135%;
+		color: $text-60;
+	}
+	// .popup__consults-list
+	&__consults-list {
+		& > span {
+			display: flex;
+			align-items: flex-start;
+			gap: 0.5rem;
+			color: $text-80;
+			font-size: 1rem;
+			font-weight: 500;
+			line-height: 135%;
+			&::before {
+				@extend %ic, .icon-check;
+				flex-shrink: 0;
+				width: 1.5rem;
+				height: 1.5rem;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: $white-bg;
+				color: $grey;
+			}
+			&:not(:last-child) {
+				margin-bottom: 0.75rem;
+			}
+		}
+	}
+	&__consults-desc {
+		margin-top: 1.5rem;
+		font-size: 0.875rem;
+		line-height: 135%;
+		@media (min-width: $md5) {
+			font-size: 1rem;
+		}
+		color: $text-60;
+		.fw-medium {
+			color: $text-80;
+		}
+	}
+	&__total {
+		margin-top: 2rem;
+		font-size: 1.25rem;
+		font-weight: 500;
+		line-height: 125%;
+	}
+	// .popup__separator
+	&__separator {
+		font-size: 0.75rem;
+		@media (min-width: $md5) {
+			font-size: 0.875rem;
+		}
+		margin-top: 1rem;
+		color: $text-60;
+		line-height: 135%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		&::before,
+		&::after {
+			content: "";
+			width: 100%;
+			height: rem(1);
+			background: $text-10;
+		}
+		& + .popup__subtitle {
+			margin-top: 0;
+			color: $text-60;
+		}
+	}
+	// .popup__payment
+	&__payment {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.75rem;
+	}
+	// .popup__payment-item
+	&__payment-item {
 	}
 }
 
@@ -151,27 +381,7 @@
 			}
 		}
 	}
-	// .login__separator
-	&__separator {
-		font-size: 0.75rem;
-		@media (min-width: $md5) {
-			font-size: 0.875rem;
-		}
-		margin-top: 1rem;
-		color: $text-60;
-		line-height: 135%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 1rem;
-		&::before,
-		&::after {
-			content: "";
-			width: 100%;
-			height: rem(1);
-			background: $text-10;
-		}
-	}
+
 	// .login__form
 	&__form {
 		margin-top: 1rem;

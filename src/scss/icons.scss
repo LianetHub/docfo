@@ -17,6 +17,7 @@
 		display: block;
 	}
 }
+
 .icon-dislike:before {
 	content: "\e925";
 }
@@ -28,6 +29,12 @@
 }
 .icon-sended:before {
 	content: "\e923";
+}
+.icon-consults:before {
+	content: "\e927";
+}
+.icon-star-outline:before {
+	content: "\e928";
 }
 .icon-check-best:before {
 	content: "\e924";

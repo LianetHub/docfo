@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Страница доктора'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "login": false
+            })
+
+            <div class="page">
+                <div class="page__container">
+                    @@include('./html/_menu.html', {})
+                    <div class="mobile-banner">
+                        <img src="@img/mobile-banner.png" alt="Баннер">
+                    </div>
+                    <div class="page__main">
+                        <main class="main">
+                            <div class="banner">
+                                <img src="@img/banner-2.png" alt="Баннер">
+                            </div>
+                            <div class="doctor-card">
+                                <div class="doctor__heading">
+                                    <div class="doctor__photo">
+                                        <img src="@img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+                                    </div>
+                                    <div class="doctor__content">
+                                        <div class="doctor__content-header">
+                                            <div class="doctor__content-row">
+                                                <h1 class="doctor__title valid">Олег Фомин</h1>
+                                                <div class="doctor__online">Заходил 17 мин. назад</div>
+                                            </div>
+                                            <button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
+                                        </div>
+                                        <ul class="doctor__stats">
+                                            <li class="doctor__stats-block icon-star-outline">
+                                                <div class="doctor__stats-value">
+                                                    123
+                                                </div>
+                                                <div class="doctor__stats-desc">
+                                                    отзывов
+                                                </div>
+                                            </li>
+                                            <li class="doctor__stats-block icon-eye">
+                                                <div class="doctor__stats-value">
+                                                    3 456
+                                                </div>
+                                                <div class="doctor__stats-desc">
+                                                    просмотра
+                                                </div>
+                                            </li>
+                                            <li class="doctor__stats-block icon-consults">
+                                                <div class="doctor__stats-value">
+                                                    55 678
+                                                </div>
+                                                <div class="doctor__stats-desc">
+                                                    консультаций
+                                                </div>
+                                            </li>
+                                            <li class="doctor__stats-block icon-clock">
+                                                <div class="doctor__stats-value">
+                                                    1 час
+                                                </div>
+                                                <div class="doctor__stats-desc">
+                                                    время отклика
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="doctor__props">
+                                            <li class="doctor__props-item">
+                                                <div class="doctor__props-name">Специализация:</div>
+                                                <div class="doctor__props-text">
+                                                    <a href="">Гинеколог</a>
+                                                </div>
+                                            </li>
+                                            <li class="doctor__props-item">
+                                                <div class="doctor__props-name">Образование:</div>
+                                                <div class="doctor__props-text sm-text">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</div>
+                                            </li>
+                                            <li class="doctor__props-item">
+                                                <div class="doctor__props-name">Место и адрес работы:</div>
+                                                <address class="doctor__props-text sm-text">г. Москва, Перинатальный центр</address>
+                                            </li>
+                                        </ul>
+                                        <div class="doctor__bottom">
+                                            <a href="#question" data-modal class="doctor__btn btn btn-fullwidth btn-primary">Консультация врача 100₽</a>
+                                            <a href="#consult" data-modal class="doctor__btn btn btn-fullwidth btn-pink">Благодарность врачу ₽</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="doctor__tabs">
+                                    <div class="doctor__tabs-btns">
+                                        <button type="button" class="doctor__tabs-btn active">Обо мне</button>
+                                        <button type="button" class="doctor__tabs-btn">Консультации (55678)</button>
+                                        <button type="button" class="doctor__tabs-btn">Отзывы (123)</button>
+                                        <button type="button" class="doctor__tabs-btn">Сертификаты</button>
+                                    </div>
+                                    <div class="doctor__tabs-body">
+                                        <div class="doctor__tabs-content active">
+                                            <ul class="doctor__desc">
+                                                <li class="doctor__desc-block">
+                                                    <div class="doctor__desc-caption">О враче</div>
+                                                    <div class="doctor__desc-text">Придерживаюсь принципов доказательной медицины и здравого смысла. Вместе с пациентом обсуждаю тактику обследования, медикаментозные и немедикаментозные методы лечения.</div>
+                                                </li>
+                                                <li class="doctor__desc-block">
+                                                    <div class="doctor__desc-caption">Специализация в лечении пациентов (диагнозы/заболевания)</div>
+                                                    <div class="doctor__desc-text">Знаю, откуда берутся дети.</div>
+                                                </li>
+                                                <li class="doctor__desc-block">
+                                                    <div class="doctor__desc-caption">Опыт работы</div>
+                                                    <div class="doctor__desc-text">В третьем поколении в роддоме, во втором - в УЗД в перинатологии, с доинтернетовских времён - в санитарном просвещении.</div>
+                                                </li>
+                                                <li class="doctor__desc-block">
+                                                    <div class="doctor__desc-caption">Достижения и награды</div>
+                                                    <div class="doctor__desc-text">Две врачебные специальности (например, курортология и физиотерапия), аспирантура, небольшая монография.</div>
+                                                </li>
+                                                <li class="doctor__desc-block">
+                                                    <div class="doctor__desc-caption">Научные труды</div>
+                                                    <div class="doctor__desc-text">Две врачебные специальности (например, курортология и физиотерапия), аспирантура, небольшая монография. Монография: "Нелекарственные методы профилактики акушерской и перинатальной патологии на курорте", 2008</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="doctor__tabs-content">
+                                            <ul class="cases__list">
+                                                <li class="case">
+                                                    <a href="/question.html" class="case__name">Расшифровка ЭКГ <span class="case__answers">10 Ответов</span></a>
+                                                    <div class="case__author">
+                                                        <a href="" class="case__person">
+                                                            <span class="case__person-thumb">
+                                                                <img src="img/stub-user.svg" alt="Аватар пользователя">
+                                                            </span>
+                                                            <span class="case__person-name">Ирина Иванова</span>
+                                                        </a>
+                                                        <time datetime="2024-10-28" class="case__time">28.10.2024</time>
+                                                    </div>
+                                                </li>
+                                                <li class="case">
+                                                    <a href="/question.html" class="case__name">Кровотечение 6,5 недель беременности <span class="case__answers">5 Ответов</span></a>
+                                                    <div class="case__author">
+                                                        <a href="" class="case__person">
+                                                            <span class="case__person-thumb">
+                                                                <img src="img/stub-user.svg" alt="Аватар пользователя">
+                                                            </span>
+                                                            <span class="case__person-name">Ирина Иванова</span>
+                                                        </a>
+                                                        <time datetime="2024-10-28" class="case__time">28.10.2024</time>
+                                                    </div>
+                                                </li>
+                                                <li class="case">
+                                                    <a href="/question.html" class="case__name">Резкая боль в районе пупка <span class="case__answers">8 Ответов</span></a>
+                                                    <div class="case__author">
+                                                        <a href="" class="case__person">
+                                                            <span class="case__person-thumb">
+                                                                <img src="img/stub-user.svg" alt="Аватар пользователя">
+                                                            </span>
+                                                            <span class="case__person-name">Ирина Иванова</span>
+                                                        </a>
+                                                        <time datetime="2024-10-28" class="case__time">28.10.2024</time>
+                                                    </div>
+                                                </li>
+                                                <li class="case">
+                                                    <a href="/question.html" class="case__name">Давление на 40 неделе <span class="case__answers">8 Ответов</span></a>
+                                                    <div class="case__author">
+                                                        <a href="" class="case__person">
+                                                            <span class="case__person-thumb">
+                                                                <img src="img/stub-user.svg" alt="Аватар пользователя">
+                                                            </span>
+                                                            <span class="case__person-name">Ирина Иванова</span>
+                                                        </a>
+                                                        <time datetime="2024-10-28" class="case__time">28.10.2024</time>
+                                                    </div>
+                                                </li>
+                                                <li class="case">
+                                                    <a href="/question.html" class="case__name">Анализ мочи при беременности <span class="case__answers">8 Ответов</span></a>
+                                                    <div class="case__author">
+                                                        <a href="" class="case__person">
+                                                            <span class="case__person-thumb">
+                                                                <img src="img/stub-user.svg" alt="Аватар пользователя">
+                                                            </span>
+                                                            <span class="case__person-name">Ирина Иванова</span>
+                                                        </a>
+                                                        <time datetime="2024-10-28" class="case__time">28.10.2024</time>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="doctor__tabs-content">
+                                            <div class="doctor__review">
+                                                <div class="doctor__review-list">
+                                                    <div class="review">
+                                                        <div class="review__stars">
+                                                            <span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+                                                        </div>
+                                                        <blockquote class="review__quote">
+                                                            Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации.
+                                                        </blockquote>
+                                                        <div class="review__author">
+                                                            <div class="review__author-thumb">
+                                                                <img src="@img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+                                                            </div>
+                                                            <div class="review__author-main">
+                                                                <div class="review__author-name">Имя Фамилия</div>
+                                                                <div class="review__author-type">Клиент</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="review">
+                                                        <div class="review__stars">
+                                                            <span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+                                                        </div>
+                                                        <blockquote class="review__quote">
+                                                            Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации.
+                                                        </blockquote>
+                                                        <div class="review__author">
+                                                            <div class="review__author-thumb">
+                                                                <img src="@img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+                                                            </div>
+                                                            <div class="review__author-main">
+                                                                <div class="review__author-name">Имя Фамилия</div>
+                                                                <div class="review__author-type">Клиент</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="review">
+                                                        <div class="review__stars">
+                                                            <span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+                                                        </div>
+                                                        <blockquote class="review__quote">
+                                                            Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации.
+                                                        </blockquote>
+                                                        <div class="review__author">
+                                                            <div class="review__author-thumb">
+                                                                <img src="@img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+                                                            </div>
+                                                            <div class="review__author-main">
+                                                                <div class="review__author-name">Имя Фамилия</div>
+                                                                <div class="review__author-type">Клиент</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="review">
+                                                        <div class="review__stars">
+                                                            <span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+                                                        </div>
+                                                        <blockquote class="review__quote">
+                                                            Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации.
+                                                        </blockquote>
+                                                        <div class="review__author">
+                                                            <div class="review__author-thumb">
+                                                                <img src="@img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+                                                            </div>
+                                                            <div class="review__author-main">
+                                                                <div class="review__author-name">Имя Фамилия</div>
+                                                                <div class="review__author-type">Клиент</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="review">
+                                                        <div class="review__stars">
+                                                            <span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+                                                        </div>
+                                                        <blockquote class="review__quote">
+                                                            Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации.
+                                                        </blockquote>
+                                                        <div class="review__author">
+                                                            <div class="review__author-thumb">
+                                                                <img src="@img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+                                                            </div>
+                                                            <div class="review__author-main">
+                                                                <div class="review__author-name">Имя Фамилия</div>
+                                                                <div class="review__author-type">Клиент</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="review">
+                                                        <div class="review__stars">
+                                                            <span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+                                                        </div>
+                                                        <blockquote class="review__quote">
+                                                            Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации.
+                                                        </blockquote>
+                                                        <div class="review__author">
+                                                            <div class="review__author-thumb">
+                                                                <img src="@img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+                                                            </div>
+                                                            <div class="review__author-main">
+                                                                <div class="review__author-name">Имя Фамилия</div>
+                                                                <div class="review__author-type">Клиент</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="doctor__review-more">Показать еще</a>
+                                                <a href="#add-review" data-modal class="doctor__review-btn btn btn-primary">Оставить отзыв</a>
+                                            </div>
+                                        </div>
+                                        <div class="doctor__tabs-content">
+                                            <div class="doctor__certs">
+                                                <a href="@img/certs/01.jpg" data-modal class="doctor__cert">
+                                                    <img src="@img/certs/01.jpg" class="cover-image" alt="Cертификат">
+                                                </a>
+                                                <a href="@img/certs/02.jpg" data-modal class="doctor__cert">
+                                                    <img src="@img/certs/02.jpg" class="cover-image" alt="Cертификат">
+                                                </a>
+                                                <a href="@img/certs/03.jpg" data-modal class="doctor__cert">
+                                                    <img src="@img/certs/03.jpg" class="cover-image" alt="Cертификат">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('./html/_faq.html')
+                        </main>
+                        @@include('./html/_sidebar.html')
+                    </div>
+                </div>
+            </div>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

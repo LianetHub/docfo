@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
     // click handlers
     document.addEventListener('click', (e) => {
 
@@ -194,6 +193,23 @@ document.addEventListener("DOMContentLoaded", () => {
             target.closest('.answer')?.querySelector('.answer__more-list').slideToggle(300, () => {
                 target.removeAttribute('style');
             })
+        }
+
+        // doctor page tabs
+        if (target.matches('.doctor__tabs-btn')) {
+            const doctorTabsButtons = document.querySelectorAll('.doctor__tabs-btn');
+            const doctorTabsBlocks = document.querySelectorAll('.doctor__tabs-content');
+
+            const targetIndex = Array.from(doctorTabsButtons).indexOf(target);
+
+            doctorTabsButtons.forEach((doctorTabsButton) => doctorTabsButton.classList.remove('active'));
+            doctorTabsBlocks.forEach((doctorTabsBlock) => doctorTabsBlock.classList.remove('active'));
+
+            target.classList.add('active');
+
+            if (doctorTabsBlocks[targetIndex]) {
+                doctorTabsBlocks[targetIndex].classList.add('active');
+            }
         }
 
 

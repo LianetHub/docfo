@@ -55,8 +55,7 @@
 			border-color: #ddd;
 		}
 		&._error {
-			outline: 1px solid #ba2028;
-			background: #fff1ed;
+			outline: 1px solid #ea4335;
 		}
 		&:is(textarea) {
 			height: rem(83);
@@ -342,38 +341,48 @@
 }
 
 .switcher {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 	// .switcher__input
 	&__input {
 		&:checked {
 			& + .switcher__btn {
+				background: rgba(50, 142, 204, 0.4);
 				&::before {
-					left: rem(2);
+					left: calc(100% - rem(20));
+					background: $accent;
 				}
-				background: #81a6ca;
 			}
 		}
 	}
 	// .switcher__btn
 	&__btn {
 		position: relative;
-		width: rem(35);
-		height: rem(20);
-		border-radius: 6.25rem;
-		background: #81a6ca;
+		width: rem(44);
+		height: rem(24);
+		background: rgba(33, 33, 33, 0.1);
+		border-radius: rem(24);
 		display: block;
 		cursor: pointer;
 		transition: background-color 0.3s ease 0s;
 		&::before {
 			content: "";
 			position: absolute;
-			top: rem(2);
-			left: rem(17);
+			top: rem(4);
+			left: rem(4);
 			width: rem(16);
+			height: rem(16);
 			transition: left 0.3s ease 0s;
 			border-radius: 50%;
-			background: $white;
-			height: calc(100% - rem(4));
+			background: #5b5b5b;
 		}
+	}
+	&__text {
+		color: $text-60;
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 135%;
 	}
 }
 

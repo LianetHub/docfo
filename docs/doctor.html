@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Docfo | Консультации</title>
+	<title>Docfo | Страница доктора</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +30,7 @@
 	<!-- Open Graph  -->
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:title" content="Консультации">
+	<meta property="twitter:title" content="Страница доктора">
 	<meta property="twitter:description" content="">
 	<meta property="twitter:site" content="">
 	<meta property="twitter:url" content="https://docfo.ru">
@@ -84,7 +84,7 @@
 							</form>
 						</div>
 						<ul class="menu__list">
-							<li class="menu__item"><a href="/consults.html" class="menu__link icon-consult active">Консультации</a></li>
+							<li class="menu__item"><a href="/consults.html" class="menu__link icon-consult">Консультации</a></li>
 							<li class="menu__item"><a href="/doctors.html" class="menu__link icon-medic">Врачи</a></li>
 							<li class="menu__item"><a href="/institutions.html" class="menu__link icon-medicine">Учреждения</a></li>
 							<li class="menu__item"><a href="/support.html" class="menu__link icon-info">Помощь</a></li>
@@ -136,300 +136,289 @@
 								<source srcset="img/banner-2.webp" type="image/webp"><img src="img/banner-2.png" alt="Баннер">
 							</picture>
 						</div>
-						<section class="cases">
-							<h2 class="cases__title">Онлайн консультация врача гинеколога</h2>
-							<div class="cases__header">
-								<form action="#" class="cases__search">
-									<input type="text" name="search" placeholder="Поиск" class="form__control">
-									<button type="submit" class="cases__search-btn icon-search"></button>
-								</form>
-								<div class="cases__btns">
-									<button type="button" class="cases__btn btn btn-sm active">Платные</button>
-									<button type="button" class="cases__btn btn btn-sm">Бесплатные</button>
+						<div class="doctor-card">
+							<div class="doctor__heading">
+								<div class="doctor__photo">
+									<picture>
+										<source srcset="img/doctors/oleg-fomin.webp" type="image/webp"><img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+									</picture>
 								</div>
-							</div>
-							<div class="cases__body">
-								<div class="cases__block active">
-									<ul class="cases__list">
-										<li class="case">
-											<div class="case__header">
-												<div class="case__row">
-													<a href="/question.html" class="case__name">Расшифровка ЭКГ</a>
-													<div class="case__side">
-														<div class="case__price">100₽</div>
-														<a href="/question.html" class="case__answers">10 Ответов</a>
-													</div>
-												</div>
-												<div class="case__main">
-													<div class="case__main-row">
-														<a href="" class="case__position">Терапевт</a>
-													</div>
-													<a href="/question.html" class="case__answers">10 Ответов</a>
-												</div>
-												<div class="case__text"> Добрый день! На последних исследованиях ЭКГ выявилась очень сильная ЭС. ЭС у меня давно, но не такая, как сейчас. Принимала беталок зок 100мг, также нолипрел 1,25+5, принимаю 2 года ЗГТ...<a href="/question.html" class="case__text-more">далее</a>
-												</div>
-												<div class="case__author">
-													<a href="" class="case__person">
-														<span class="case__person-thumb">
-															<img src="img/stub-user.svg" alt="Аватар пользователя">
-														</span>
-														<span class="case__person-name">Ирина Иванова, 30 лет</span>
-													</a>
-													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
-												</div>
-											</div>
-											<div class="case__answer">
-												<a href="" class="case__person person-lg">
-													<span class="case__person-thumb online">
-														<picture>
-															<source srcset="img/doctors/doctor-4.webp" type="image/webp"><img src="img/doctors/doctor-4.jpg" alt="Аватар Доктора">
-														</picture>
-													</span>
-													<span class="case__person-info">
-														<span class="case__person-name">Елена Романчук</span>
-														<span class="case__person-position">Кардиолог</span>
-													</span>
-												</a>
-												<div class="case__answer-text"> Здравствуйте. По экг ритм синусовый правильный, с частыми желудочковыми экстрасистолами. Чаще всего в данном случае рекомендуем исследовать уровень гемоглобина ферритина </div>
-											</div>
+								<div class="doctor__content">
+									<div class="doctor__content-header">
+										<div class="doctor__content-row">
+											<h1 class="doctor__title valid">Олег Фомин</h1>
+											<div class="doctor__online">Заходил 17 мин. назад</div>
+										</div>
+										<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
+									</div>
+									<ul class="doctor__stats">
+										<li class="doctor__stats-block icon-star-outline">
+											<div class="doctor__stats-value"> 123 </div>
+											<div class="doctor__stats-desc"> отзывов </div>
 										</li>
-										<li class="case">
-											<div class="case__header">
-												<div class="case__row">
-													<a href="/question.html" class="case__name">Повышенные лейкоциты в моче, эпителий плоский большое количество, теперь боюсь что это такое?</a>
-													<div class="case__side">
-														<div class="case__price">100₽</div>
-														<a href="/question.html" class="case__answers">10 Ответов</a>
-													</div>
-												</div>
-												<div class="case__main">
-													<div class="case__main-row">
-														<a href="" class="case__position">Терапевт</a>
-													</div>
-													<a href="/question.html" class="case__answers">10 Ответов</a>
-												</div>
-												<div class="case__text"> Добрый день! На последних исследованиях ЭКГ выявилась очень сильная ЭС. ЭС у меня давно, но не такая, как сейчас. Принимала беталок зок 100мг, также нолипрел 1,25+5, принимаю 2 года ЗГТ...<a href="/question.html" class="case__text-more">далее</a>
-												</div>
-												<div class="case__author">
-													<a href="" class="case__person">
-														<span class="case__person-thumb">
-															<img src="img/stub-user.svg" alt="Аватар пользователя">
-														</span>
-														<span class="case__person-name">Ирина Иванова, 30 лет</span>
-													</a>
-													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
-												</div>
-											</div>
-											<div class="case__answer">
-												<a href="" class="case__person person-lg">
-													<span class="case__person-thumb online">
-														<picture>
-															<source srcset="img/doctors/doctor-4.webp" type="image/webp"><img src="img/doctors/doctor-4.jpg" alt="Аватар Доктора">
-														</picture>
-													</span>
-													<span class="case__person-info">
-														<span class="case__person-name">Елена Романчук</span>
-														<span class="case__person-position">Кардиолог</span>
-													</span>
-												</a>
-												<div class="case__answer-text"> Здравствуйте. По экг ритм синусовый правильный, с частыми желудочковыми экстрасистолами. Чаще всего в данном случае рекомендуем исследовать уровень гемоглобина ферритина </div>
-											</div>
+										<li class="doctor__stats-block icon-eye">
+											<div class="doctor__stats-value"> 3 456 </div>
+											<div class="doctor__stats-desc"> просмотра </div>
 										</li>
-										<li class="case">
-											<div class="case__header">
-												<div class="case__row">
-													<a href="/question.html" class="case__name">Частые срыгивания у новорожденного. Частые срыгивания у новорожденного. </a>
-													<div class="case__side">
-														<div class="case__price">100₽</div>
-														<a href="/question.html" class="case__answers">10 Ответов</a>
-													</div>
-												</div>
-												<div class="case__main">
-													<div class="case__main-row">
-														<a href="" class="case__position">Терапевт</a>
-													</div>
-													<a href="/question.html" class="case__answers">10 Ответов</a>
-												</div>
-												<div class="case__text"> Добрый день! На последних исследованиях ЭКГ выявилась очень сильная ЭС. ЭС у меня давно, но не такая, как сейчас. Принимала беталок зок 100мг, также нолипрел 1,25+5, принимаю 2 года ЗГТ...<a href="/question.html" class="case__text-more">далее</a>
-												</div>
-												<div class="case__author">
-													<a href="" class="case__person">
-														<span class="case__person-thumb">
-															<img src="img/stub-user.svg" alt="Аватар пользователя">
-														</span>
-														<span class="case__person-name">Ирина Иванова, 30 лет</span>
-													</a>
-													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
-												</div>
-											</div>
-											<div class="case__answer">
-												<a href="" class="case__person person-lg">
-													<span class="case__person-thumb online">
-														<picture>
-															<source srcset="img/doctors/doctor-4.webp" type="image/webp"><img src="img/doctors/doctor-4.jpg" alt="Аватар Доктора">
-														</picture>
-													</span>
-													<span class="case__person-info">
-														<span class="case__person-name">Елена Романчук</span>
-														<span class="case__person-position">Кардиолог</span>
-													</span>
-												</a>
-												<div class="case__answer-text"> Здравствуйте. По экг ритм синусовый правильный, с частыми желудочковыми экстрасистолами. Чаще всего в данном случае рекомендуем исследовать уровень гемоглобина ферритина </div>
-											</div>
+										<li class="doctor__stats-block icon-consults">
+											<div class="doctor__stats-value"> 55 678 </div>
+											<div class="doctor__stats-desc"> консультаций </div>
+										</li>
+										<li class="doctor__stats-block icon-clock">
+											<div class="doctor__stats-value"> 1 час </div>
+											<div class="doctor__stats-desc"> время отклика </div>
 										</li>
 									</ul>
-									<a href="" class="cases__more">Показать еще</a>
-								</div>
-								<div class="cases__block">
-									<ul class="cases__list">
-										<li class="case">
-											<div class="case__header">
-												<div class="case__row">
-													<a href="/question.html" class="case__name">Частые срыгивания у новорожденного. Частые срыгивания у новорожденного. </a>
-													<div class="case__side">
-														<div class="case__price">Бесплатно</div>
-														<a href="" class="case__answers">10 Ответов</a>
-													</div>
-												</div>
-												<div class="case__main">
-													<div class="case__main-row">
-														<a href="" class="case__position">Терапевт</a>
-														<span class="case__status success">Вопрос закрыт</span>
-													</div>
-													<a href="/question.html" class="case__answers">10 Ответов</a>
-												</div>
+									<ul class="doctor__props">
+										<li class="doctor__props-item">
+											<div class="doctor__props-name">Специализация:</div>
+											<div class="doctor__props-text">
+												<a href="">Гинеколог</a>
 											</div>
-											<div class="case__body">
-												<div class="case__column">
+										</li>
+										<li class="doctor__props-item">
+											<div class="doctor__props-name">Образование:</div>
+											<div class="doctor__props-text sm-text">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</div>
+										</li>
+										<li class="doctor__props-item">
+											<div class="doctor__props-name">Место и адрес работы:</div>
+											<address class="doctor__props-text sm-text">г. Москва, Перинатальный центр</address>
+										</li>
+									</ul>
+									<div class="doctor__bottom">
+										<a href="#question" data-modal class="doctor__btn btn btn-fullwidth btn-primary">Консультация врача 100₽</a>
+										<a href="#consult" data-modal class="doctor__btn btn btn-fullwidth btn-pink">Благодарность врачу ₽</a>
+									</div>
+								</div>
+							</div>
+							<div class="doctor__tabs">
+								<div class="doctor__tabs-btns">
+									<button type="button" class="doctor__tabs-btn active">Обо мне</button>
+									<button type="button" class="doctor__tabs-btn">Консультации (55678)</button>
+									<button type="button" class="doctor__tabs-btn">Отзывы (123)</button>
+									<button type="button" class="doctor__tabs-btn">Сертификаты</button>
+								</div>
+								<div class="doctor__tabs-body">
+									<div class="doctor__tabs-content active">
+										<ul class="doctor__desc">
+											<li class="doctor__desc-block">
+												<div class="doctor__desc-caption">О враче</div>
+												<div class="doctor__desc-text">Придерживаюсь принципов доказательной медицины и здравого смысла. Вместе с пациентом обсуждаю тактику обследования, медикаментозные и немедикаментозные методы лечения.</div>
+											</li>
+											<li class="doctor__desc-block">
+												<div class="doctor__desc-caption">Специализация в лечении пациентов (диагнозы/заболевания)</div>
+												<div class="doctor__desc-text">Знаю, откуда берутся дети.</div>
+											</li>
+											<li class="doctor__desc-block">
+												<div class="doctor__desc-caption">Опыт работы</div>
+												<div class="doctor__desc-text">В третьем поколении в роддоме, во втором - в УЗД в перинатологии, с доинтернетовских времён - в санитарном просвещении.</div>
+											</li>
+											<li class="doctor__desc-block">
+												<div class="doctor__desc-caption">Достижения и награды</div>
+												<div class="doctor__desc-text">Две врачебные специальности (например, курортология и физиотерапия), аспирантура, небольшая монография.</div>
+											</li>
+											<li class="doctor__desc-block">
+												<div class="doctor__desc-caption">Научные труды</div>
+												<div class="doctor__desc-text">Две врачебные специальности (например, курортология и физиотерапия), аспирантура, небольшая монография. Монография: "Нелекарственные методы профилактики акушерской и перинатальной патологии на курорте", 2008</div>
+											</li>
+										</ul>
+									</div>
+									<div class="doctor__tabs-content">
+										<ul class="cases__list">
+											<li class="case">
+												<a href="/question.html" class="case__name">Расшифровка ЭКГ <span class="case__answers">10 Ответов</span></a>
+												<div class="case__author">
 													<a href="" class="case__person">
 														<span class="case__person-thumb">
 															<img src="img/stub-user.svg" alt="Аватар пользователя">
 														</span>
-														<span class="case__person-name">Елена Романчук</span>
+														<span class="case__person-name">Ирина Иванова</span>
 													</a>
 													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
 												</div>
-												<div class="case__doctors">
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
+											</li>
+											<li class="case">
+												<a href="/question.html" class="case__name">Кровотечение 6,5 недель беременности <span class="case__answers">5 Ответов</span></a>
+												<div class="case__author">
+													<a href="" class="case__person">
+														<span class="case__person-thumb">
+															<img src="img/stub-user.svg" alt="Аватар пользователя">
+														</span>
+														<span class="case__person-name">Ирина Иванова</span>
+													</a>
+													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
+												</div>
+											</li>
+											<li class="case">
+												<a href="/question.html" class="case__name">Резкая боль в районе пупка <span class="case__answers">8 Ответов</span></a>
+												<div class="case__author">
+													<a href="" class="case__person">
+														<span class="case__person-thumb">
+															<img src="img/stub-user.svg" alt="Аватар пользователя">
+														</span>
+														<span class="case__person-name">Ирина Иванова</span>
+													</a>
+													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
+												</div>
+											</li>
+											<li class="case">
+												<a href="/question.html" class="case__name">Давление на 40 неделе <span class="case__answers">8 Ответов</span></a>
+												<div class="case__author">
+													<a href="" class="case__person">
+														<span class="case__person-thumb">
+															<img src="img/stub-user.svg" alt="Аватар пользователя">
+														</span>
+														<span class="case__person-name">Ирина Иванова</span>
+													</a>
+													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
+												</div>
+											</li>
+											<li class="case">
+												<a href="/question.html" class="case__name">Анализ мочи при беременности <span class="case__answers">8 Ответов</span></a>
+												<div class="case__author">
+													<a href="" class="case__person">
+														<span class="case__person-thumb">
+															<img src="img/stub-user.svg" alt="Аватар пользователя">
+														</span>
+														<span class="case__person-name">Ирина Иванова</span>
+													</a>
+													<time datetime="2024-10-28" class="case__time">28.10.2024</time>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="doctor__tabs-content">
+										<div class="doctor__review">
+											<div class="doctor__review-list">
+												<div class="review">
+													<div class="review__stars">
+														<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
 													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-2.webp" type="image/webp"><img src="img/doctors/doctor-2.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
+													<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
+													<div class="review__author">
+														<div class="review__author-thumb">
+															<picture>
+																<source srcset="img/clients/01.webp" type="image/webp"><img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+															</picture>
+														</div>
+														<div class="review__author-main">
+															<div class="review__author-name">Имя Фамилия</div>
+															<div class="review__author-type">Клиент</div>
+														</div>
 													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-3.webp" type="image/webp"><img src="img/doctors/doctor-3.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
+												</div>
+												<div class="review">
+													<div class="review__stars">
+														<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
 													</div>
-													<div class="case__doctor">
-														<picture>
-															<source srcset="img/doctors/doctor-1.webp" type="image/webp"><img src="img/doctors/doctor-1.jpg" class="cover-image" alt="Фото доктора">
-														</picture>
+													<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
+													<div class="review__author">
+														<div class="review__author-thumb">
+															<picture>
+																<source srcset="img/clients/01.webp" type="image/webp"><img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+															</picture>
+														</div>
+														<div class="review__author-main">
+															<div class="review__author-name">Имя Фамилия</div>
+															<div class="review__author-type">Клиент</div>
+														</div>
+													</div>
+												</div>
+												<div class="review">
+													<div class="review__stars">
+														<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+													</div>
+													<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
+													<div class="review__author">
+														<div class="review__author-thumb">
+															<picture>
+																<source srcset="img/clients/01.webp" type="image/webp"><img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+															</picture>
+														</div>
+														<div class="review__author-main">
+															<div class="review__author-name">Имя Фамилия</div>
+															<div class="review__author-type">Клиент</div>
+														</div>
+													</div>
+												</div>
+												<div class="review">
+													<div class="review__stars">
+														<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+													</div>
+													<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
+													<div class="review__author">
+														<div class="review__author-thumb">
+															<picture>
+																<source srcset="img/clients/01.webp" type="image/webp"><img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+															</picture>
+														</div>
+														<div class="review__author-main">
+															<div class="review__author-name">Имя Фамилия</div>
+															<div class="review__author-type">Клиент</div>
+														</div>
+													</div>
+												</div>
+												<div class="review">
+													<div class="review__stars">
+														<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+													</div>
+													<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
+													<div class="review__author">
+														<div class="review__author-thumb">
+															<picture>
+																<source srcset="img/clients/01.webp" type="image/webp"><img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+															</picture>
+														</div>
+														<div class="review__author-main">
+															<div class="review__author-name">Имя Фамилия</div>
+															<div class="review__author-type">Клиент</div>
+														</div>
+													</div>
+												</div>
+												<div class="review">
+													<div class="review__stars">
+														<span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span><span class="review__star icon-star active"></span>
+													</div>
+													<blockquote class="review__quote"> Консультация была полезна. Доктор не просто сделала заключение по ЭКГ, а дала развернутое описание по основным составляющим. Ответила на вопросы, выдала рекомендации. </blockquote>
+													<div class="review__author">
+														<div class="review__author-thumb">
+															<picture>
+																<source srcset="img/clients/01.webp" type="image/webp"><img src="img/clients/01.jpg" class="cover-image" alt="Фото клиента">
+															</picture>
+														</div>
+														<div class="review__author-main">
+															<div class="review__author-name">Имя Фамилия</div>
+															<div class="review__author-type">Клиент</div>
+														</div>
 													</div>
 												</div>
 											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section class="consult">
-							<h2 class="consult__title">Задать вопрос врачу</h2>
-							<div class="consult__body">
-								<form action="#" class="consult__form form">
-									<div class="form__fields">
-										<div class="form__field">
-											<div class="select">
-												<select name="specialization">
-													<option value="therapist">Терапевт</option>
-													<option value="obstetrician">Акушер</option>
-													<option value="venereologist">Венеролог</option>
-													<option value="gastroenterologist">Гастроэнтеролог</option>
-													<option value="gynecologist">Гинеколог</option>
-													<option value="dermatologist">Дерматолог</option>
-													<option value="dietitian">Диетолог</option>
-													<option value="infectious_disease_specialist">Инфекционист</option>
-													<option value="cardiologist">Кардиолог</option>
-													<option value="lor">ЛОР</option>
-													<option value="neurologist">Невролог</option>
-													<option value="oncologist">Онколог</option>
-													<option value="orthopedist">Ортопед</option>
-													<option value="pediatrician">Педиатр</option>
-													<option value="plastic_surgeon">Пластический хирург</option>
-													<option value="psychiatrist">Психиатр</option>
-													<option value="psychologist">Психолог</option>
-													<option value="psychotherapist">Психотерапевт</option>
-													<option value="pulmonologist">Пульмонолог</option>
-													<option value="sexologist">Сексолог</option>
-													<option value="dentist">Стоматолог</option>
-													<option value="trichologist">Трихолог</option>
-													<option value="urologist">Уролог</option>
-													<option value="surgeon">Хирург</option>
-													<option value="endocrinologist">Эндокринолог</option>
-												</select>
-											</div>
-											<div class="form__hint">Выберите раздел. Если сомневаетесь, оставьте "Терапевт"</div>
-										</div>
-										<div class="form__field">
-											<input type="text" name="caption" class="form__control" placeholder="Краткий заголовок вопроса">
-											<div class="form__hint">Например: "Поднялась температура и неважно себя чувствую"</div>
-										</div>
-										<div class="form__field">
-											<textarea name="question" class="form__control" placeholder="Ваш вопрос врачу - постарайтесь описать проблему наиболее детально"></textarea>
-											<div class="form__row">
-												<div class="form__hint">Необходимо ввести не менее 50 символов</div>
-												<div class="form__side">
-													<label class="form__file">
-														<input type="file" multiple name="files[]" class="form__file-input hidden" hidden>
-														<span class="form__file-btn icon-plus">Прикрепить файл</span>
-													</label>
-													<div class="form__hint">*Файлы видны только врачам</div>
-												</div>
-											</div>
-											<ul class="form__attachment"></ul>
+											<a href="" class="doctor__review-more">Показать еще</a>
+											<a href="#add-review" data-modal class="doctor__review-btn btn btn-primary">Оставить отзыв</a>
 										</div>
 									</div>
-									<button type="submit" class="consult__form-btn btn btn-primary">Отправить</button>
-								</form>
-								<div class="consult__banner">
-									<div class="consult__banner-body">
-										<h3 class="consult__banner-title"> Задайте индивидуальный вопрос, чтобы получить ответ быстрее! </h3>
-										<a href="" class="consult__banner-btn btn btn-white">Перейти к индивидуальной консультации</a>
-									</div>
-									<div class="consult__banner-image">
-										<picture>
-											<source srcset="img/doctors/individual-1.webp" type="image/webp"><img src="img/doctors/individual-1.png" alt="Фото доктора">
-										</picture>
-									</div>
-								</div>
-								<div class="consult__banner blue">
-									<div class="consult__banner-body">
-										<h3 class="consult__banner-title"> Задайте индивидуальный вопрос, чтобы получить ответ быстрее! </h3>
-										<a href="" class="consult__banner-btn btn btn-white">Перейти к индивидуальной консультации</a>
-									</div>
-									<div class="consult__banner-image">
-										<picture>
-											<source srcset="img/doctors/individual-2.webp" type="image/webp"><img src="img/doctors/individual-2.png" alt="Фото доктора">
-										</picture>
-									</div>
-								</div>
-								<div class="consult__banner">
-									<div class="consult__banner-body">
-										<h3 class="consult__banner-title"> Задайте индивидуальный вопрос, чтобы получить ответ быстрее! </h3>
-										<a href="" class="consult__banner-btn btn btn-white">Перейти к индивидуальной консультации</a>
-									</div>
-									<div class="consult__banner-image">
-										<picture>
-											<source srcset="img/doctors/individual-3.webp" type="image/webp"><img src="img/doctors/individual-3.png" alt="Фото доктора">
-										</picture>
+									<div class="doctor__tabs-content">
+										<div class="doctor__certs">
+											<a href="img/certs/01.jpg" data-modal class="doctor__cert">
+												<picture>
+													<source srcset="img/certs/01.webp" type="image/webp"><img src="img/certs/01.jpg" class="cover-image" alt="Cертификат">
+												</picture>
+											</a>
+											<a href="img/certs/02.jpg" data-modal class="doctor__cert">
+												<picture>
+													<source srcset="img/certs/02.webp" type="image/webp"><img src="img/certs/02.jpg" class="cover-image" alt="Cертификат">
+												</picture>
+											</a>
+											<a href="img/certs/03.jpg" data-modal class="doctor__cert">
+												<picture>
+													<source srcset="img/certs/03.webp" type="image/webp"><img src="img/certs/03.jpg" class="cover-image" alt="Cертификат">
+												</picture>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
-						</section>
+						</div>
 						<section class="faq">
 							<h2 class="faq__title">Часто задаваемые вопросы</h2>
 							<ul class="faq__list">

@@ -92,6 +92,29 @@
 			}
 		}
 	}
+	// .consult__form-bottom
+	&__form-bottom {
+		border-top: rem(1) solid rgba(33, 33, 33, 0.1);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding-top: 1rem;
+		gap: 1.25rem;
+		@media (min-width: $md5) {
+			justify-content: flex-end;
+			flex-direction: row;
+		}
+		.consult__form-btn {
+			margin: 0;
+		}
+	}
+	// .consult__form-price
+	&__form-price {
+		text-align: right;
+		font-size: 1.25rem;
+		font-weight: 500;
+		line-height: 125%;
+	}
 }
 
 .answers {

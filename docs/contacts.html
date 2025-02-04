@@ -36,8 +36,8 @@
 	<meta property="twitter:url" content="https://docfo.ru">
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20250204180039">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250204180039">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20250204203752">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250204203752">
 </head>
 
 <body>
@@ -62,7 +62,7 @@
 				</form>
 				<div class="header__actions">
 					<a href="#sign-in" data-modal class="header__btn btn btn-white header__btn-sign">Вход</a>
-					<a href="" class="header__btn btn btn-primary">Задать вопрос</a>
+					<a href="#consult" data-modal class="header__btn btn btn-primary">Задать вопрос</a>
 					<button type="button" aria-label="Открыть меню" class="header__menu-btn icon-menu">
 						<span></span>
 						<span></span>
@@ -282,7 +282,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="login__separator">или</div>
+					<div class="popup__separator">или</div>
 					<form action="#" class="login__form form">
 						<div class="form__fields">
 							<div class="form__field">
@@ -321,7 +321,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="login__separator">или</div>
+					<div class="popup__separator">или</div>
 					<form action="#" class="login__form form">
 						<div class="form__fields">
 							<div class="form__grid">
@@ -375,15 +375,241 @@
 				</div>
 			</div>
 		</div>
+		<div id="add-review" class="popup">
+			<div class="popup__body">
+				<button type="button" data-close-modal class="popup__close icon-close"></button>
+				<h4 class="popup__title text-center">Оставить отзыв</h4>
+				<p class="popup__subtitle text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+				<form action="#" class="popup__form form">
+					<div class="star-rating">
+						<input type="radio" name="rate" id="rate-5" value="5" class="star-rating__input hidden" hidden>
+						<label class="star-rating__label" for="rate-5"></label>
+						<input type="radio" name="rate" id="rate-4" value="4" class="star-rating__input hidden" hidden>
+						<label class="star-rating__label" for="rate-4"></label>
+						<input type="radio" name="rate" id="rate-3" value="3" class="star-rating__input hidden" hidden>
+						<label class="star-rating__label" for="rate-3"></label>
+						<input type="radio" name="rate" id="rate-2" value="2" class="star-rating__input hidden" hidden>
+						<label class="star-rating__label" for="rate-2"></label>
+						<input type="radio" name="rate" id="rate-1" value="1" class="star-rating__input hidden" hidden>
+						<label class="star-rating__label" for="rate-1"></label>
+					</div>
+					<div class="form__field">
+						<div class="form__label">Отзыв</div>
+						<textarea name="quote" class="form__control" placeholder="Напишите отзыв"></textarea>
+					</div>
+					<button type="submit" class="btn btn-primary btn-fullwidth">Отправить</button>
+				</form>
+			</div>
+		</div>
+		<div id="consult" class="popup">
+			<div class="popup__body popup__body-xl">
+				<button type="button" data-close-modal class="popup__close icon-close"></button>
+				<h4 class="popup__title text-center">Задать вопрос врачу</h4>
+				<div class="popup__consults">
+					<div class="popup__consults-title">Выберите тип вопроса: бесплатный или платный с гарантированными ответами</div>
+					<div class="popup__consults-cards">
+						<label class="popup__consults-card">
+							<input type="radio" checked name="payment" value="cash" class="popup__consults-input hidden">
+							<span class="popup__consults-btn">
+								<span class="popup__consults-caption">
+									<span class="popup__consults-name">Платный</span>
+									<span class="popup__consults-price">от 100₽</span>
+								</span>
+								<span class="popup__consults-body">
+									<span class="popup__consults-list">
+										<span>Анонимность вопроса</span>
+										<span>Возможность скрыть вопрос</span>
+										<span>Моментальная публикация</span>
+										<span>Возможность загрузить фотографии или сканы анализов</span>
+										<span>Возможность получить ответы нескольких врачей</span>
+										<span>Первые ответы в течении 1 часа</span>
+										<span>Максимальная активность врачей: консультация нескольких специалистов, более развернутые ответы врачей</span>
+									</span>
+								</span>
+							</span>
+						</label>
+						<label class="popup__consults-card">
+							<input type="radio" name="payment" value="free" class="popup__consults-input hidden">
+							<span class="popup__consults-btn">
+								<span class="popup__consults-caption">
+									<span class="popup__consults-name">Бесплатный</span>
+									<span class="popup__consults-price">без гарантий</span>
+								</span>
+								<span class="popup__consults-body">
+									<span class="popup__consults-list">
+										<span>Анонимность вопроса</span>
+										<span>Возможность скрыть вопрос</span>
+										<span>Постановка в очередь бесплатных вопросов</span>
+										<span>Нет гарантии получения ответов врачей на ваш вопрос</span>
+									</span>
+									<span class="popup__consults-desc"> В очереди на публикацию находится: <span class="fw-medium">245 бесплатных вопросов</span>. Ожидаемое время публикации вашего вопроса: <span class="fw-medium">7 часов 59 минут</span>
+									</span>
+								</span>
+							</span>
+						</label>
+					</div>
+				</div>
+				<a href="#question" data-modal class="consult__form-btn btn btn-primary">Продолжить</a>
+			</div>
+		</div>
+		<div id="question" class="popup">
+			<div class="popup__body popup__body-xl">
+				<button type="button" data-close-modal class="popup__close icon-close"></button>
+				<h4 class="popup__title text-center">Задать вопрос врачу</h4>
+				<form action="#" class="popup__form form">
+					<div class="form__fields">
+						<div class="form__field">
+							<div class="select">
+								<select name="specialization">
+									<option value="therapist">Терапевт</option>
+									<option value="obstetrician">Акушер</option>
+									<option value="venereologist">Венеролог</option>
+									<option value="gastroenterologist">Гастроэнтеролог</option>
+									<option value="gynecologist">Гинеколог</option>
+									<option value="dermatologist">Дерматолог</option>
+									<option value="dietitian">Диетолог</option>
+									<option value="infectious_disease_specialist">Инфекционист</option>
+									<option value="cardiologist">Кардиолог</option>
+									<option value="lor">ЛОР</option>
+									<option value="neurologist">Невролог</option>
+									<option value="oncologist">Онколог</option>
+									<option value="orthopedist">Ортопед</option>
+									<option value="pediatrician">Педиатр</option>
+									<option value="plastic_surgeon">Пластический хирург</option>
+									<option value="psychiatrist">Психиатр</option>
+									<option value="psychologist">Психолог</option>
+									<option value="psychotherapist">Психотерапевт</option>
+									<option value="pulmonologist">Пульмонолог</option>
+									<option value="sexologist">Сексолог</option>
+									<option value="dentist">Стоматолог</option>
+									<option value="trichologist">Трихолог</option>
+									<option value="urologist">Уролог</option>
+									<option value="surgeon">Хирург</option>
+									<option value="endocrinologist">Эндокринолог</option>
+								</select>
+							</div>
+							<div class="form__hint">Выберите раздел. Если сомневаетесь, оставьте "Терапевт"</div>
+						</div>
+						<div class="form__field">
+							<input type="text" name="caption" class="form__control" placeholder="Краткий заголовок вопроса">
+							<div class="form__hint">Например: "Поднялась температура и неважно себя чувствую"</div>
+						</div>
+						<div class="form__field">
+							<textarea name="question" class="form__control" placeholder="Ваш вопрос врачу - постарайтесь описать проблему наиболее детально"></textarea>
+							<div class="form__row">
+								<div class="form__hint">Необходимо ввести не менее 50 символов</div>
+								<div class="form__side">
+									<label class="form__file">
+										<input type="file" multiple name="files[]" class="form__file-input hidden" hidden>
+										<span class="form__file-btn icon-plus">Прикрепить файл</span>
+									</label>
+									<div class="form__hint">*Файлы видны только врачам</div>
+								</div>
+							</div>
+							<ul class="form__attachment"></ul>
+						</div>
+					</div>
+					<div class="doctors">
+						<h4 class="doctors__title">Врач:</h4>
+						<ul class="doctors__list">
+							<li class="doctor">
+								<div class="doctor__side">
+									<a href="/doctor.html" class="doctor__image">
+										<picture>
+											<source srcset="img/doctors/oleg-fomin.webp" type="image/webp"><img src="img/doctors/oleg-fomin.jpg" class="cover-image" alt="Фото доктора">
+										</picture>
+									</a>
+									<button type="button" aria-label="Добавить в избранное" class="favorite-btn"></button>
+									<span class="doctor__status online"><span>Сейчас на сайте</span></span>
+								</div>
+								<div class="doctor__body">
+									<div class="doctor__main">
+										<div class="doctor__header">
+											<a href="/doctor.html" class="doctor__name">Олег Фомин</a>
+											<div class="doctor__reviews">
+												<a href="" class="doctor__reviews-link">Смотреть отзывы</a>
+												<span class="rate-label icon-star">4.8</span>
+											</div>
+										</div>
+										<div class="doctor__row doctor__experience">
+											<span class="doctor__property">Опыт</span>
+											<span class="doctor__value">8 лет</span>
+										</div>
+										<div class="doctor__position">
+											<a href="">Диетолог</a>, <a href="">Терапевт</a>
+										</div>
+									</div>
+									<div class="doctor__row doctor__education">
+										<span class="doctor__property">Образование</span>
+										<span class="doctor__value">Высшее медицинское образование по специальности лечебное дело, специализация по акушерству-гинекологии.</span>
+									</div>
+									<div class="doctor__bottom">
+										<a href="#payment" data-modal class="doctor__btn btn btn-fullwidth btn-primary">Задать вопрос</a>
+										<a href="#consult" data-modal class="doctor__btn btn btn-fullwidth btn-pink">Онлайн консультация 100₽</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="consult__form-bottom">
+						<div class="consult__form-price">Итого: 800 ₽</div>
+						<a href="#payment" data-modal class="consult__form-btn btn btn-primary">Отправить</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="payment" class="popup">
+			<div class="popup__body">
+				<button type="button" data-close-modal class="popup__close icon-close"></button>
+				<h4 class="popup__title text-center">Выберите способ оплаты</h4>
+				<div class="popup__total">Итого: 800 ₽</div>
+				<form action="#" class="popup__form form">
+					<div class="form__fields">
+						<div class="form__field">
+							<div class="form__label">Номер карты</div>
+							<input type="text" name="card" class="form__control" placeholder="____ - ____ - ____ - ____">
+						</div>
+						<div class="form__grid">
+							<div class="form__field">
+								<div class="form__label">Дата</div>
+								<input type="text" name="date" class="form__control" placeholder="__/__">
+							</div>
+							<div class="form__field">
+								<div class="form__label">CVV</div>
+								<input type="text" name="CVV" class="form__control" placeholder="___">
+							</div>
+						</div>
+						<div class="form__field">
+							<label class="switcher">
+								<input type="checkbox" checked name="memory" class="switcher__input hidden" hidden>
+								<span class="switcher__btn"></span>
+								<span class="switcher__text">Запомнить карту</span>
+							</label>
+						</div>
+					</div>
+					<div class="popup__separator">или</div>
+					<p class="popup__subtitle text-center"> Оплатить с помощью </p>
+					<div class="popup__payment">
+						<a href="" class="popup__payment-item">
+							<img src="img/payment.svg" alt="payment">
+						</a>
+						<a href="" class="popup__payment-item">
+							<img src="img/payment-2.svg" alt="payment">
+						</a>
+					</div>
+					<button type="submit" class="btn btn-primary btn-fullwidth">Оплатить</button>
+				</form>
+			</div>
+		</div>
 		<div id="success" class="popup">
 			<div class="popup__body">
 				<button type="button" data-close-modal class="popup__close icon-close"></button>
 				<div class="popup__status icon-check"></div>
-				<h4 class="popup__title text-center">Ваш вопрос отправлен, ожидайте ответа</h4>
+				<h4 class="popup__title text-center">Ваш вопрос отправлен, <br> ожидайте ответа</h4>
 				<a href="" class="popup__btn btn btn-primary btn-fullwidth">Смотреть статус</a>
 			</div>
 		</div>
-		<script src="js/app.min.js?_v=20250204180039"></script>
+		<script src="js/app.min.js?_v=20250204203752"></script>
 	</div>
 </body>
 
