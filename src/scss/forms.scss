@@ -97,6 +97,13 @@
 				}
 			}
 		}
+		&:focus-visible {
+			& + .form__checkbox-text {
+				&::before {
+					outline: rem(2) solid $accent;
+				}
+			}
+		}
 		&.error {
 			& + .form__checkbox-text {
 				&::before {
@@ -355,6 +362,11 @@
 				}
 			}
 		}
+		&:focus-visible {
+			& + .switcher__btn {
+				outline: rem(2) solid $accent;
+			}
+		}
 	}
 	// .switcher__btn
 	&__btn {
@@ -423,6 +435,11 @@
 					background: $accent;
 					box-shadow: inset 0 0 0 0.25rem $white;
 				}
+			}
+		}
+		&:focus-visible {
+			& + .radio-btn__value {
+				outline: rem(2) solid $accent;
 			}
 		}
 	}

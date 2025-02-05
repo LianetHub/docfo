@@ -498,6 +498,9 @@ body {
 	}
 	// .sidebar__block
 	&__block {
+		&:not(:last-child) {
+			margin-bottom: 2.75rem;
+		}
 	}
 	// .sidebar__title
 	&__title {
@@ -589,6 +592,7 @@ body {
 						}
 					}
 					.doctor__property {
+						cursor: pointer;
 						text-decoration: underline;
 						text-decoration-style: dashed;
 						text-decoration-thickness: 0.05em;

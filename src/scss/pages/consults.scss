@@ -82,6 +82,10 @@
 			bottom: 0rem;
 			right: 0;
 			top: 0;
+			& img {
+				height: 100%;
+				width: auto;
+			}
 		}
 		order: -1;
 		display: flex;

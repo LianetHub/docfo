@@ -17,16 +17,16 @@
 @font-face {
   font-family: "Roboto";
   font-display: swap;
-  src: url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
-  font-weight: 300;
+  src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
   font-display: swap;
-  src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
-  font-weight: 500;
+  src: url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -699,6 +699,10 @@ body.locked {
 
 .sidebar {
   padding: 2.25rem 0;
+}
+
+.sidebar__block:not(:last-child) {
+  margin-bottom: 2.75rem;
 }
 
 .sidebar__doctors {
@@ -2735,6 +2739,10 @@ h4,
   border-color: #328ecc;
 }
 
+.form__checkbox-input:focus-visible + .form__checkbox-text::before {
+  outline: 0.125rem solid #328ecc;
+}
+
 .form__checkbox-input.error + .form__checkbox-text::before {
   border: 0.0625rem solid red;
 }
@@ -3049,6 +3057,10 @@ h4,
   background: #328ecc;
 }
 
+.switcher__input:focus-visible + .switcher__btn {
+  outline: 0.125rem solid #328ecc;
+}
+
 .switcher__btn {
   position: relative;
   width: 2.75rem;
@@ -3116,6 +3128,10 @@ h4,
   background: #328ecc;
   -webkit-box-shadow: inset 0 0 0 0.25rem #fff;
           box-shadow: inset 0 0 0 0.25rem #fff;
+}
+
+.radio-btn__input:focus-visible + .radio-btn__value {
+  outline: 0.125rem solid #328ecc;
 }
 
 .radio-btn__value {
@@ -3511,6 +3527,222 @@ h4,
   font-size: 0.75rem;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+body {
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input,
+button,
+textarea {
+  font-size: inherit;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  opacity: 1;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+[role=button] {
+  cursor: pointer;
+  background-color: inherit;
+  font-size: inherit;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+:focus::-moz-placeholder {
+  color: transparent;
+}
+
+:focus:-moz-placeholder {
+  color: transparent;
+}
+
+:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+}
+
+:focus-visible {
+  outline: 2px solid #328ecc;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #328ecc;
+}
+
 .no-webp .promo__banner {
   background-image: url("../img/promo.jpg"), -webkit-gradient(linear, left top, right top, from(#328ecc), color-stop(80.36%, #3f8abe));
   background-image: url("../img/promo.jpg"), linear-gradient(90deg, #328ecc 0%, #3f8abe 80.36%); }
@@ -3668,7 +3900,6 @@ h4,
 }
 
 .cases__more {
-  text-decoration: underline;
   display: block;
   color: #328ecc;
   width: -webkit-fit-content;
@@ -4402,6 +4633,7 @@ h4,
   transition: background-color 0.3s ease;
   padding: 0.75rem 1rem;
   height: auto;
+  cursor: pointer;
 }
 
 .review__stars {
@@ -4485,6 +4717,8 @@ h4,
   text-align: center;
   height: 4.25rem;
   padding: 0.88rem 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .media__item img {
@@ -7241,6 +7475,11 @@ h4,
     top: 0;
   }
 
+  .consult__banner-image img {
+    height: 100%;
+    width: auto;
+  }
+
   .instructions__body {
     margin-top: 1.5rem;
     gap: 2rem;
@@ -7711,6 +7950,7 @@ h4,
   }
 
   .sidebar__doctors .doctor .doctor__education .doctor__property {
+    cursor: pointer;
     text-decoration: underline;
     text-decoration-style: dashed;
     text-decoration-thickness: 0.05em;
@@ -8124,7 +8364,7 @@ h4,
   }
 
   .cases__more:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   .case:hover {
@@ -8169,6 +8409,10 @@ h4,
 
   .review:hover {
     background: #ebf4fa;
+  }
+
+  .media__item:hover {
+    opacity: 0.7;
   }
 
   .blog__slide:hover {
